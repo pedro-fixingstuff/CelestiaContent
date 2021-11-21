@@ -280,7 +280,7 @@ ReferencePoint "Pluto-Charon" "Sol"
 		Period	9.074170
 		Inclination	23.236
 		AscendingNode	21.418
-		MeridianAngle	170
+		MeridianAngle	350
 	}
 	LunarLambert	0.5
 	GeomAlbedo	0.090
