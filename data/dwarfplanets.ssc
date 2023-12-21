@@ -282,7 +282,7 @@ ReferencePoint "Pluto-Charon" "Sol"
 	EllipticalOrbit
 	{
 		Epoch	2458423.5  # 2018 Nov 01
-		Period	4.60401749819034
+		Period	4.60398  # proper
 		SemiMajorAxis	2.767488610268551
 		Eccentricity	0.07564579866970941
 		Inclination	10.5936527669872

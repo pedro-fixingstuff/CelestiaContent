@@ -1,3 +1,9 @@
+# Minor planets and their satellites, up to the orbit of Jupiter.
+# Ceres is defined in dwarfplanets.ssc.
+
+# Proper orbital periods are calculated from the mean motion (n) values available
+# at the AstDyS portal: https://newton.spacedys.com/astdys/index.php?pc=0
+
 # Physical parameters of large asteroids are mainly taken from
 # Vernazza et al. (2021), A&A 654, A56, "VLT/SPHERE imaging survey of the largest
 # main-belt asteroids: Final results and synthesis"
@@ -22,13 +28,13 @@
 	Texture	"asteroid.*"
 	Color	[ 0.586 0.585 0.576 ]
 	BlendTexture	true
-	Radius	284  # maximum semi-axis
+	Radius	284  # maximum semi-axis (best-fit ellipsoid)
 	Mass	3.41929e-5
 	Density	2920
 	EllipticalOrbit
 	{
 		Epoch	2460200.5  # 2023 Sept 13
-		Period	4.610604140279951
+		Period	4.61292  # proper
 		SemiMajorAxis	2.770127481405055
 		Eccentricity	0.2302291418027128
 		Inclination	34.92583508111117
@@ -60,13 +66,13 @@
 	Texture	"asteroid.*"
 	Color	[ 0.677 0.658 0.626 ]
 	BlendTexture	true
-	Radius	144  # maximum semi-axis
+	Radius	144  # maximum semi-axis (best-fit ellipsoid)
 	Mass	4.604823e-6
 	Density	3200
 	EllipticalOrbit
 	{
 		Epoch	2460200.5  # 2023 Sept 13
-		Period	4.361092302470355
+		Period	4.36215  # proper
 		SemiMajorAxis	2.669263108802283
 		Eccentricity	0.2562134612917888
 		Inclination	12.9905522351009
@@ -90,7 +96,7 @@
 # Mass and density from Konopliv et al. (2014), Icarus 240, 103-117
 # "The Vesta gravity field, spin pole and rotation period, landmark positions, and ephemeris from
 # the Dawn tracking and optical data"
-# Albedos from Li et al. (2013), Icarus 226, 1252-1274
+# Bond and geometric albedo from Li et al. (2013), Icarus 226, 1252-1274
 # "Global photometric properties of Asteroid (4) Vesta observed with Dawn Framing Camera"
 # https://arxiv.org/abs/1310.4165
 "4 Vesta:Vesta" "Sol"
@@ -100,13 +106,13 @@
 	MeshCenter	[ 2.094 0.0485 5.415 ]
 	Texture	"vesta.*"
 	Color	[ 1.0 0.983 0.944 ]
-	Radius	286.3  # maximum semi-axis
+	Radius	286.3  # maximum semi-axis (best-fit ellipsoid)
 	Mass	4.337359e-5
 	Density	3459
 	EllipticalOrbit
 	{
 		Epoch	2455927.5  # 2012 Jan 01 (after Dawn arrival)
-		Period	3.629134651190404
+		Period	3.62944  # proper
 		SemiMajorAxis	2.361546962535303
 		Eccentricity	0.08826710959760306
 		Inclination	7.134368704375506
@@ -139,13 +145,13 @@
 	Texture	"asteroid.*"
 	Color	[ 0.791 0.763 0.714 ]
 	BlendTexture	true
-	Radius	130  # maximum semi-axis
+	Radius	130  # maximum semi-axis (best-fit ellipsoid)
 	Mass	2.260549e-6
 	Density	3260
 	EllipticalOrbit
 	{
 		Epoch	2460200.5  # 2023 Sept 13
-		Period	3.687351731720197
+		Period	3.6865  # proper
 		SemiMajorAxis	2.386735224876513
 		Eccentricity	0.2297678850612325
 		Inclination	5.518704224953987
@@ -174,13 +180,13 @@
 	Texture	"asteroid.*"
 	Color	[ 0.38 0.378 0.373 ]
 	BlendTexture	true
-	Radius	225  # maximum semi-axis
+	Radius	225  # maximum semi-axis (best-fit ellipsoid)
 	Mass	1.463496e-5
 	Density	2060
 	EllipticalOrbit
 	{
 		Epoch	2460200.5  # 2023 Sept 13
-		Period	5.564048142612810
+		Period	5.57088  # proper
 		SemiMajorAxis	3.139943146104073
 		Eccentricity	0.1110224699444766
 		Inclination	3.831824852338094
@@ -218,7 +224,7 @@
 	EllipticalOrbit
 	{
 		Epoch	2460200.5  # 2023 Sept 13
-		Period	4.999182317265353
+		Period	4.99659  # proper
 		SemiMajorAxis	2.923662128456563
 		Eccentricity	0.1341931447944021
 		Inclination	3.096815244138823
@@ -250,13 +256,13 @@
 	Texture	"asteroid.*"
 	Color	[ 0.386 0.384 0.377 ]
 	BlendTexture	true
-	Radius	126  # maximum semi-axis
+	Radius	126  # maximum semi-axis (best-fit ellipsoid)
 	Mass	9.430844e-7
 	Density	1660
 	EllipticalOrbit
 	{
 		Epoch	2460200.5  # 2023 Sept 13
-		Period	4.486962887167529
+		Period	4.48879  # proper
 		SemiMajorAxis	2.72037964582147
 		Eccentricity	0.08319376065918045
 		Inclination	6.605134973013918
@@ -336,15 +342,15 @@
 	Mesh	"sylvia.cmod"
 	MeshCenter	[ -0.1710 -2.655 -0.1451 ]
 	Texture	"asteroid.*"
-	Color	[ 0.303 0.300 0.292 ]
+	Color	[ 0.303 0.3 0.292 ]
 	BlendTexture	true
-	Radius	181.5  # maximum semi-axis; MPCD model
+	Radius	181.5  # maximum semi-axis (best-fit ellipsoid; MPCD model)
 	Mass	2.411253e-6
 	Density	1378
 	EllipticalOrbit
 	{
 		Epoch	2460200.5  # 2023 Sept 13
-		Period	6.483690492144261
+		Period	6.51031  # proper
 		SemiMajorAxis	3.477037558039971
 		Eccentricity	0.09389234196453734
 		Inclination	10.88029344765754
@@ -370,7 +376,7 @@
 	Class	"minormoon"
 	Mesh	"asteroid.cms"
 	Texture	"asteroid.*"
-	Color	[ 0.303 0.300 0.292 ]
+	Color	[ 0.303 0.3 0.292 ]
 	BlendTexture	true
 	Radius	5.15
 	Mass	1.306095e-10
@@ -399,7 +405,7 @@
 	Class	"minormoon"
 	Mesh	"roughsphere.cms"
 	Texture	"asteroid.*"
-	Color	[ 0.303 0.300 0.292 ]
+	Color	[ 0.303 0.3 0.292 ]
 	BlendTexture	true
 	# Radius	7.55
 	SemiAxes	[ 19 7 7 ]
@@ -437,7 +443,7 @@
 	Mesh	"elektra.cmod"
 	MeshCenter	[ -0.1315 -0.0109 2.624 ]
 	Texture	"asteroid.*"
-	Color	[ 0.394 0.390 0.373 ]
+	Color	[ 0.394 0.39 0.373 ]
 	BlendTexture	true
 	Radius	135  # maximum semi-axis; mean of two models
 	Mass	1.106162e-6
@@ -445,7 +451,7 @@
 	EllipticalOrbit
 	{
 		Epoch	2460200.5  # 2023 Sept 13
-		Period	5.527107049307030
+		Period	5.50659  # proper
 		SemiMajorAxis	3.126029815266054
 		Eccentricity	0.209667410193861
 		Inclination	22.77754756941516
@@ -471,7 +477,7 @@
 	Class	"minormoon"
 	Mesh	"asteroid.cms"
 	Texture	"asteroid.*"
-	Color	[ 0.394 0.390 0.373 ]
+	Color	[ 0.394 0.39 0.373 ]
 	BlendTexture	true
 	Radius	1.0
 	Mass	1.138647e-12
@@ -497,7 +503,7 @@
 	Class	"minormoon"
 	Mesh	"asteroid.cms"
 	Texture	"asteroid.*"
-	Color	[ 0.394 0.390 0.373 ]
+	Color	[ 0.394 0.39 0.373 ]
 	BlendTexture	true
 	Radius	0.8
 	Mass	5.693235e-13
@@ -523,7 +529,7 @@
 	Class	"minormoon"
 	Mesh	"asteroid.cms"
 	Texture	"asteroid.*"
-	Color	[ 0.394 0.390 0.373 ]
+	Color	[ 0.394 0.39 0.373 ]
 	BlendTexture	true
 	Radius	3.0
 	Mass	3.014066e-11
@@ -556,7 +562,7 @@
 	Mesh	"kleopatra.cmod"
 	MeshCenter	[ 7.24 0.4550 -1.669 ]
 	Texture	"asteroid.*"
-	Color	[ 0.587 0.578 0.570 ]
+	Color	[ 0.587 0.578 0.57 ]
 	BlendTexture	true
 	Radius	133.5  # maximum semi-axis; MPCD model
 	Mass	4.973208e-7
@@ -564,7 +570,7 @@
 	EllipticalOrbit
 	{
 		Epoch	2460200.5  # 2023 Sept 13
-		Period	4.668221155087945
+		Period	4.67242  # proper
 		SemiMajorAxis	2.793157852317082
 		Eccentricity	0.2509986364100729
 		Inclination	13.12108303620164
@@ -590,7 +596,7 @@
 	Class	"minormoon"
 	Mesh	"asteroid.cms"
 	Texture	"asteroid.*"
-	Color	[ 0.587 0.578 0.570 ]
+	Color	[ 0.587 0.578 0.57 ]
 	BlendTexture	true
 	Radius	3.45
 	Mass	6.697924e-11
@@ -617,7 +623,7 @@
 	Class	"minormoon"
 	Mesh	"asteroid.cms"
 	Texture	"asteroid.*"
-	Color	[ 0.587 0.578 0.570 ]
+	Color	[ 0.587 0.578 0.57 ]
 	BlendTexture	true
 	Radius	4.45
 	Mass	1.004689e-10
@@ -647,13 +653,13 @@
 	Texture	"asteroid.*"
 	Color	[ 0.388 0.391 0.395 ]
 	BlendTexture	true
-	Radius	177  # maximum semi-axis
+	Radius	177  # maximum semi-axis (best-fit ellipsoid)
 	Mass	5.894173e-6
 	Density	1840
 	EllipticalOrbit
 	{
 		Epoch	2460200.5  # 2023 Sept 13
-		Period	5.348580216638409
+		Period	5.35638  # proper
 		SemiMajorAxis	3.058347812128694
 		Eccentricity	0.1559418886160162
 		Inclination	17.30804365401011
