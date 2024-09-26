@@ -1,126 +1,31 @@
-# Nearby stars and star orbits out to 25 light years, supplementary
-# to Celestia's stars.dat.
-
-# Because the RECONS survey tabulation has not been updated since 2010,
-# the data mostly comes from the SIMBAD database, as well as "The 10 parsec
-# sample in the Gaia era" table (https://gruze.org/10pc/). Most parallaxes
-# come from Gaia EDR3, which does not provide parallaxes for the brightest
-# stars, so for those the Hipparcos parallaxes have been used. In some cases
-# where Gaia EDR3 parallaxes exist for one of the component stars, those have
-# been used; if two or more components have them, the weighted mean of the
-# parallaxes has been used.
-
-# Most brown dwarfs in this file do not have Gaia parallaxes, in which case the
-# parallax comes from Kirkpatrick et al. (2021), ApJS 253 (1), 7
-# "The Field Substellar Mass Function Based on the Full-sky 20 pc Census of
-# 525 L, T, and Y Dwarfs"
-# https://iopscience.iop.org/article/10.3847/1538-4365/abd107
-# Other sources appear as comments for individual star systems.
-
-# Additional Gliese designations are from Golovin et al. (2022) "The Fifth
-# Catalogue of Nearby Stars", https://dc.g-vo.org/CNS5
-
-# Because the magnitude system breaks down for extremely dim stars (such as late
-# T or Y dwarfs), they have been given an arbitrary but extremely low AbsMag
-# value of 40, and their radii have also been set to a value around ~1 Jupiter
-# radius, if their radii are not known.
-
-# Orbits are taken from the Sixth Catalog of Orbits of Visual Binary Stars
-# (http://www.astro.gsu.edu/wds/orb6.html), with other sources in the comments
-# below.
-
-# For binary orbits, the direction of an orbit's node on the plane of the
-# sky is often unknown - the orbits given below will appear correct when
-# viewed from Earth, but the true orbit may be tilted either towards or away from
-# the Earth.
-# For a few orbits the nature of the node is known - these are
-# marked with the phrase "fully specified orientation".
-# Barycenter positions are based on mass estimates from the papers themselves. The 
-# values used are listed below.
-
-Barycenter "Solar System Barycenter:SSB"
-{
-	RA 0
-	Dec 0
-	Distance 0
-}
-
-0 "Sol:Sun"
-{
-	OrbitBarycenter "Solar System Barycenter"
-	CustomOrbit "vsop87-sun"
-
-	SpectralType "G2V"
-	AbsMag 4.83
-	Temperature 5772
-	BoloCorrection -0.08
-	InfoURL "https://en.wikipedia.org/wiki/Sun"
-
-	UniformRotation
-	{
-	    Period         609.12  # 25.38 days
-	    Inclination      7.25
-	    AscendingNode   75.77
-	    MeridianAngle   23.00  # standard meridian
-	}
-}
-
 70890 # Proxima Cen
 {
-	RA  217.39232147
+	RA 217.39232147
 	Dec -62.67607512
 	Distance 4.2465 # 768.0665 +/- 0.0499 mas
-	SpectralType "M5.5Ve"
-	AppMag 11.09
-	InfoURL "https://en.wikipedia.org/wiki/Proxima_Centauri"
+	SpectralType "M5.5"
+	AppMag 11.13
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=alf+Cen+C"
 }
 
-# Akeson et al. (2021), AJ 162 (1), 14
-# "Precision Millimeter Astrometry of the α Centauri AB System"
-# https://iopscience.iop.org/article/10.3847/1538-3881/abfaff
-Barycenter "ALF Cen:Gliese 559"
+71683 # alf Cen A
 {
-	RA  219.85892215
-	Dec -60.83163195
-	Distance 4.3441 # 750.81 +/- 0.38 mas
-}
-
-71683 # ALF Cen A
-{
-	OrbitBarycenter "ALF Cen"
-	SpectralType "G2V"
+	RA 219.90205833
+	Dec -60.83399269
+	Distance 4.3897 # 743.0 +/- 1.3 mas
+	SpectralType "G2"
 	AppMag 0.01
-	Radius 847000
-	InfoURL "https://en.wikipedia.org/wiki/Alpha_Centauri"
- 
-	EllipticalOrbit {              # fully specified orientation
-		Period          79.762
-		SemiMajorAxis    10.66 # mass ratio 1.0788:0.9092
-		Eccentricity   0.51947
-		Inclination      82.33
-		AscendingNode   231.87
-		ArgOfPericenter 279.48
-		MeanAnomaly     200.56
-	}
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=alf+Cen+A"
 }
 
-71681 # ALF Cen B
+71681 # alf Cen B
 {
-	OrbitBarycenter "ALF Cen"
-	SpectralType "K1V"
+	RA 219.89609629
+	Dec -60.83752757
+	Distance 4.3897 # 743.0 +/- 1.3 mas
+	SpectralType "K1"
 	AppMag 1.33
-	Radius 597700
-	InfoURL "https://en.wikipedia.org/wiki/Alpha_Centauri"
-
-	EllipticalOrbit {              # fully specified orientation
-		Period          79.762
-		SemiMajorAxis    12.64 # mass ratio 1.0788:0.9092
-		Eccentricity   0.51947
-		Inclination      82.33
-		AscendingNode   231.87
-		ArgOfPericenter  99.48
-		MeanAnomaly     200.56
-	}
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=alf+Cen+B"
 }
 
 87937 # Barnard's Star
@@ -128,79 +33,37 @@ Barycenter "ALF Cen:Gliese 559"
 	RA 269.44850253
 	Dec 4.73942005
 	Distance 5.9629 # 546.9759 +/- 0.0401 mas
-	SpectralType "M4V"
+	SpectralType "M3.5"
 	AppMag 9.511
-	InfoURL "https://en.wikipedia.org/wiki/Barnard%27s_Star"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Barnard's+Star"
 }
 
-# Lazorenko & Sahlmann (2018), A&A 618, A111
-# "Updated astrometry and masses of the LUH 16 brown dwarf binary"
-# https://arxiv.org/abs/1808.07835
-# Magnitudes from Boffin et al. (2014), A&A 561, L4
-# "Possible astrometric discovery of a substellar companion to the closest
-# binary brown dwarf system WISE J104915.57-531906.1"
-# https://www.aanda.org/articles/aa/full_html/2014/01/aa22975-13/aa22975-13.html
-# Rotation periods from Apai, Nardiello & Bedin (2021), ApJ 906 (1), 64
-# "TESS Observations of the Luhman 16 AB Brown Dwarf System: Rotational Periods,
-# Lightcurve Evolution, and Zonal Circulation"
-# https://iopscience.iop.org/article/10.3847/1538-4357/abcb97
-Barycenter "Luhman 16:WISE 1049-5319:WISE J104915.57-531906.1:GJ 11551"
+"Luhman 16:Luhman 16 A"
 {
-	RA 162.31073787
-	Dec -53.318058293
+	RA 162.30864367
+	Dec -53.31804475
 	Distance 6.5029 # 501.557 +/- 0.082 mas
-}
-
-"Luhman 16 A:WISE 1049-5319 A:WISE J104915.57-531906.1 A:GJ 11551 A"
-{
-	OrbitBarycenter "Luhman 16"
 	SpectralType "L7.5"
-	AppMag 23.25
-	Radius 70000 # approx.
-
-	EllipticalOrbit {              # fully specified orientation
-		Period           27.54
-		SemiMajorAxis    1.636 # mass ratio 33.51J:28.55J
-		Eccentricity     0.343
-		Inclination     135.68
-		AscendingNode   118.64
-		ArgOfPericenter 316.22
-		MeanAnomaly     127.58
-	}
-
-	RotationPeriod 6.94
+	AppMag 16.2
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Luhman+16A"
 }
 
-"Luhman 16 B:WISE 1049-5319 B:WISE J104915.57-531906.1 B:GJ 11551 B"
+"Luhman 16:Luhman 16 B"
 {
-	OrbitBarycenter "Luhman 16"
+	RA 162.30840223
+	Dec -53.31827781
+	Distance 6.5029 # 501.557 +/- 0.082 mas
 	SpectralType "T0.5"
-	AppMag 24.07
-	Radius 63000 # approx.
-
-	EllipticalOrbit {              # fully specified orientation
-		Period           27.54
-		SemiMajorAxis    1.921 # mass ratio 33.51J:28.55J
-		Eccentricity     0.343
-		Inclination     135.68
-		AscendingNode   118.64
-		ArgOfPericenter 136.22
-		MeanAnomaly     127.58
-	}
-
-	RotationPeriod 5.28
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Luhman+16B"
 }
 
-# parameters from Kirkpatrick et al. (2021)
-"WISE 0855-0714:WISE J085510.83-071442.5:GJ 11286"
+"WISEA J085510.74-071442.5"
 {
 	RA 133.780984
 	Dec -7.243932
-	Distance 7.430 # 439.0 +/- 2.4 mas
-	SpectralType "Y4"
-	Radius 60000 # approx.
-	AbsMag 40 # extremely low
-	InfoURL "https://en.wikipedia.org/wiki/WISE_0855%E2%88%920714"
+	Distance 7.4295 # 439.0 +/- 2.4 mas
+	SpectralType ">Y4"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISEA+J085510.74-071442.5"
 }
 
 "CN Leo:Gliese 406:Wolf 359"
@@ -208,122 +71,57 @@ Barycenter "Luhman 16:WISE 1049-5319:WISE J104915.57-531906.1:GJ 11551"
 	RA 164.10319031
 	Dec 7.00272694
 	Distance 7.8558 # 415.1794 +/- 0.0684 mas
-	SpectralType "M6V"
+	SpectralType "M6"
 	AppMag 13.507
-	InfoURL "https://en.wikipedia.org/wiki/Wolf_359"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Wolf+359"
 }
 
-54035 # Lalande 21185
+54035 # HD 95735
 {
 	RA 165.83095968
 	Dec 35.94865303
 	Distance 8.3044 # 392.7529 +/- 0.0321 mas
-	SpectralType "M2V"
-	AppMag 7.520
-	InfoURL "https://en.wikipedia.org/wiki/Lalande_21185"
+	SpectralType "M1.5e"
+	AppMag 7.52
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+95735"
 }
 
-# Parameters from Bond et al. (2017), ApJ 840 (2), 70
-# "The Sirius System and Its Astrophysical Puzzles: Hubble Space Telescope and 
-# Ground-based Astrometry"
-# https://iopscience.iop.org/article/10.3847/1538-4357/aa6af8
-Barycenter 32349 "Sirius:Alhabor:ALF CMa:9 CMa:Gliese 244:ADS 5423"
+32349 # alf CMa A
 {
 	RA 101.28715533
 	Dec -16.71611586
-	Distance 8.608 # 378.9 +/- 1.4 mas
-}
-
-"Sirius A:Alhabor A:ALF CMa A:9 CMa A:Gliese 244 A:ADS 5423 A"
-{
-	OrbitBarycenter "Sirius"
-	SpectralType "A1V"
+	Distance 8.6009 # 379.21 +/- 1.58 mas
+	SpectralType "A1"
 	AppMag -1.46
-	Radius 1192700
-	InfoURL "https://en.wikipedia.org/wiki/Sirius#Sirius_A"
-
-	EllipticalOrbit {              # fully specified orientation
-		Period         50.1284
-		SemiMajorAxis     6.53 # mass ratio 2.063:1.018
-		Eccentricity   0.59142
-		Inclination     143.15
-		AscendingNode   256.59
-		ArgOfPericenter  67.30
-		MeanAnomaly      38.99
-	}
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=alf+CMa+A"
 }
 
-"Sirius B:Alhabor B:ALF CMa B:9 CMa B:Gliese 244 B:ADS 5423 B"
+"Sirius B:Gliese 244 B:alf CMa B"
 {
-	OrbitBarycenter "Sirius"
-	SpectralType "DA2"
+	RA 101.28662552
+	Dec -16.72093253
+	Distance 8.7094 # 374.4896 +/- 0.2313 mas
+	SpectralType "DA1.9"
 	AppMag 8.44
-	Radius 5634
-	InfoURL "https://en.wikipedia.org/wiki/Sirius#Sirius_B"
-
-	EllipticalOrbit {              # fully specified orientation
-		Period         50.1284
-		SemiMajorAxis    13.25 # mass ratio 2.063:1.018
-		Eccentricity   0.59142
-		Inclination     143.15
-		AscendingNode   256.59
-		ArgOfPericenter 247.30
-		MeanAnomaly      38.99
-	}
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=alf+CMa+B"
 }
 
-# Distance and radii from same source as orbit
-# Rotation periods from Barnes et al. (2017), MNRAS 471 (1), 811
-# "Surprisingly different star-spot distributions on the near equal-mass 
-# equal-rotation-rate stars in the M dwarf binary GJ 65 AB"
-# https://arxiv.org/abs/1706.03979
-Barycenter "Gliese 65:Luyten 726-8"
+"BL Cet:Gliese 65 A:G 272-61 A"
 {
-	RA 24.77161351 # mass ratio 0.1225:0.1195
-	Dec -17.94799520
-	Distance 8.728 # 373.70 +/- 2.70 mas
+	RA 24.77155429
+	Dec -17.94829989
+	Distance 8.8699 # 367.7119 +/- 0.7418 mas
+	SpectralType "M5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+272-61A"
 }
 
-"BL Cet:Gliese 65 A:Luyten 726-8 A"
+"UV Cet:Gliese 65 B:G 272-61 B"
 {
- 	OrbitBarycenter "Gliese 65"
-	SpectralType "M5.5V"
-	AppMag 12.7
-	Radius 114790
-	InfoURL "https://en.wikipedia.org/wiki/Gliese_65"
-
-	EllipticalOrbit {              # fully specified orbit
-		Period          26.284
-		SemiMajorAxis     2.72 # mass ratio 0.1225:0.1195
-		Eccentricity    0.6185
-		Inclination     113.55
-		AscendingNode    47.80
-		ArgOfPericenter 357.54
-		MeanAnomaly      21.93
-	}
-
-	RotationPeriod 5.832
-}
-
-"UV Cet:Gliese 65 B:Luyten 726-8 B"
-{
-	OrbitBarycenter "Gliese 65"
-	SpectralType "M6V"
-	AppMag 13.2
-	Radius 110600
-	InfoURL "https://en.wikipedia.org/wiki/Gliese_65"
-
-	EllipticalOrbit {              # fully specified orbit
-		Period          26.284
-		SemiMajorAxis     2.79 # mass ratio 0.1225:0.1195
-		Eccentricity    0.6185
-		Inclination     113.55
-		AscendingNode    47.80
-		ArgOfPericenter 177.54
-		MeanAnomaly      21.93
-	}
-
-	RotationPeriod 5.4432
+	RA 24.77167421
+	Dec -17.94768286
+	Distance 8.7244 # 373.8443 +/- 0.5009 mas
+	SpectralType "M6"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+272-61B"
 }
 
 92403 # Ross 154
@@ -331,3411 +129,4366 @@ Barycenter "Gliese 65:Luyten 726-8"
 	RA 282.45878902
 	Dec -23.83709745
 	Distance 9.7063 # 336.0266 +/- 0.0317 mas
-	SpectralType "M3.5Ve"
-	AppMag 10.495
-	InfoURL "https://en.wikipedia.org/wiki/Ross_154"
+	SpectralType "M3.5e"
+	AppMag 10.43
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Ross+154"
 }
 
 "HH And:Gliese 905:Ross 248"
 {
 	RA 355.48001526
-	Dec 44.17037570
-	Distance 10.3057 # 316.4812 +/- 0.0444 mas
-	SpectralType "M5.0V"
-	AppMag 12.28
-	InfoURL "https://en.wikipedia.org/wiki/Ross_248"
+	Dec 44.1703757
+	Distance 10.306 # 316.4812 +/- 0.0444 mas
+	SpectralType "M5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Ross+248"
 }
 
-16537 # Eps Eri
+16537 # eps Eri
 {
 	RA 53.22829342
 	Dec -9.45816822
-	Distance 10.5016 # 310.5773 +/- 0.1355 mas
-	SpectralType "K2V"
+	Distance 10.502 # 310.5773 +/- 0.1355 mas
+	SpectralType "K2"
 	AppMag 3.73
-	Temperature 5076 # 5076 +/- 30 K (Heiter et al. 2015)
-	Radius 511000 # 0.735 +/- 0.005 Sol (di Folco et al. 2007)
-
-	UniformRotation
-	{
-	    Period         274 # 11.4 +/- 0.2 days (Roettenbacher et al. 2022)
-	    Inclination      12 # inclination = 70 degrees
-	    AscendingNode   88 # position angle of rotation axis = 335 degrees
-	}
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=eps+Eri"
 }
 
-114046 # Lacaille 9352
+114046 # Gliese 887
 {
 	RA 346.50391668
 	Dec -35.84716421
-	Distance 10.7241 # 304.1354 +/- 0.0200 mas
-	SpectralType "M2V"
+	Distance 10.724 # 304.1354 +/- 0.02 mas
+	SpectralType "M2"
 	AppMag 7.34
-	InfoURL "https://en.wikipedia.org/wiki/Lacaille_9352"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+217987"
 }
 
 57548 # Ross 128
 {
 	RA 176.93768799
 	Dec 0.79911997
-	Distance 11.0074 # 296.3053 +/- 0.0302 mas
-	SpectralType "M4V"
+	Distance 11.007 # 296.3053 +/- 0.0302 mas
+	SpectralType "M4"
 	AppMag 11.153
-	InfoURL "https://en.wikipedia.org/wiki/Ross_128"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Ross+128"
 }
 
-# Segransan et al. (2000), A&A 364, 665
-# "Accurate masses of very low mass stars. III. 16 new or improved masses"
-# http://adsabs.harvard.edu/abs/2000A%26A...364..665S
-Barycenter "Gliese 866:Luyten 789-6"
+"EZ Aqr A:Gliese 866 A"
 {
-	RA 339.650693945
+	RA 339.65069395
 	Dec -15.28964705
 	Distance 11.109 # 293.6 +/- 0.9 mas
+	SpectralType "M5"
+	AppMag 12.38
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+866+A"
 }
 
-Barycenter "Gliese 866 A:Luyten 789-6 A"
+"EZ Aqr B:Gliese 866 B"
 {
-	OrbitBarycenter "Gliese 866"
-
-	EllipticalOrbit {               # fully specified orientation
-		Period            2.2537
-		SemiMajorAxis     0.415 # mass ratio (0.1187:0.0930):0.1145
-		Eccentricity      0.439
-		Inclination      89.43
-		AscendingNode   358.27
-		ArgOfPericenter  61.70
-		MeanAnomaly     243.55
-	}
+	RA 339.65069395
+	Dec -15.28964705
+	Distance 11.109 # 293.6 +/- 0.9 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+866+B"
 }
 
-"EZ Aqr:Gliese 866 Aa:Luyten 789-6 Aa"
+"EZ Aqr C:Gliese 866 C"
 {
-	OrbitBarycenter "Gliese 866 A"
-	SpectralType "M5V"
-	AppMag 13.03
-	InfoURL "https://en.wikipedia.org/wiki/EZ_Aquarii"
-
-	EllipticalOrbit {
-		Period          0.01037 # 3.786516 d
-		SemiMajorAxis   0.01244 # to match period and mass ratio 0.1187:0.0930
-		Inclination     90      # plane-of-sky inclination 116.5 deg
-		AscendingNode   2       # guess - to roughly match plane of B
-		ArgOfPericenter 144
-	}
+	RA 339.65069395
+	Dec -15.28964705
+	Distance 11.109 # 293.6 +/- 0.9 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+866+C"
 }
 
-"Gliese 866 Ab:Luyten 789-6 Ab"
+104214 # 61 Cyg A
 {
-	OrbitBarycenter "Gliese 866 A"
-	SpectralType "M7V" # from mass
-	AppMag 15.07
-
-	EllipticalOrbit {
-		Period          0.01037 # 3.786516 d
-		SemiMajorAxis   0.01589 # to match period and mass ratio 0.1187:0.0930
-		Inclination     90      # guess - to match plane of B
-		AscendingNode   2       # guess - to match plane of B
-		ArgOfPericenter 324
-	}
-}
-
-"Gliese 866 B:Luyten 789-6 B"
-{
-	OrbitBarycenter "Gliese 866"
-	SpectralType "M6V" # from apparent magnitude
-	AppMag 13.27
-
-	EllipticalOrbit {               # fully specified orientation
-		Period            2.2537
-		SemiMajorAxis     0.768 # mass ratio (0.1187:0.0930):0.1145
-		Eccentricity      0.439
-		Inclination      89.43
-		AscendingNode   358.27
-		ArgOfPericenter 241.70
-		MeanAnomaly     243.55
-	}
-}
-
-# Physical parameters from Kervella et al. (2008), A&A 488 (2), 667
-# "The radii of the nearby K5V and K7V stars 61 Cygni A & B. CHARA/FLUOR 
-# interferometry and CESAM2k modeling"
-# https://arxiv.org/abs/0806.4049
-Barycenter "61 Cyg:Gliese 820:ADS 14636"
-{
-	RA 316.75090091 # mass ratio 0.690:0.605
-	Dec 38.76022325 # A: 285.9949 +/- 0.0599 mas
-	Distance 11.404 # B: 286.0054 +/- 0.0289 mas
-}
-
-104214 "61 Cyg A:V1803 Cyg:Gliese 820 A:ADS 14636 A"
-{
-	OrbitBarycenter "61 Cyg"
-	SpectralType "K5V"
+	RA 316.74847929
+	Dec 38.76386245
+	Distance 11.404 # 285.9949 +/- 0.0599 mas
+	SpectralType "K5"
 	AppMag 5.21
-	Radius 462600
-
-	EllipticalOrbit {
-		Period          618.7
-		SemiMajorAxis   41.24 # mass ratio 0.69:0.605
-		Eccentricity    0.54
-		Inclination     101
-		AscendingNode   295
-		ArgOfPericenter 281
-		MeanAnomaly     175
-	}
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=61+Cyg+A"
 }
 
-104217 "61 Cyg B:Gliese 820 B:ADS 14636 B"
+104217 # 61 Cyg B
 {
-	OrbitBarycenter "61 Cyg"
-	SpectralType "K7V"
+	RA 316.75366275
+	Dec 38.75607277
+	Distance 11.404 # 286.0054 +/- 0.0289 mas
+	SpectralType "K7"
 	AppMag 6.03
-	Radius 413900
-
-	EllipticalOrbit {
-		Period          618.7
-		SemiMajorAxis   47.03 # mass ratio 0.69:0.605
-		Eccentricity    0.54
-		Inclination     101
-		AscendingNode   295
-		ArgOfPericenter 101
-		MeanAnomaly     175
-	}
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=61+Cyg+B"
 }
 
-# Orbit from Bond et al. (2018), Res. Notes AAS 2 (3), 147
-# "Final Hubble Space Telescope Astrometry of the Procyon Binary System"
-# https://iopscience.iop.org/article/10.3847/2515-5172/aad9a4
-# Parameters from Bond et al. (2015), ApJ 813 (2), 106
-# "Hubble Space Telescope Astrometry of the Procyon System"
-# https://iopscience.iop.org/article/10.1088/0004-637X/813/2/106
-Barycenter 37279 "Procyon:Elgomaisa:ALF CMi:10 CMi:Gliese 280:ADS 6251"
+37279 # alf CMi A
 {
 	RA 114.82549791
 	Dec 5.22498756
-	Distance 11.444 # 285.0 +/- 0.7 mas
-}
-
-"Procyon A:Elgomaisa A:ALF CMi A:10 CMi A:Gliese 280 A:ADS 6251 A"
-{
-	OrbitBarycenter "Procyon"
-	SpectralType "F5IV"
+	Distance 11.462 # 284.56 +/- 1.26 mas
+	SpectralType "F5.0"
 	AppMag 0.37
-	InfoURL "https://en.wikipedia.org/wiki/Procyon"
-
-	EllipticalOrbit {             # fully specified orientation
-		Period         40.844
-		SemiMajorAxis    4.32 # mass ratio 1.478:0.592
-		Eccentricity  0.39799
-		Inclination     42.60
-		AscendingNode   25.19
-		ArgOfPericenter 90.25
-		MeanAnomaly    281.41
-	}
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=alf+CMi+A"
 }
 
-"Procyon B:Elgomaisa B:ALF CMi B:10 CMi B:Gliese 280 B:ADS 6251 B"
+"Procyon B:Gliese 280 B:alf CMi B"
 {
-	OrbitBarycenter "Procyon"
+	RA 114.8245
+	Dec 5.2241111
+	Distance 11.462 # 284.56 +/- 1.26 mas
 	SpectralType "DQZ"
-	Temperature 7740
-	Radius 8571
-	AppMag 10.82
-	InfoURL "https://en.wikipedia.org/wiki/Procyon#Procyon_B"
-
-	EllipticalOrbit {              # fully specified orientation
-		Period          40.844
-		SemiMajorAxis    10.80 # mass ratio 1.478:0.592
-		Eccentricity   0.39799
-		Inclination      42.60
-		AscendingNode    25.19
-		ArgOfPericenter 270.25
-		MeanAnomaly     281.41
-	}
+	AppMag 10.92
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=alf+CMi+B"
 }
 
-# masses from Mann et al. (2015), ApJ 804 (1), 64
-# "How to Constrain Your M Dwarf: Measuring Effective Temperature, 
-# Bolometric Luminosity, Mass, and Radius"
-# http://iopscience.iop.org/article/10.1088/0004-637X/804/1/64/meta
-Barycenter "Gliese 725:Struve 2398:ADS 11632"
+91768 # HD 173739
 {
-	RA 280.68307740 # mass ratio 0.334:0.248
-	Dec 59.63698903 # A: 283.8401 +/- 0.0220 mas
-	Distance 11.491 # B: 283.8378 +/- 0.0287 mas
+	RA 280.68307084
+	Dec 59.63835791
+	Distance 11.491 # 283.8401 +/- 0.022 mas
+	SpectralType "M3"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+173739"
 }
 
-91768 "Gliese 725 A:Struve 2398 A:ADS 11632 A"
+91772 # HD 173740
 {
-	OrbitBarycenter "ADS 11632"
-	SpectralType "M3V"
-	AppMag 8.91
-	InfoURL "https://en.wikipedia.org/wiki/Struve_2398"
-
-	EllipticalOrbit {
-		Period            408
-		SemiMajorAxis   20.84 # mass ratio 0.334:0.248
-		Eccentricity     0.53
-		Inclination     111.9
-		AscendingNode   146.1
-		ArgOfPericenter 243.5
-		MeanAnomaly     198.5
-	}
+	RA 280.68308625
+	Dec 59.63514545
+	Distance 11.491 # 283.8378 +/- 0.0287 mas
+	SpectralType "M3.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+173740"
 }
 
-91772 "Gliese 725 B:Struve 2398 B:ADS 11632 B"
+"GX And:Gliese 15 A"
 {
-	OrbitBarycenter "ADS 11632"
-	SpectralType "M3.5V"
-	AppMag 9.69
-	InfoURL "https://en.wikipedia.org/wiki/Struve_2398"
-
-	EllipticalOrbit {
-		Period           408
-		SemiMajorAxis  28.06 # mass ratio 0.334:0.248
-		Eccentricity    0.53
-		Inclination    111.9
-		AscendingNode  146.1
-		ArgOfPericenter 63.5
-		MeanAnomaly    198.5
-	}
+	RA 4.61322626
+	Dec 44.02478674
+	Distance 11.619 # 280.7068 +/- 0.0203 mas
+	SpectralType "M1"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+15+A"
 }
 
-# Pinamonti et al. (2018), A&A 617, A104
-# "The HADES RV Programme with HARPS-N at TNG. VIII. GJ15A: a multiple
-# wide planetary system sculpted by binary interaction"
-# https://arxiv.org/abs/1804.03476
-Barycenter 1475 "Gliese 15:Groombridge 34:ADS 246"
+"GQ And:Gliese 15 B"
 {
-	RA 4.61664355 # mass ratio 0.38:0.15
-	Dec 44.02590687 # A: 280.7068 +/- 0.0203 mas
-	Distance 11.619 # B: 280.6947 +/- 0.0278 mas
-}
-
-"GX And:Gliese 15 A:Groombridge 34 A:ADS 246 A"
-{
-	OrbitBarycenter "Groombridge 34"
-	SpectralType "M2V"
-	AppMag 8.13
-	Radius 264400
-	InfoURL "https://en.wikipedia.org/wiki/Groombridge_34"
-
-	EllipticalOrbit {
-		Period         1230
-		SemiMajorAxis 26.32 # mass ratio 0.38:0.15
-		Eccentricity   0.53
-		Inclination     172
-		AscendingNode   194
-		ArgOfPericenter  75
-		MeanAnomaly     296
-	}
-}
-
-"GQ And:Gliese 15 B:Groombridge 34 B:ADS 246 B"
-{
-	OrbitBarycenter "Groombridge 34"
-	SpectralType "M3.5V"
+	RA 4.62530068
+	Dec 44.02874452
+	Distance 11.62 # 280.6947 +/- 0.0278 mas
+	SpectralType "M3.5e"
 	AppMag 11.04
-	Radius 125200
-
-	EllipticalOrbit {
-		Period         1230
-		SemiMajorAxis 66.68 # mass ratio 0.38:0.15
-		Eccentricity   0.53
-		Inclination     172
-		AscendingNode   194
-		ArgOfPericenter 255
-		MeanAnomaly     296
-	}
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+15+B"
 }
 
-"DX Cnc:GJ 1111:Giclas 51-15"
+"DX Cnc:GJ 1111:G 51-15"
 {
-	RA 127.45009240
+	RA 127.4500924
 	Dec 26.77328597
-	Distance 11.6797 # 279.2496 +/- 0.0637 mas
-	SpectralType "M6.5V"
-	AppMag 14.81
-	InfoURL "https://en.wikipedia.org/wiki/DX_Cancri"
+	Distance 11.68 # 279.2496 +/- 0.0637 mas
+	SpectralType "M6.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+51-15"
 }
 
-Barycenter "EPS Ind:Gliese 845" # orbit of A & B components unknown
-{
-	RA 330.90487220 # mass ratio 0.732:(0.0716:0.0669)
-	Dec -56.79670693
-	Distance 11.853
-}
-
-108870 "EPS Ind A:Gliese 845 A"
+108870 # eps Ind A
 {
 	RA 330.87240788
 	Dec -56.79725466
-	Distance 11.8670 # 274.8431 +/- 0.0956 mas
-	SpectralType "K5V"
+	Distance 11.867 # 274.8431 +/- 0.0956 mas
+	SpectralType "K5"
 	AppMag 4.69
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+845+A"
 }
 
-# Dieterich et al. (2018) "Dynamical Masses of ε Indi B and C: Two Massive
-# Brown Dwarfs at the Edge of the Stellar–substellar Boundary"
-# https://arxiv.org/abs/1807.09880
-# Duplicated in CNS5: Gliese 845 B = GJ 13185
-Barycenter "EPS Ind B:CI Ind:Gliese 845 B:GJ 13185"
+"eps Ind Ba:Gliese 845 B:eps Ind B"
 {
-	RA 331.07645260
+	RA 331.0764526
 	Dec -56.79381207
-	Distance 11.780 # 276.88 +/- 0.81 mas
-}
-
-"EPS Ind Ba:CI Ind A:Gliese 845 Ba:GJ 13185 A"
-{
-	OrbitBarycenter "EPS Ind B"
-	SpectralType "T1.5V"
-	Temperature 1320
-	Radius 59000
+	Distance 12.05 # 270.658 +/- 0.6896 mas
+	SpectralType "T1"
 	AppMag 24.12
-
-	EllipticalOrbit {
-		Period          11.41
-		SemiMajorAxis    1.26 # mass ratio 75.0J:70.1J
-		Eccentricity     0.47
-		Inclination     77.95
-		AscendingNode  138.03
-		ArgOfPericenter 87.11
-		MeanAnomaly     49.82
-	}
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+845+B"
 }
 
-"EPS Ind Bb:CI Ind B:Gliese 845 Bb:GJ 13185 B"
+"eps Ind Bb:Gliese 845 C:eps Ind C"
 {
-	OrbitBarycenter "EPS Ind B"
-	SpectralType "T6V"
-	Temperature 910
-	Radius 61000
-	AbsMag 40 # extremely low
-
-	EllipticalOrbit {
-		Period           11.41
-		SemiMajorAxis     1.35 # mass ratio 75.0J:70.1J
-		Eccentricity      0.47
-		Inclination      77.95
-		AscendingNode   138.03
-		ArgOfPericenter 267.11
-		MeanAnomaly      49.82
-	}
+	RA 331.0764526
+	Dec -56.79381207
+	Distance 12.05 # 270.658 +/- 0.6896 mas
+	SpectralType "T6"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+845+C"
 }
 
-8102 # Tau Cet
+8102 # tau Cet
 {
 	RA 26.00905506
-	Dec -15.93368020
-	Distance 11.9118 # 273.8097 +/- 0.1701 mas
-	SpectralType "G8V"
-	AppMag 3.50
-	Radius 552000 # 0.793 +/- 0.004 Sol (Teixeira et al. 2009)
-	InfoURL "https://en.wikipedia.org/wiki/Tau_Ceti"
-
-	UniformRotation
-	{
-	    Period         816 # 34 days (Baliunas et al. 1996)
-	}
+	Dec -15.9336802
+	Distance 11.912 # 273.8097 +/- 0.1701 mas
+	SpectralType "G8.5"
+	AppMag 3.5
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=tau+Cet"
 }
 
-"GJ 1061:Luyten 372-58"
+"GJ 1061"
 {
 	RA 54.00339388
 	Dec -44.51436232
-	Distance 11.9839 # 272.1615 +/- 0.0316 mas
-	SpectralType "M5.5V"
-	AppMag 13.03
-	InfoURL "https://en.wikipedia.org/wiki/GJ_1061"
+	Distance 11.984 # 272.1615 +/- 0.0316 mas
+	SpectralType "M5.5"
+	AppMag 13.07
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=L+372-58"
 }
 
 5643 # YZ Cet
 {
 	RA 18.13325425
 	Dec -16.99615487
-	Distance 12.1222 # 269.0573 +/- 0.0337 mas
-	SpectralType "M4.0Ve"
+	Distance 12.122 # 269.0573 +/- 0.0337 mas
+	SpectralType "M4e"
 	AppMag 12.074
-	InfoURL "https://en.wikipedia.org/wiki/YZ_Ceti"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=YZ+Cet"
 }
 
-36208 # Luyten's Star
+36208 # Gliese 273
 {
 	RA 111.85462844
-	Dec 5.20938270
-	Distance 12.3485 # 264.1269 +/- 0.0413 mas
-	SpectralType "M3.5V"
+	Dec 5.2093827
+	Distance 12.348 # 264.1269 +/- 0.0413 mas
+	SpectralType "M3.5"
 	AppMag 9.872
-	InfoURL "https://en.wikipedia.org/wiki/Luyten%27s_Star"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BD%2B05+1668"
 }
 
-"Teegarden's Star:SO0253+1652:SO025300.5+165258:GJ 10393"
+"Teegarden's Star"
 {
 	RA 43.26964248
 	Dec 16.86437382
-	Distance 12.4970 # 260.9884 +/- 0.0934 mas
-	SpectralType "M7.0V"
-	AppMag 15.40
-	InfoURL "https://en.wikipedia.org/wiki/Teegarden%27s_Star"
+	Distance 12.497 # 260.9884 +/- 0.0934 mas
+	SpectralType "M6"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Teegarden's+Star"
 }
 
 24186 # Kapteyn's Star
 {
 	RA 77.95993735
-	Dec -45.04381270
-	Distance 12.8308 # 254.1986 +/- 0.0168 mas
-	SpectralType "M1VI"
+	Dec -45.0438127
+	Distance 12.831 # 254.1986 +/- 0.0168 mas
+	SpectralType "sdM1"
 	AppMag 8.853
-	InfoURL "https://en.wikipedia.org/wiki/Kapteyn%27s_Star"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Kapteyn's+Star"
 }
 
-105090 # Lacaille 8760
+105090 # AX Mic
 {
 	RA 319.29501814
-	Dec -38.87245640
-	Distance 12.9472 # 251.9124 +/- 0.0352 mas
-	SpectralType "M1V"
+	Dec -38.8724564
+	Distance 12.947 # 251.9124 +/- 0.0352 mas
+	SpectralType "M1"
 	AppMag 6.68
-	InfoURL "https://en.wikipedia.org/wiki/Lacaille_8760"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=AX+Mic"
 }
 
-# Used Gaia EDR3 parallax for A
-# parameters from Vigan et al. (2012), A&A 540, A131
-# "High-contrast spectroscopy of SCR J1845-6357 B"
-# https://www.aanda.org/articles/aa/abs/2012/04/aa18426-11/aa18426-11.html
-Barycenter "SCR 1845-6357:GJ 12724"
+"Kruger 60 A:Gliese 860 A:HD 239960 A"
+{
+	RA 336.99211291
+	Dec 57.69403205
+	Distance 13.078 # 249.3926 +/- 0.1653 mas
+	SpectralType "M3"
+	AppMag 11.41
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+239960A"
+}
+
+"DO Cep:Gliese 860 B:HD 239960 B"
+{
+	RA 336.99138609
+	Dec 57.69410078
+	Distance 13.048 # 249.9668 +/- 0.7414 mas
+	SpectralType "M4"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+239960B"
+}
+
+"SCR J1845-6357 A"
 {
 	RA 281.29804386
 	Dec -63.96056737
-	Distance 13.0638 # 249.6651 +/- 0.1330 mas
+	Distance 13.064 # 249.6651 +/- 0.133 mas
+	SpectralType "M8"
+	AppMag 17.4
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=SCR+J1845-6357"
 }
 
-"SCR 1845-6357 A:GJ 12724 A"
+"SCR J1845-6357 B"
 {
-	OrbitBarycenter "SCR 1845-6357"
-	SpectralType "M8.5V"
-	AppMag 17.40
-	InfoURL "https://en.wikipedia.org/wiki/SCR_1845%E2%88%926357"
-
-	EllipticalOrbit {
-		Period 		24  # estimate
-		SemiMajorAxis	1.6 # estimated mass ratio 0.07:0.045
-		ArgOfPericenter 180
-	}
+	RA 281.28054
+	Dec -63.961885
+	Distance 13.064 # 249.6651 +/- 0.133 mas
+	SpectralType "T6"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=SCR+J1845-6357B"
 }
 
-"SCR 1845-6357 B:GJ 12724 B"
-{
-	OrbitBarycenter "SCR 1845-6357"
-	SpectralType "T6V"
-	AbsMag 33.5 # for approximate radius in Celestia
-	InfoURL "https://en.wikipedia.org/wiki/SCR_1845%E2%88%926357"
-
-	EllipticalOrbit {
-		Period 		24  # estimate
-		SemiMajorAxis	2.4 # estimated mass ratio 0.07:0.045
-	}
-}
-
-Barycenter 110893 "Gliese 860:Kruger 60:ADS 15972"
-{
-	RA 336.99185002 # mass ratio 0.30:0.17
-	Dec 57.69405691 # only used DR2 parallax of A
-	Distance 13.0780 # 249.3926 +/- 0.1653 mas
-}
-
-1000923991 "Gliese 860 A:Kruger 60 A:ADS 15972 A"
-{
-	OrbitBarycenter "Kruger 60"
-	SpectralType "M3V"
-	AppMag 9.93
-	InfoURL "https://en.wikipedia.org/wiki/Kruger_60"
-
-	EllipticalOrbit {
-		Period          44.581
-		SemiMajorAxis     3.48 # mass ratio 0.30:0.17
-		Eccentricity     0.408
-		Inclination      37.20
-		AscendingNode   129.48
-		ArgOfPericenter 262.00
-		MeanAnomaly     240.36
-	}
-}
-
-2000923991 "DO Cep:Gliese 860 B:Kruger 60 B:ADS 15972 B"
-{
-	OrbitBarycenter "Kruger 60"
-	SpectralType "M4V"
-	AppMag 11.41
-	InfoURL "https://en.wikipedia.org/wiki/Kruger_60"
-
-	EllipticalOrbit {
-		Period          44.67
-		SemiMajorAxis    6.15 # mass ratio 0.30:0.17
-		Eccentricity    0.408
-		Inclination     37.20
-		AscendingNode  129.48
-		ArgOfPericenter 82.00
-		MeanAnomaly    240.36
-	}
-}
-
-"DENIS 1048-3956:DENIS J104814.6-395606:RECONS 2:GJ 11547"
+"DENIS J104814.6-395606"
 {
 	RA 162.05388772
 	Dec -39.93962595
-	Distance 13.1932 # 247.2156 +/- 0.0512 mas
-	SpectralType "M9V"
+	Distance 13.193 # 247.2156 +/- 0.0512 mas
+	SpectralType "M9"
 	AppMag 17.532
-	InfoURL "https://en.wikipedia.org/wiki/DENIS_J1048%E2%88%923956"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=DENIS+J104814.6-395606"
 }
 
-# parallax from Leggett et al. (2012), ApJ 748 (2), 74
-# "The Properties of the 500 K Dwarf UGPS J072227.51-054031.2 and a Study
-# of the Far-red Flux of Cold Brown Dwarfs"
-# https://iopscience.iop.org/article/10.1088/0004-637X/748/2/74
-"UGPS 0722-0540:UGPS J072227.51-054031.2:GJ 11075"
-{
-	RA 110.6161250
-	Dec -5.6753056
-	Distance 13.433 # 242.8 +/- 2.40 mas
-	SpectralType "T9V"
-	Temperature 505
-	Radius 60000 # approx.
-	AbsMag 40 # extremely low
-	InfoURL "https://en.wikipedia.org/wiki/UGPS_J072227.51%E2%88%92054031.2"
-}
-
-# masses and parallaxes from Benedict et al. (2016), AJ 152 (5), 141
-# "The Solar Neighborhood. XXXVII: The Mass-Luminosity Relation for Main-sequence
-# M Dwarfs"
-# http://iopscience.iop.org/article/10.3847/0004-6256/152/5/141/meta
-Barycenter 30920 "Gliese 234:Ross 614"
+30920 # Ross 614 A
 {
 	RA 97.35079477
 	Dec -2.81713072
-	Distance 13.533 # 241.0 +/- 0.4 mas
+	Distance 13.424 # 242.9659 +/- 0.8833 mas
+	SpectralType "M4.5"
+	AppMag 11.071
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Ross+614+A"
 }
 
-"V577 Mon:Gliese 234 A:Ross 614 A"
+"V577 Mon B:Gliese 234 B:Ross 614 B"
 {
-	OrbitBarycenter "Ross 614"
-	SpectralType "M4.5V"
-	AppMag 11.15
-	InfoURL "https://en.wikipedia.org/wiki/Ross_614"
-
-	EllipticalOrbit {              # fully specified orientation
-		Period           16.63
-		SemiMajorAxis     1.49 # mass ratio 0.223:0.109
-		Eccentricity      0.382
-		Inclination      53.59
-		AscendingNode    70.27
-		ArgOfPericenter 122.95
-		MeanAnomaly      15.85
-	}
-}
-
-"Gliese 234 B:Ross 614 B"
-{
-	OrbitBarycenter "Ross 614"
-	SpectralType "M7V"
+	RA 97.35079477
+	Dec -2.81713072
+	Distance 13.424 # 242.9659 +/- 0.8833 mas
+	SpectralType "M5.5"
 	AppMag 14.23
-
-	EllipticalOrbit {              # fully specified orientation
-		Period           16.63
-		SemiMajorAxis     3.05 # mass ratio 0.223:0.109
-		Eccentricity      0.382
-		Inclination      53.59
-		AscendingNode    70.27
-		ArgOfPericenter 302.95
-		MeanAnomaly      15.85
-	}
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Ross+614+B"
 }
 
-# masses and parallaxes from Benedict et al. (2016), AJ 152 (5), 141
-# "The Solar Neighborhood. XXXVII: The Mass-Luminosity Relation for Main-sequence
-# M Dwarfs"
-# http://iopscience.iop.org/article/10.3847/0004-6256/152/5/141/meta
-Barycenter "Gliese 473:Wolf 424"
+"UGPS J072227.51-054031.2"
 {
-	RA 188.31458052 # mass ratio 0.124:0.113
-	Dec 9.02196651
-	Distance 13.850 # 235.5 +/- 2.9 mas
-}
-
-"Gliese 473 A:Wolf 424 A"
-{
-	OrbitBarycenter "Wolf 424"
-	SpectralType "M5.5V"
-	AppMag 13.18
-	InfoURL "https://en.wikipedia.org/wiki/Wolf_424"
-
-	EllipticalOrbit {
-		Period          15.81
-		SemiMajorAxis    1.86 # mass ratio 0.124:0.113
-		Eccentricity     0.30
-		Inclination     29.15
-		AscendingNode  357.44
-		ArgOfPericenter 80.72
-		MeanAnomaly    172.43
-	}
-}
-
-"FL Vir:Gliese 473 B:Wolf 424 B"
-{
-	OrbitBarycenter "Wolf 424"
-	SpectralType "M5.5V"
-	AppMag 13.17
-	InfoURL "https://en.wikipedia.org/wiki/Wolf_424"
-
-	EllipticalOrbit {
-		Period           15.81
-		SemiMajorAxis     2.04 # mass ratio 0.124:0.113
-		Eccentricity      0.30
-		Inclination      29.15
-		AscendingNode   357.44
-		ArgOfPericenter 260.72
-		MeanAnomaly     172.43
-	}
+	RA 110.614629
+	Dec -5.675336
+	Distance 13.433 # 242.8 +/- 2.4 mas
+	SpectralType "> T9"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=UGPS+J072227.51-054031.2"
 }
 
 80824 # Wolf 1061
 {
 	RA 247.57481416
 	Dec -12.66785108
-	Distance 14.0500 # 232.1390 +/- 0.0268 mas
-	SpectralType "M3V"
+	Distance 14.05 # 232.139 +/- 0.0268 mas
+	SpectralType "M3"
 	AppMag 10.072
-	InfoURL "https://en.wikipedia.org/wiki/Wolf_1061"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BD-12+4523"
 }
 
-3829 # van Maanen's Star
+3829 # Wolf 28
 {
 	RA 12.29674025
 	Dec 5.37655661
-	Distance 14.0718 # 231.7800 +/- 0.0183 mas
-	SpectralType "DZ7.5"
+	Distance 14.072 # 231.78 +/- 0.0183 mas
+	SpectralType "DZ"
 	AppMag 12.374
-	InfoURL "https://en.wikipedia.org/wiki/Van_Maanen_2"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Wolf+28"
 }
 
-439 # Gliese 1
+"FL Vir A:Gliese 473 A:Wolf 424 A"
+{
+	RA 188.3144928
+	Dec 9.02209162
+	Distance 14.112 # 231.1185 +/- 0.5119 mas
+	SpectralType "M5.5"
+	AppMag 12.467
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Wolf+424"
+}
+
+"FL Vir B:Gliese 473 B:Wolf 424 B"
+{
+	RA 188.31467678
+	Dec 9.02182921
+	Distance 14.595 # 223.4775 +/- 0.4665 mas
+	SpectralType "M7"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Wolf+424"
+}
+
+439 # HD 225213
 {
 	RA 1.38328415
 	Dec -37.36774403
-	Distance 14.1747 # 230.0970 +/- 0.0362 mas
-	SpectralType "M2V"
+	Distance 14.175 # 230.097 +/- 0.0362 mas
+	SpectralType "M2"
 	AppMag 8.562
-	InfoURL "https://en.wikipedia.org/wiki/Gliese_1"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+225213"
 }
 
-"TZ Ari:Gliese 83.1:GJ 9066:Luyten 1159-16"
+"Gliese 83.1:GJ 9066"
 {
 	RA 30.05898705
-	Dec 13.04407120
-	Distance 14.5780 # 223.7321 +/- 0.0699 mas
-	SpectralType "M4.5V"
+	Dec 13.0440712
+	Distance 14.578 # 223.7321 +/- 0.0699 mas
+	SpectralType "M4.5"
 	AppMag 12.298
-	InfoURL "https://en.wikipedia.org/wiki/TZ_Arietis"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=TZ+Ari"
 }
 
 86162 # Gliese 687
 {
 	RA 264.10405257
 	Dec 68.33349764
-	Distance 14.8395 # 219.7898 +/- 0.0210 mas
-	SpectralType "M3.0V"
-	AppMag 9.15
-	InfoURL "https://en.wikipedia.org/wiki/Gliese_687"
+	Distance 14.839 # 219.7898 +/- 0.021 mas
+	SpectralType "M3"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BD%2B68+946"
 }
 
 85523 # Gliese 674
 {
 	RA 262.17016392
-	Dec -46.89910490
-	Distance 14.8492 # 219.6463 +/- 0.0262 mas
-	SpectralType "M3V"
+	Dec -46.8991049
+	Distance 14.849 # 219.6463 +/- 0.0262 mas
+	SpectralType "M2"
 	AppMag 9.407
-	InfoURL "https://en.wikipedia.org/wiki/Gliese_674"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=CD-46+11540"
 }
 
-# parameters from Kirkpatrick et al. (2021)
-"WISE 1639-6847:WISE J163940.83-684738.6:GJ 12393"
+"WISE J163940.83-684738.6"
 {
 	RA 249.922582
 	Dec -68.798903
 	Distance 14.852 # 219.6 +/- 2.3 mas
-	SpectralType "Y0Vpec"
-	Temperature 412
-	Radius 60000 # approx.
-	AbsMag 40 # extremely low
-	InfoURL "https://en.wikipedia.org/wiki/WISE_1639%E2%88%926847"
+	SpectralType "Y0pec"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISE+J163940.83-684738.6"
 }
 
 "GJ 3622:LP 731-58"
 {
-	RA 162.05518400
+	RA 162.055184
 	Dec -11.34280332
-	Distance 14.8706 # 219.3302 +/- 0.0602 mas
-	SpectralType "M6.5V"
+	Distance 14.871 # 219.3302 +/- 0.0602 mas
+	SpectralType "M6.5"
 	AppMag 15.784
-	InfoURL "https://en.wikipedia.org/wiki/LHS_292"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=LP+731-58"
 }
 
-57367 # Luyten 145-141
+57367 # LAWD 37
 {
 	RA 176.45664662
 	Dec -64.84305285
-	Distance 15.1226 # 215.6753 +/- 0.0181 mas
-	SpectralType "DQ6"
+	Distance 15.123 # 215.6753 +/- 0.0181 mas
+	SpectralType "DQ"
 	AppMag 11.513
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=LAWD+37"
 }
 
-# Used Gaia EDR3 parallax for B
-# masses from Benedict et al. (2016), AJ 152 (5), 141
-# "The Solar Neighborhood. XXXVII: The Mass-Luminosity Relation for Main-sequence
-# M Dwarfs"
-# http://iopscience.iop.org/article/10.3847/0004-6256/152/5/141/meta
-# orbit listed for A-B in Sixth Catalog yields unrealistically high mass sum
-Barycenter "GJ 1245"
-{
-	RA 298.48051408 # mass ratio (0.111:0.076):0.10
-	Dec 44.41253085
-	Distance 15.2001 # 214.5745 +/- 0.0476 mas
-}
-
-Barycenter "GJ 1245 A"
+"GJ 1245 A"
 {
 	RA 298.47975909
 	Dec 44.41233014
-	Distance 15.2001
+	Distance 15.303 # 213.1329 +/- 0.5737 mas
+	SpectralType "M5.5"
+	AppMag 13.126
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+1245+A"
 }
 
-"V1581 Cyg:GJ 1245 Aa"
+"GJ 1245 C"
 {
-	OrbitBarycenter "GJ 1245 A"
-	SpectralType "M5.5V"
-	AppMag 13.46
-
-	EllipticalOrbit {
-		Period           16.84
-		SemiMajorAxis     1.56 # mass ratio 0.111:0.076
-		Eccentricity      0.33
-		Inclination      70.45
-		AscendingNode    37.06
-		ArgOfPericenter 208.50
-		MeanAnomaly       2.21
-	}
-}
-
-"GJ 1245 Ab"
-{
-	OrbitBarycenter "GJ 1245 A"
-	SpectralType "M7.5V"
-	AppMag 16.75
-
-	EllipticalOrbit {
-		Period          16.84
-		SemiMajorAxis    2.29 # mass ratio 0.111:0.076
-		Eccentricity     0.33
-		Inclination     70.45
-		AscendingNode   37.06
-		ArgOfPericenter 28.50
-		MeanAnomaly      2.21
-	}
+	RA 298.47975909
+	Dec 44.41233014
+	Distance 15.303 # 213.1329 +/- 0.5737 mas
+	SpectralType "M8"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+1245+C"
 }
 
 "GJ 1245 B"
 {
-	RA 298.48192590
+	RA 298.4819259
 	Dec 44.41290616
-	Distance 15.2001
-	SpectralType "M6V"
+	Distance 15.2 # 214.5745 +/- 0.0476 mas
+	SpectralType "M5.5"
 	AppMag 13.99
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+1245+B"
 }
 
-# parallax from Kirkpatrick et al. (2019), ApJS 240 (2), 19
-# "Preliminary Trigonometric Parallaxes of 184 Late-T and Y Dwarfs and an
-# Analysis of the Field Substellar Mass Function into the 'Planetary' Mass Regime"
-# https://iopscience.iop.org/article/10.3847/1538-4365/aaf6af
-# rotation period, radius from Burningham et al. (2016), MNRAS 463, 2
-# "A LOFAR mini-survey for low-frequency radio emission from the nearest brown dwarfs"
-# https://academic.oup.com/mnras/article/463/2/2202/2892466
-"WISE 1741+2553:WISE J174124.25+255319.6:GJ 12549"
+"WISEP J174124.25+255319.5"
 {
 	RA 265.352586
 	Dec 25.892878
-	Distance 15.220 # 214.3 +/- 2.8 mas
-	SpectralType "T9V"
-	Temperature 620
-	Radius 60000 # approx.
-	AbsMag 40 # extremely low
-	RotationPeriod 2
-	InfoURL "https://en.wikipedia.org/wiki/WISEPA_J174124.26%2B255319.5"
+	Distance 15.22 # 214.3 +/- 2.8 mas
+	SpectralType "T9"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISEP+J174124.25%2B255319.5"
 }
 
 113020 # Gliese 876
 {
-	RA 343.32411100
+	RA 343.324111
 	Dec -14.26668939
-	Distance 15.2382 # 214.0380 +/- 0.0356 mas
-	SpectralType "M3.5V"
+	Distance 15.256 # 213.7873 +/- 0.0739 mas
+	SpectralType "M4"
 	AppMag 10.192
-	InfoURL "https://en.wikipedia.org/wiki/Gliese_876"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BD-15+6290"
 }
 
-"GJ 3618:Luyten 143-23"
+"GJ 3618:L 143-23"
 {
 	RA 161.08527551
-	Dec -61.20263830
-	Distance 15.7586 # 206.9698 +/- 0.0448 mas 
-	SpectralType "M5.0V"
-	AppMag 13.920
-	InfoURL "https://en.wikipedia.org/wiki/LHS_288"
+	Dec -61.2026383
+	Distance 15.759 # 206.9698 +/- 0.0448 mas
+	SpectralType "M5.5"
+	AppMag 13.92
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=L+143-23"
 }
 
-"GJ 1002"
+"GJ 1002:G 158-27"
 {
 	RA 1.67635043
 	Dec -7.54647533
-	Distance 15.8060 # 206.3500 +/- 0.0474 mas
-	SpectralType "M5.5V"
-	Radius 122000 # approx. for class
+	Distance 15.806 # 206.35 +/- 0.0474 mas
+	SpectralType "M5.5"
 	AppMag 13.837
-	InfoURL "https://en.wikipedia.org/wiki/GJ_1002"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+158-27"
 }
 
-"DENIS 0255-4700:DENIS-P J025503.5-470050:2MASS 0255-4700:2MASS J02550357-4700509:GJ 10402"
+"DENIS 0255-4700:DENIS J025503.3-470049"
 {
 	RA 43.77198593
 	Dec -47.01672836
-	Distance 15.8771 # 205.4251 +/- 0.1857 mas
-	SpectralType "L9V"
-	Radius 60000 # approx.
+	Distance 15.877 # 205.4251 +/- 0.1857 mas
+	SpectralType "L9"
 	AppMag 22.921
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=DENIS+J025503.3-470049"
 }
 
-49908 # Groombridge 1618
+49908 # HD 88230
 {
 	RA 152.83292896
-	Dec 49.45198890
-	Distance 15.8857 # 205.3148 +/- 0.0224 mas
-	SpectralType "K6Ve"
+	Dec 49.4519889
+	Distance 15.886 # 205.3148 +/- 0.0224 mas
+	SpectralType "K7.5e"
 	AppMag 6.61
-	InfoURL "https://en.wikipedia.org/wiki/Groombridge_1618"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+88230"
 }
 
-# masses from Mann et al. (2015), ApJ 804 (1), 64
-# "How to Constrain Your M Dwarf: Measuring Effective Temperature, 
-# Bolometric Luminosity, Mass, and Radius"
-# http://iopscience.iop.org/article/10.1088/0004-637X/804/1/64/meta
-Barycenter 54211 "Gliese 412:Lalande 21258" # orbits of A & B unknown
-{
-	RA 166.34402770 # mass ratio 0.39:0.0952
-	Dec 43.52995949
-	Distance 15.9977
-}
-
-"Gliese 412 A:Lalande 21258 A"
+54211 # BD+44 2051 A
 {
 	RA 166.34205974
 	Dec 43.53094856
-	Distance 15.9969 # 203.8876 +/- 0.0332 mas
-	SpectralType "M1.0Ve"
-	AppMag 8.780
+	Distance 15.997 # 203.8876 +/- 0.0332 mas
+	SpectralType "M1"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BD%2B44+2051"
 }
 
-"WX UMa:Gliese 412 B:Lalande 21258 B"
+"WX UMa:Gliese 412 B:BD+44 2051 B"
 {
 	RA 166.35208968
 	Dec 43.52590762
-	Distance 16.0012 # 203.8323 +/- 0.0500 mas
-	SpectralType "M6.0V"
+	Distance 16.001 # 203.8323 +/- 0.05 mas
+	SpectralType "M5.5"
 	AppMag 14.45
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BD%2B44+2051B"
 }
 
-1001741423 "AD Leo:Gliese 388"
+"AD Leo:Gliese 388:BD+20 2465"
 {
-	RA 154.89881370
+	RA 154.8988137
 	Dec 19.86980991
-	Distance 16.1939 # 201.4064 +/- 0.0296 mas
-	SpectralType "M4Vae"
-	Radius 180000 # approx. for class
+	Distance 16.194 # 201.4064 +/- 0.0296 mas
+	SpectralType "M3"
 	AppMag 9.52
-	InfoURL "https://en.wikipedia.org/wiki/AD_Leonis"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BD%2B20+2465"
 }
 
 106440 # Gliese 832
 {
 	RA 323.39125188
-	Dec -49.01263040
-	Distance 16.2005 # 201.3252 +/- 0.0237 mas
-	SpectralType "M2V"
-	Radius 306000 # approx. for class
+	Dec -49.0126304
+	Distance 16.2 # 201.3252 +/- 0.0237 mas
+	SpectralType "M1.5"
 	AppMag 8.672
-	InfoURL "https://en.wikipedia.org/wiki/Gliese_832"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+204961"
 }
 
 86214 # Gliese 682
 {
 	RA 264.26088739
 	Dec -44.32338224
-	Distance 16.3328 # 199.6944 +/- 0.0312 mas
-	SpectralType "M3.5V"
-	Radius 180000 # approx. for class
+	Distance 16.333 # 199.6944 +/- 0.0312 mas
+	SpectralType "M5"
 	AppMag 10.946
-	InfoURL "https://en.wikipedia.org/wiki/Gliese_682"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=CD-44+11909"
 }
 
-# mass of component A from Ma et al. (2018), MNRAS 480 (2), 2411
-# "The first super-Earth detection from the high cadence and high radial velocity 
-# precision Dharma Planet Survey"
-# https://arxiv.org/abs/1807.07098
-Barycenter 19849 "Keid:OMI2 Eri:40 Eri:Gliese 166:ADS 3093" # Orbits of A & (BC) unknown
-{
-	RA 63.81919733 # mass ratio 0.78:(0.573:0.2036)
-	Dec -7.67024168
-	Distance 16.3399
-}
-
-"Keid A:OMI2 Eri A:40 Eri A:Gliese 166 A:ADS 3093 A"
+19849 # Gliese 166 A
 {
 	RA 63.80795301
 	Dec -7.66807782
-	Distance 16.3398 # 199.6080 +/- 0.1208 mas
-	SpectralType "K0V"
+	Distance 16.34 # 199.608 +/- 0.1208 mas
+	SpectralType "K0.5"
 	AppMag 4.43
-	InfoURL "https://en.wikipedia.org/wiki/40_Eridani"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+166+A"
 }
 
-Barycenter "Keid BC:OMI2 Eri BC:40 Eri BC:Gliese 166 BC"
+"Gliese 166 B"
 {
-	RA 63.83049088 # mass ratio 0.573:0.2036
-	Dec -7.67241502 # B: 199.6911 +/- 0.0512 mas
-	Distance 16.340 # C: 199.4516 +/- 0.0692 mas
-}
-
-# radius from Bond et al. (2017), ApJ 848 (1), 16
-# "Astrophysical Implications of a New Dynamical Mass for the 
-# Nearby White Dwarf 40 Eridani B"
-# http://iopscience.iop.org/article/10.3847/1538-4357/aa8a63/meta
-"Keid B:OMI2 Eri B:40 Eri B:Gliese 166 B:ADS 3093 B"
-{
-	OrbitBarycenter "Keid BC"
-	SpectralType "DA3"
-	Radius 9100
+	RA 63.83078752
+	Dec -7.67295214
+	Distance 16.333 # 199.6911 +/- 0.0512 mas
+	SpectralType "DA2.9"
 	AppMag 9.53
-	InfoURL "https://en.wikipedia.org/wiki/40_Eridani"
-
-	EllipticalOrbit {	
-		Period         222.74
-		SemiMajorAxis    9.17 # mass ratio 0.573:0.2036
-		Eccentricity    0.451
-		Inclination     83.57
-		AscendingNode  216.91
-		ArgOfPericenter 77.11
-		MeanAnomaly    245.29
-	}
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+166+B"
 }
 
-"Keid C:OMI2 Eri C:40 Eri C:DY Eri:Gliese 166 C:ADS 3093 C"
+"DY Eri:Gliese 166 C"
 {
-	OrbitBarycenter "Keid BC"
-	SpectralType "M4.5V"
-	Radius 180000 # approx. for class
+	RA 63.82965602
+	Dec -7.67090338
+	Distance 16.353 # 199.4516 +/- 0.0692 mas
+	SpectralType "M4.5"
 	AppMag 11.17
-	InfoURL "https://en.wikipedia.org/wiki/40_Eridani"
-
-	EllipticalOrbit {
-		Period          222.74
-		SemiMajorAxis    25.82 # mass ratio 0.573:0.2036
-		Eccentricity     0.451
-		Inclination      83.57
-		AscendingNode   216.91
-		ArgOfPericenter 257.11
-		MeanAnomaly     245.29
-	}
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+166+C"
 }
 
 112460 # EV Lac
 {
 	RA 341.70282545
 	Dec 44.33195332
-	Distance 16.4761 # 197.9573 +/- 0.0220 mas
-	SpectralType "M4.0V"
-	Radius 225000 # approx. for class
+	Distance 16.476 # 197.9573 +/- 0.022 mas
+	SpectralType "M4"
 	AppMag 10.26
-	InfoURL "https://en.wikipedia.org/wiki/EV_Lacertae"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=EV+Lac"
 }
 
-# Eggenberger et al. (2008), A&A 482 (2), 631
-# "Analysis of 70 Ophiuchi AB including seismic constraints"
-# https://www.aanda.org/articles/aa/abs/2008/17/aa8624-07/aa8624-07.html
-Barycenter 88601 "70 Oph:Gliese 702:Struve 2272:ADS 11046"
+"EI Cnc A:GJ 1116 A:G 9-38 A"
 {
-	RA 271.36511072 # mass ratio 0.89:0.73
-	Dec 2.49476206 # A: 195.5674 +/- 0.1964 mas
-	Distance 16.668 # B: 195.8563 +/- 0.2535 mas
-}
-
-1052130434 "70 Oph A:Gliese 702 A:Struve 2272 A:ADS 11046 A"
-{
-	OrbitBarycenter "70 Oph"
-	SpectralType "K0V"
-	AppMag 4.13
-
-	EllipticalOrbit {              # fully specified orientation
-		Period           88.44
-		SemiMajorAxis    10.42 # mass ratio 0.89:0.73
-		Eccentricity      0.50
-		Inclination      28.75
-		AscendingNode    73.59
-		ArgOfPericenter 285.57
-		MeanAnomaly      63.92
-	}
-}
-
-1052120434 "70 Oph B:V2391 Oph:Gliese 702 B:Struve 2272 B:ADS 11046 B"
-{
-	OrbitBarycenter "70 Oph"
-	SpectralType "K4V"
-	AppMag 6.07
-
-	EllipticalOrbit {              # fully specified orientation
-		Period           88.44
-		SemiMajorAxis    12.71 # mass ratio 0.89:0.73
-		Eccentricity      0.50
-		Inclination      28.75
-		AscendingNode    73.59
-		ArgOfPericenter 105.57
-		MeanAnomaly      63.92
-	}
-}
-
-# rotational parameters from Bouchaud et al. (2020), A&A 633, A78
-# "A realistic two-dimensional model of Altair"
-# https://arxiv.org/abs/1912.03138
-97649 # Altair
-{
-	RA 297.69582730
-	Dec 8.86832120
-	Distance 16.730 # 194.95 +/- 0.57 mas
-	SpectralType "A7IV"
-	AppMag 0.76
-	Radius 1396700 # equatorial radius
-
-	SemiAxes [ 1 0.779 1 ] # equatorial radius 28.3% greater than polar
-	InfoURL "https://en.wikipedia.org/wiki/Altair"
-
-	UniformRotation
-	{
-		Period          7.79 # from equatorial rotational velocity
-		Inclination    81.21 # inclination (i) = 50.65 deg
-		AscendingNode 246.44 # orientation (alpha) = 301.13 deg
-	}
-}
-
-# Orbit from Tokovinin et al. (2020), AJ 160 (1), 7
-# "Speckle Interferometry at SOAR in 2019"
-# https://arxiv.org/abs/2005.05305
-Barycenter "GJ 1116"
-{
-	RA 134.55895246 # mass ratio 0.11:0.10
-	Dec 19.76277843 # A: 194.1443 +/- 0.1228 mas
-	Distance 16.749 # B: 196.2619 +/- 0.1976 mas
-}
-
-"EI Cnc:GJ 1116 A"
-{
-	OrbitBarycenter "GJ 1116"
-	SpectralType "M8Ve"
+	RA 134.55918968
+	Dec 19.76295984
+	Distance 16.8 # 194.1443 +/- 0.1228 mas
+	SpectralType "M7"
 	AppMag 13.93
-	InfoURL "https://en.wikipedia.org/wiki/G_9-38"
-
-	EllipticalOrbit {
-		Period          134.4
-		SemiMajorAxis   7.91 # mass ratio 0.11:0.10
-		Eccentricity    0.661
-		Inclination     84.9
-		AscendingNode   59.9
-		ArgOfPericenter 22.9
-		MeanAnomaly     343.3
-	}
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+9-38+A"
 }
 
-"GJ 1116 B:LP 426-40"
+"EI Cnc B:GJ 1116 B:G 9-38 B"
 {
-	OrbitBarycenter "GJ 1116"
-	SpectralType "M7V"
+	RA 134.55869151
+	Dec 19.76257888
+	Distance 16.618 # 196.2619 +/- 0.1976 mas
+	SpectralType "M7"
 	AppMag 13.75
-
-	EllipticalOrbit {
-		Period          134.4
-		SemiMajorAxis   8.70 # mass ratio 0.11:0.10
-		Eccentricity    0.661
-		Inclination     84.9
-		AscendingNode   59.9
-		ArgOfPericenter 202.9
-		MeanAnomaly     343.3
-	}
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+9-38+B"
 }
 
-# rotation period from Burningham et al. (2016), MNRAS 463 (2), 2202
-# "A LOFAR mini-survey for low-frequency radio emission from the nearest brown
-# dwarfs"
-# https://academic.oup.com/mnras/article/463/2/2202/2892466
-"WISE 1506+7027:WISE J150649.97+702736.1:GJ 12169"
+88601 # 70 Oph A
+{
+	RA 271.36445382
+	Dec 2.4952241
+	Distance 16.677 # 195.5674 +/- 0.1964 mas
+	SpectralType "K0"
+	AppMag 4.03
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=70+Oph+A"
+}
+
+"Gliese 702 B:70 Oph B"
+{
+	RA 271.36591161
+	Dec 2.49419876
+	Distance 16.653 # 195.8563 +/- 0.2535 mas
+	SpectralType "K4"
+	AppMag 6.07
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=70+Oph+B"
+}
+
+97649 # alf Aql
+{
+	RA 297.6958273
+	Dec 8.8683212
+	Distance 16.73 # 194.95 +/- 0.57 mas
+	SpectralType "A7"
+	AppMag 0.76
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=alf+Aql"
+}
+
+"2MASS J15065257+7027247"
 {
 	RA 226.70263615
 	Dec 70.46161913
-	Distance 16.8173 # 193.9412 +/- 0.6277 mas
-	AppMag 17.48 # calculated from J, H, and Ks bands
+	Distance 16.817 # 193.9412 +/- 0.6277 mas
 	SpectralType "T6"
-	Radius 60000 # approx.
-	RotationPeriod 1.74
-	Temperature 1000
-	InfoURL "https://en.wikipedia.org/wiki/WISE_1506%2B7027"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASS+J15065257%2B7027247"
 }
 
-1006050134 "GJ 3379:Giclas 99-49"
+"GJ 3379:G 99-49"
 {
 	RA 90.01597644
 	Dec 2.70637408
-	Distance 16.9861 # 192.0135 +/- 0.0310 mas
-	SpectralType "M3.5Ve"
-	Radius 225000 # approx. for class
+	Distance 16.986 # 192.0135 +/- 0.031 mas
+	SpectralType "M3.5e"
 	AppMag 11.31
-	InfoURL "https://en.wikipedia.org/wiki/GJ_3379"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+99-49"
 }
 
-"WISE 0817-6155:WISEP J081729.74-615504.1:GJ 11204"
+"2MASS J08173001-6155158"
 {
 	RA 124.37351806
 	Dec -61.91613022
-	Distance 17.0018 # 191.8362 +/- 0.4186 mas
-	SpectralType "T6V"
-	AbsMag 34 # for approximate radius in Celestia
+	Distance 17.002 # 191.8362 +/- 0.4186 mas
+	SpectralType "T6"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASS+J08173001-6155158"
 }
 
-57544 # Gliese 445
+57544 # G 254-29
 {
 	RA 176.93940798
 	Dec 78.69329745
-	Distance 17.1368 # 190.3251 +/- 0.0194 mas
-	SpectralType "M4.0Ve"
-	Radius 181000 # approx. for class
-	AppMag 10.84
-	InfoURL "https://en.wikipedia.org/wiki/Gliese_445"
+	Distance 17.137 # 190.3251 +/- 0.0194 mas
+	SpectralType "M4e"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+254-29"
 }
 
-# magnitude from Perez Garrido et al. (2014), A&A 567, A6
-# "2MASS J154043.42-510135.7: a new addition to the 5 pc population"
-# https://www.aanda.org/articles/aa/abs/2014/07/aa23615-14/aa23615-14.html
-# Appears to be duplicated in CNS5 GJ 12258=GJ 12259
-"WISE 1540-5101:WISE J154045.65-510139.2:GJ 12258:GJ 12259"
+"WISEA J154045.67-510139.3"
 {
 	RA 235.19517746
 	Dec -51.02810131
-	Distance 17.3738 # 187.7290 +/- 0.0496 mas
+	Distance 17.374 # 187.729 +/- 0.0496 mas
 	SpectralType "M6.5"
-	Radius 83500 # approx. for class
-	AppMag 15.26 # measured w/ ESO Faint Object Spectrograph and Camera
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISEA+J154045.67-510139.3"
 }
 
-# Leggett et al. (2009), ApJ 695, 1517
-# "The phyical properties of four 600K T dwarfs."
-# http://iopscience.iop.org/article/10.1088/0004-637X/695/2/1517/meta
-# unresolved binary; separation and orbit unknown
-"2MASS 0939-2448 A:2MASS J09393548-2448279 A:GJ 11394 A"
+"2MASS J09393548-2448279"
 {
-	RA 144.897865
-	Dec -24.807761
-	Distance 17.414 # 187.30 +/- 4.60 mas
-	SpectralType "T8V"
-	Temperature 600
-	Radius 60000 # approx.
-	AbsMag 40 # extremely low
+	RA 144.897874
+	Dec -24.807762
+	Distance 17.414 # 187.3 +/- 4.6 mas
+	SpectralType "T8"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASS+J09393548-2448279"
 }
 
-"2MASS 0939-2448 B:2MASS J09393548-2448279 B:GJ 11394 B"
-{
-	RA 144.897885
-	Dec -24.807761
-	Distance 17.414 # 187.30 +/- 4.60 mas
-	SpectralType "T8V"
-	Temperature 600
-	Radius 60000 # approx.
-	AbsMag 40 # extremely low
-}
-
-"GJ 3323:LP 656-38:RECONS 3"
+"GJ 3323"
 {
 	RA 75.48680521
 	Dec -6.94858741
-	Distance 17.5309 # 186.0466 +/- 0.0277 mas
-	SpectralType "M4.0Ve"
-	Radius 180000 # approx. for class
+	Distance 17.531 # 186.0466 +/- 0.0277 mas
+	SpectralType "M4e"
 	AppMag 12.196
-	InfoURL "https://en.wikipedia.org/wiki/GJ_3323"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=LP+656-38"
 }
 
-67155 # Lalande 25372
+67155 # HD 119850
 {
 	RA 206.44056584
-	Dec 14.88505270
-	Distance 17.7263 # 183.9962 +/- 0.0253 mas
-	SpectralType "M2V"
-	Radius 306000 # approx. for class
-	AppMag 8.50
-	InfoURL "https://en.wikipedia.org/wiki/Gliese_526"
+	Dec 14.8850527
+	Distance 17.726 # 183.9962 +/- 0.0253 mas
+	SpectralType "M1.5"
+	AppMag 8.5
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+119850"
 }
 
-# parameters from Sahu et al. (2017), Science 356 (6342), 1046
-# "Relativistic deflection of background starlight measures the mass of 
-# a nearby white dwarf star"
-# https://arxiv.org/abs/1706.02037
-# orbit listed in Sixth Orbit Catalogue is of poor quality, so unused
-Barycenter 21088 "Gliese 169.1:Stein 2051"
-{
-	RA 67.81236059 # mass ratio MB/MA 2.07
-	Dec 58.96899220
-	Distance 17.9935
-}
-
-1004123744 "Gliese 169.1 A:Stein 2051 A"
+"Stein 2051 A:Gliese 169.1 A"
 {
 	RA 67.80919063
 	Dec 58.96797997
-	Distance 17.9954 # 181.2438 +/- 0.0499 mas
-	SpectralType "M4V"
-	Radius 180000 # approx. for class
-	AppMag 10.977
-	InfoURL "https://en.wikipedia.org/wiki/Stein_2051"
+	Distance 17.995 # 181.2438 +/- 0.0499 mas
+	SpectralType "M4e"
+	AppMag 10.98
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+169.1+A"
 }
 
-1020623744 "Gliese 169.1 B:Stein 2051 B"
+"Stein 2051 B:Gliese 169.1 B"
 {
 	RA 67.81389197
 	Dec 58.96948121
-	Distance 17.9926 # 181.2730 +/- 0.0203 mas
-	SpectralType "DC5"
-	Temperature 7122
-	Radius 7900
-	AppMag 11.19
-	InfoURL "https://en.wikipedia.org/wiki/Stein_2051"
+	Distance 17.993 # 181.273 +/- 0.0203 mas
+	SpectralType "DC"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+169.1+B"
 }
 
-# coordinates, parallax from Dupuy & Liu (2012), ApJS 201 (2), 19
-# "The Hawaii Infrared Parallax Program. I. Ultracool Binaries and the L/T Transition"
-# http://iopscience.iop.org/article/10.1088/0067-0049/201/2/19/meta
-# radius and temperature from Line et al. (2017), ApJ 848 (2), 83
-# "Uniform Atmospheric Retrieval Analysis of Ultracool Dwarfs. II. Properties 
-# of 11 T dwarfs"
-# http://iopscience.iop.org/0004-637X/848/2/83/
-"2MASS 1114-2618:2MASS J11145133-2618235:GJ 11600"
+"2MASS J11145133-2618235"
 {
-	RA 168.7032979
-	Dec -26.3074976
+	RA 168.713905
+	Dec -26.306545
 	Distance 18.201 # 179.2 +/- 1.4 mas
-	SpectralType "T7.5V"
-	Temperature 680
-	Radius 64000
-	AbsMag 40 # extremely low
-	InfoURL "https://en.wikipedia.org/wiki/2MASS_J11145133%E2%88%922618235"
+	SpectralType "T7.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASS+J11145133-2618235"
 }
 
-33226 # Wolf 294
+33226 # Gliese 251
 {
 	RA 103.70012923
 	Dec 33.26640802
-	Distance 18.2146 # 179.0629 +/- 0.0280 mas
-	SpectralType "M3V"
-	Radius 270000 # approx. for class
-	AppMag 10.11
-	InfoURL "https://en.wikipedia.org/wiki/Gliese_251"
+	Distance 18.215 # 179.0629 +/- 0.028 mas
+	SpectralType "M3"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+265866"
 }
 
 103039 # LP 816-60
 {
 	RA 313.13613276
 	Dec -16.97455847
-	Distance 18.3305 # 177.9312 +/- 0.0365 mas
-	SpectralType "M4V"
-	Radius 181000 # approx. for class
+	Distance 18.33 # 177.9312 +/- 0.0365 mas
+	SpectralType "M4"
 	AppMag 11.458
-	InfoURL "https://en.wikipedia.org/wiki/LP_816-60"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=LP+816-60"
 }
 
-# parameters from Kirkpatrick et al. (2021)
-"WISE 0350-5658:WISE J035000.32-565830.2:GJ 10528"
+"WISE J035000.32-565830.2"
 {
 	RA 57.500868
 	Dec -56.975831
-	Distance 18.490 # 176.4 +/- 2.3 mas
-	SpectralType "Y1V"
-	Temperature 388
-	Radius 60000 # approx.
-	AbsMag 40 # extremely low
-	InfoURL "https://en.wikipedia.org/wiki/WISE_0350%E2%88%925658"
+	Distance 18.49 # 176.4 +/- 2.3 mas
+	SpectralType "Y1"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISE+J035000.32-565830.2"
 }
 
-"2MASS 1835+3259:2MASS J18353790+3259545:GJ 12692"
+"2MASSI J1835379+325954"
 {
 	RA 278.90744885
 	Dec 32.99478716
-	Distance 18.5534 # 175.7930 +/- 0.0468 mas
-	SpectralType "M8.5V"
-	Radius 66000 # approx. for class
-	AppMag 18.27
-	InfoURL "https://en.wikipedia.org/wiki/LSR_J1835%2B3259"
+	Distance 18.553 # 175.793 +/- 0.0468 mas
+	SpectralType "M8.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASSI+J1835379%2B325954"
 }
 
-25878 # Wolf 1453
+25878 # HD 36395
 {
 	RA 82.86754111
-	Dec -3.68652760
-	Distance 18.6042 # 175.3131 +/- 0.0204 mas
-	SpectralType "M1.5Ve"
-	Radius 324000 # approx. for class
+	Dec -3.6865276
+	Distance 18.604 # 175.3131 +/- 0.0204 mas
+	SpectralType "M1.5"
 	AppMag 7.968
-	InfoURL "https://en.wikipedia.org/wiki/Gliese_205"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+36395"
 }
 
-# coordinates, parallax from Dupuy & Liu (2012), ApJS 201 (2), 19
-# "The Hawaii Infrared Parallax Program. I. Ultracool Binaries and the L/T Transition"
-# http://iopscience.iop.org/article/10.1088/0067-0049/201/2/19/meta
-"2MASS 0415-0935:2MASS J04151954-0935066:GJ 10582"
+"2MASSI J0415195-093506"
 {
-	RA 63.8381022
-	Dec -9.5835266
+	RA 63.831432
+	Dec -9.585187
 	Distance 18.616 # 175.2 +/- 1.7 mas
-	SpectralType "T8.0V"
-	Temperature 750
-	Radius 60000 # approx.
-	AbsMag 40 # extremely low
-	InfoURL "https://en.wikipedia.org/wiki/2MASS_J04151954%E2%88%920935066"
+	SpectralType "T8"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASSI+J0415195-093506"
 }
 
-# Brandt et al. (2021), AJ 162 (6), 301
-# "Improved Dynamical Masses for Six Brown Dwarf Companions Using Hipparcos and Gaia EDR3"
-# https://iopscience.iop.org/article/10.3847/1538-3881/ac273e
-Barycenter 29295 "Gliese 229:Luyten 668-21:LPM 230"
+29295 # Gliese 229 A
 {
 	RA 92.64357908
 	Dec -21.86782311
-	Distance 18.7906 # 173.574 +/- 0.013 mas
-}
-
-"Gliese 229 A:Luyten 668-21 A:LPM 230 A"
-{
-	OrbitBarycenter "Gliese 229"
-	SpectralType "M1V"
+	Distance 18.791 # 173.574 +/- 0.017 mas
+	SpectralType "M1"
 	AppMag 8.125
-	Radius 341000 # approx. for class
-	InfoURL "https://en.wikipedia.org/wiki/Gliese_229"
-
-	EllipticalOrbit {             # fully specified orbit
-		Period          237.9
-		SemiMajorAxis     3.5 # mass ratio 0.579:71.4J
-		Eccentricity    0.851
-		Inclination      49.0
-		AscendingNode    12.3
-		ArgOfPericenter 224.5
-		MeanAnomaly       296
-	}
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+42581"
 }
 
-"Gliese 229 B:Luyten 668-21 B:LPM 230 B"
+"Gliese 229 B"
 {
-	OrbitBarycenter "Gliese 229"
-	SpectralType "T6.5V"
-	AbsMag 33.5 # for approximate radius in Celestia
-	InfoURL "https://en.wikipedia.org/wiki/Gliese_229#Brown_dwarf"
-
-	EllipticalOrbit {             # fully specified orbit
-		Period          237.9
-		SemiMajorAxis    29.8 # mass ratio 0.579:71.4J
-		Eccentricity    0.851
-		Inclination      49.0
-		AscendingNode    12.3
-		ArgOfPericenter  44.5
-		MeanAnomaly       296
-	}
+	RA 92.645
+	Dec -21.86666667
+	Distance 18.832 # 173.19 +/- 1.12 mas
+	SpectralType "T7pec"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+42581B"
 }
 
-96100 # Sig Dra
+96100 # sig Dra
 {
 	RA 293.09759805
 	Dec 69.65345106
-	Distance 18.7993 # 173.4939 +/- 0.0748 mas
-	SpectralType "K0V"
-	AppMag 4.680
+	Distance 18.799 # 173.4939 +/- 0.0748 mas
+	SpectralType "G9"
+	AppMag 4.68
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=sig+Dra"
 }
 
 26857 # Ross 47
 {
 	RA 85.54770759
 	Dec 12.48235992
-	Distance 18.8883 # 172.6762 +/- 0.0286 mas
-	SpectralType "M4V"
-	Radius 180000 # approx. for class
+	Distance 18.888 # 172.6762 +/- 0.0286 mas
+	SpectralType "M4"
 	AppMag 11.509
-	InfoURL "https://en.wikipedia.org/wiki/Ross_47"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Ross+47"
 }
 
-# Used Gaia EDR3 parallax for A
-# mass and radius of A from Demory et al. (2009), A&A 505 (1), 205
-# "Mass-radius relation of low and very low-mass stars revisited with the VLTI"
-# https://www.aanda.org/articles/aa/full_html/2009/37/aa11976-09/aa11976-09.html
-# masses of B, C from same sources as orbit
-Barycenter "Gliese 570:ADS 9446"
+73184 # Gliese 570 A
 {
-	RA 224.36820687 # mass ratio 0.802:(0.586:0.390)
-	Dec -21.42079800
-	Distance 19.1987 # 169.8843 +/- 0.0653 mas
+	RA 224.37159427
+	Dec -21.4231404
+	Distance 19.199 # 169.8843 +/- 0.0653 mas
+	SpectralType "K4"
+	AppMag 5.72
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+570+A"
 }
 
-73184 "KX Lib:Gliese 570 A:ADS 9446 A"
+73182 # Gliese 570 B
 {
-	OrbitBarycenter "Gliese 570"
-	SpectralType "K4V"
-	AppMag 5.64
-	Radius 514100
-	InfoURL "https://en.wikipedia.org/wiki/Gliese_570"
-
-	EllipticalOrbit {             # fully specified orientation
-		Period           2130
-		SemiMajorAxis   104.5 # mass ratio 0.802:(0.586:0.390)
-		Eccentricity     0.20
-		Inclination     142.6
-		AscendingNode   191.6
-		ArgOfPericenter 129.2
-		MeanAnomaly      52.6
-	}
+	RA 224.36542336
+	Dec -21.4188732
+	Distance 19.325 # 168.77 +/- 21.54 mas
+	SpectralType "M1"
+	AppMag 8.065
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+570+B"
 }
 
-Barycenter 73182 "Gliese 570 BC"
+"Gliese 570 C"
 {
-	OrbitBarycenter "Gliese 570"
-
-	EllipticalOrbit {             # fully specified orientation
-		Period           2130
-		SemiMajorAxis    85.9 # mass ratio 0.802:(0.586:0.390)
-		Eccentricity     0.20
-		Inclination     142.6
-		AscendingNode   191.6
-		ArgOfPericenter 309.2
-		MeanAnomaly      52.6
-	}
+	RA 224.36542336
+	Dec -21.4188732
+	Distance 19.325 # 168.77 +/- 21.54 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+570+C"
 }
 
-"Gliese 570 B:ADS 9446 B"
+"Gliese 570 D"
 {
-	OrbitBarycenter "Gliese 570 BC"
-	SpectralType "M1.5V"
-	Radius 324000 # approx. for class
-	AppMag 8.33
-
-	EllipticalOrbit {              # fully specified orientation
-		Period            0.846
-		SemiMajorAxis     0.35 # mass ratio 0.586:0.390
-		Eccentricity      0.76
-		Inclination      90.68
-		AscendingNode    30.52
-		ArgOfPericenter 221.92
-		MeanAnomaly      45.19
-	}
+	RA 224.312344
+	Dec -21.363264
+	Distance 19.265 # 169.3 +/- 1.7 mas
+	SpectralType "T7"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+570+D"
 }
 
-"Gliese 570 C:ADS 9446 C"
-{
-	OrbitBarycenter "Gliese 570 BC"
-	SpectralType "M3V"
-	Radius 270000 # approx. for class
-	AppMag 9.94
-
-	EllipticalOrbit {             # fully specified orientation
-		Period           0.846
-		SemiMajorAxis    0.53 # mass ratio 0.586:0.390
-		Eccentricity     0.76
-		Inclination     90.68
-		AscendingNode   30.52
-		ArgOfPericenter 41.92
-		MeanAnomaly     45.19
-	}
-}
-
-# radius and temperature from Zhang et al. (2021), ApJ 911 (1), 7
-# "The Hawaii Infrared Parallax Program. V. New T-dwarf Members and Candidate
-# Members of Nearby Young Moving Groups"
-# https://iopscience.iop.org/article/10.3847/1538-4357/abe3fa
-"Gliese 570 D:ADS 9446 D"
-{
-	RA 224.31233
-	Dec -21.36328
-	Distance 19.1987
-	SpectralType "T7.5V"
-	Temperature 786
-	Radius 64000
-	AbsMag 40 # extremely low
-	InfoURL "https://en.wikipedia.org/wiki/Gliese_570"
-}
-
-86990 # Luyten 205-128
+86990 # L 205-128
 {
 	RA 266.63344447
-	Dec -57.32506180
-	Distance 19.2078 # 169.8042 +/- 0.0465 mas
-	SpectralType "M3.5V"
-	Radius 225000 # approx. for class
+	Dec -57.3250618
+	Distance 19.208 # 169.8042 +/- 0.0465 mas
+	SpectralType "M4"
 	AppMag 10.783
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=L+205-128"
 }
 
-"Gliese 754:Luyten 347-14"
+"Gliese 754:L 347-14"
 {
 	RA 290.20411627
 	Dec -45.57110617
-	Distance 19.2724 # 169.2351 +/- 0.0588 mas
-	SpectralType "M4.5V"
-	Radius 180000 # approx. for class
+	Distance 19.272 # 169.2351 +/- 0.0588 mas
+	SpectralType "M4.5"
 	AppMag 12.23
-	InfoURL "https://en.wikipedia.org/wiki/Gliese_754"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=L+347-14"
 }
 
-117473 # Gliese 908
+117473 # BR Psc
 {
 	RA 357.30660382
 	Dec 2.39691794
-	Distance 19.2745 # 169.2163 +/- 0.0281 mas
-	SpectralType "M1V"
-	Radius 341000 # approx. for class
+	Distance 19.275 # 169.2163 +/- 0.0281 mas
+	SpectralType "M1"
 	AppMag 8.993
-	InfoURL "https://en.wikipedia.org/wiki/Gliese_908"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BR+Psc"
 }
 
-# Parameters of A from Karminski et al. (2018), A&A 618, A115
-# "The CARMENES search for exoplanets around M dwarfs. A Neptune-mass
-# planet traversing the habitable zone around HD 180617"
-# https://arxiv.org/abs/1808.01183
-# Parameters of B from Tsuji et al. (2016), PASJ 68 (1), 1331
-# "Near-infrared spectroscopy of M dwarfs. III. Carbon and oxygen abundances
-# in late M dwarfs, including the dusty rapid rotator 2MASSI J1835379+325954"
-# https://arxiv.org/abs/1511.04682
-Barycenter 94761 "Gliese 752:Ross 652:Wolf 1055" # orbit of A & B unknown
+94761 # Gliese 752 A
 {
-	RA 289.22927187 # mass ratio 0.45:0.09
-	Dec 5.15987580
-	Distance 19.2942
-}
-
-"V1428 Aql:Gliese 752 A:Ross 652 A:Wolf 1055 A:HD 180617 A"
-{
-	RA 289.22765150
-	Dec 5.16297630
-	Distance 19.2922 # 169.0615 +/- 0.0239 mas
-	SpectralType "M2.5V"
-	Radius 315000
+	RA 289.2276515
+	Dec 5.1629763
+	Distance 19.292 # 169.0615 +/- 0.0239 mas
+	SpectralType "M3"
 	AppMag 9.115
-	RotationPeriod 1105
-	InfoURL "https://en.wikipedia.org/wiki/Gliese_752"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+752+A"
 }
 
-"Van Biesbroeck's Star:V1298 Aql:Gliese 752 B:Ross 652 B:Wolf 1055 B:VB 10:HD 180617 B"
+"vB 10:Gliese 752 B"
 {
-	RA 289.23737370
+	RA 289.2373737
 	Dec 5.14437332
-	Distance 19.3045 # 168.9537 +/- 0.0668 mas
-	SpectralType "M8.0V"
-	Radius 86000
-	AppMag 17.30
-	InfoURL "https://en.wikipedia.org/wiki/VB_10"
+	Distance 19.304 # 168.9537 +/- 0.0668 mas
+	SpectralType "M8"
+	AppMag 17.3
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+752+B"
 }
 
-76074 # Gliese 588
+76074 # CD-40 9712
 {
 	RA 233.04692742
 	Dec -41.28017409
-	Distance 19.2996 # 168.9965 +/- 0.0270 mas
-	SpectralType "M2.5V"
-	Radius 290000 # approx. for class
+	Distance 19.3 # 168.9965 +/- 0.027 mas
+	SpectralType "M2.5"
 	AppMag 9.311
-	InfoURL "https://en.wikipedia.org/wiki/Gliese_588"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=CD-40+9712"
 }
 
-Barycenter 3821 "Achird:ETA Cas:24 Cas:Gliese 34:ADS 671"
+3821 # eta Cas A
 {
-	RA 12.28385489 # mass ratio 1.07:0.55
-	Dec 57.81375040 # A: 168.8322 +/- 0.1663 mas
-	Distance 19.331 # B: 168.7186 +/- 0.0216 mas
-}
-
-# Mass ratio from theoretical values from same source as orbit
-"Achird A:ETA Cas A:24 Cas A:Gliese 34 A:ADS 671 A"
-{
-	OrbitBarycenter "ETA Cas"
-	SpectralType "G0V"
+	RA 12.28522738
+	Dec 57.81272813
+	Distance 19.318 # 168.8322 +/- 0.1663 mas
+	SpectralType "F9.0"
 	AppMag 3.44
-
-	EllipticalOrbit {
-		Period          479.27
-		SemiMajorAxis    24.23 # mass ratio 1.07:0.55
-		Eccentricity      0.50
-		Inclination     152.40
-		AscendingNode     8.78
-		ArgOfPericenter 182.11
-		MeanAnomaly      82.68
-	}
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=eta+Cas+A"
 }
 
-2026693663 "Achird B:ETA Cas B:24 Cas B:Gliese 34 B:ADS 671 B"
+"Gliese 34 B:eta Cas B"
 {
-	OrbitBarycenter "ETA Cas"
-	SpectralType "K7V"
+	RA 12.28118476
+	Dec 57.81573919
+	Distance 19.331 # 168.7186 +/- 0.0216 mas
+	SpectralType "K7e"
 	AppMag 7.51
-
-	EllipticalOrbit {
-		Period        479.27
-		SemiMajorAxis  47.13 # mass ratio 1.07:0.55
-		Eccentricity    0.50
-		Inclination   152.40
-		AscendingNode   8.78
-		ArgOfPericenter 2.11
-		MeanAnomaly    82.68
-	}
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=eta+Cas+B"
 }
 
-Barycenter "Guniibuu:36 Oph:Gliese 663:ADS 10417" # orbit of (AB) & C unknown
+"Guniibuu:Gliese 663 A:36 Oph A"
 {
-	RA 258.90522009 # mass ratio (0.75:0.76):0.72
-	Dec -26.58920251
-	Distance 19.4092
-}
-
-Barycenter 84405 "Guniibuu AB:36 Oph AB:Gliese 663 AB"
-{
-	RA 258.83461527 # mass ratio 0.75:0.76
-	Dec -26.60734861 # A: 168.1303 +/- 0.1081 mas
-	Distance 19.405 # B: 168.0031 +/- 0.1343 mas
-}
-
-# Average masses from Luck, R. E. (2017), AJ 153 (1), 21
-# "Abundances in the Local Region II: F, G, and K Dwarfs and Subgiants"
-# http://iopscience.iop.org/article/10.3847/1538-3881/153/1/21/meta
-1003266820 "Guniibuu A:36 Oph A:Gliese 663 A:ADS 10417 A"
-{
-	OrbitBarycenter "36 Oph AB"
-	SpectralType "K2V"
+	RA 258.83511696
+	Dec -26.60789783
+	Distance 19.399 # 168.1303 +/- 0.1081 mas
+	SpectralType "K2"
 	AppMag 5.08
-
-	EllipticalOrbit {
-		Period          470.9
-		SemiMajorAxis    38.93 # mass ratio 0.75:0.76
-		Eccentricity      0.92
-		Inclination      13.35
-		AscendingNode   348.86
-		ArgOfPericenter 270.97
-		MeanAnomaly     246.27
-	}
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=36+Oph+A"
 }
 
-2003266820 "Guniibuu B:36 Oph B:Gliese 663 B:ADS 10417 B"
+84405 # 36 Oph B
 {
-	OrbitBarycenter "36 Oph AB"
-	SpectralType "K1V"
-	AppMag 5.08
-
-	EllipticalOrbit {
-		Period         470.9
-		SemiMajorAxis   38.42 # mass ratio 0.75:0.76
-		Eccentricity     0.92
-		Inclination     13.35
-		AscendingNode  348.86
-		ArgOfPericenter 90.97
-		MeanAnomaly    246.27
-	}
+	RA 258.83412018
+	Dec -26.60680662
+	Distance 19.414 # 168.0031 +/- 0.1343 mas
+	SpectralType "K1"
+	AppMag 5.03
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=36+Oph+B"
 }
 
-84478 "Guniibuu C:36 Oph C:V2215 Oph:Gliese 664:Gliese 663 C:ADS 10417 C"
+84478 # 36 Oph C
 {
-	RA 259.05329410
+	RA 259.0532941
 	Dec -26.55114609
-	Distance 19.4185 # 167.9617 +/- 0.0311 mas
-	SpectralType "K5V"
+	Distance 19.418 # 167.9617 +/- 0.0311 mas
+	SpectralType "K5"
 	AppMag 6.34
-	InfoURL "https://en.wikipedia.org/wiki/36_Ophiuchi"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=36+Oph+C"
 }
 
-37766 # Ross 882
+84140 # Legget A
+{
+	RA 258.03421598
+	Dec 45.65905974
+	Distance 19.496 # 167.29 +/- 5.2 mas
+	SpectralType "M3"
+	AppMag 9.523
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+661"
+}
+
+"Furuhjelm 46 B:Gliese 661 B"
+{
+	RA 258.03421598
+	Dec 45.65905974
+	Distance 19.496 # 167.29 +/- 5.2 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+661"
+}
+
+37766 # YZ CMi
 {
 	RA 116.16583593
 	Dec 3.55048445
-	Distance 19.5330 # 166.9769 +/- 0.0343 mas
-	SpectralType "M4.0V"
-	Radius 180000 # approx. for class
+	Distance 19.533 # 166.9769 +/- 0.0343 mas
+	SpectralType "M4e"
 	AppMag 11.225
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=YZ+CMi"
 }
 
-# parameters from Kirkpatrick et al. (2021)
-# BT-Settl model parameters from Beichman et al. (2014), ApJ 783 (2), 68
-# "WISE Y Dwarfs as Probes of the Brown Dwarf-Exoplanet Connection"
-# https://iopscience.iop.org/article/10.1088/0004-637X/783/2/68/meta
-"WISE 1541-2250:WISE J1541-2250:WISEPA J154151.66-225025.2:GJ 12260"
+"WISE J154151.65-225024.9"
 {
 	RA 235.463692
 	Dec -22.840586
 	Distance 19.542 # 166.9 +/- 2.0 mas
-	SpectralType "Y1"
-	Temperature 350
-	Radius 69900
-	AbsMag 40 # extremely low
-	InfoURL "https://en.wikipedia.org/wiki/WISE_1541%E2%88%922250"
+	SpectralType "Y0.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISE+J154151.65-225024.9"
 }
 
-# masses and parallaxes from Benedict et al. (2016), AJ 152 (5), 141
-# "The Solar Neighborhood. XXXVII: The Mass-Luminosity Relation for Main-sequence
-# M Dwarfs"
-# http://iopscience.iop.org/article/10.3847/0004-6256/152/5/141/meta
-Barycenter 1242 "GJ 1005:Luyten 722-22"
+1242 # G 158-50 A
 {
 	RA 3.86988027
 	Dec -16.13657165
 	Distance 19.577 # 166.6 +/- 0.3 mas
+	SpectralType "M4"
+	AppMag 11.483
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+158-50"
 }
 
-"GJ 1005 A:Luyten 722-22 A"
+"GJ 1005 B:G 158-50 B"
 {
-	OrbitBarycenter "GJ 1005"
-	SpectralType "M3.5V"
-	AppMag 11.60
-
-	EllipticalOrbit {
-		Period           4.565
-		SemiMajorAxis     0.70 # mass ratio 0.179:0.112
-		Eccentricity      0.36
-		Inclination      72.44
-		AscendingNode    85.33
-		ArgOfPericenter 182.79
-		MeanAnomaly       5.81
-	}
+	RA 3.86988027
+	Dec -16.13657165
+	Distance 19.577 # 166.6 +/- 0.3 mas
+	SpectralType "M4"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+158-50"
 }
 
-"GJ 1005 B:Luyten 722-22 B"
-{
-	OrbitBarycenter "GJ 1005"
-	SpectralType "M7V"
-	AppMag 14.02
-
-	EllipticalOrbit {
-		Period         4.565
-		SemiMajorAxis   1.12 # mass ratio 0.179:0.112
-		Eccentricity    0.36
-		Inclination    72.44
-		AscendingNode  85.33
-		ArgOfPericenter 2.79
-		MeanAnomaly     5.81
-	}
-}
-
-Barycenter 99461 "Gliese 783:CD-36 13940:J Herschel 5173:HJ 5173" # orbit of A & B unknown
-{
-	RA 302.80247598 # mass ratio 0.82:0.20
-	Dec -36.10846971
-	Distance 19.6093
-}
-
-"Gliese 783 A:CD-36 13940 A:J Herschel 5173 A:HJ 5173 A"
+99461 # Gliese 783 A
 {
 	RA 302.80226904
 	Dec -36.10821654
-	Distance 19.6093 # 166.3272 +/- 0.1065 mas
-	SpectralType "K2.5V"
+	Distance 19.609 # 166.3272 +/- 0.1065 mas
+	SpectralType "K2.5"
 	AppMag 5.32
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+783+A"
 }
 
-"Gliese 783 B:CD-36 13940 B:J Herschel 5173 B:HJ 5173 B"
+"Gliese 783 B"
 {
-	RA 302.8033 # matched to the same epoch as primary's coordinates
-	Dec -36.1095 # using the latter's proper motions
-	Distance 19.6093
-	SpectralType "M3.5V"
-	Radius 180000 # approx. for class
-	AppMag 11.50
+	RA 302.80226904
+	Dec -36.10821654
+	Distance 19.609 # 166.3272 +/- 0.1065 mas
+	SpectralType "M3.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+783+B"
 }
 
-15510 # 82 Eri
+15510 # HD 20794
 {
 	RA 50.00034362
 	Dec -43.06655253
-	Distance 19.7045 # 165.5242 +/- 0.0784 mas
-	SpectralType "G6V"
+	Distance 19.704 # 165.5242 +/- 0.0784 mas
+	SpectralType "G8"
 	AppMag 4.27
-	InfoURL "https://en.wikipedia.org/wiki/82_G._Eridani"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=e+Eri"
 }
 
-# Barry et al. (2012), ApJ 760 (1), 55
-# "A Precise Physical Orbit for the M-dwarf Binary Gliese 268"
-# http://iopscience.iop.org/article/10.1088/0004-637X/760/1/55/meta
-Barycenter 34603 "Gliese 268:Ross 986"
+34603 # Gliese 268 A
 {
-	RA 107.50514340
+	RA 107.5051434
 	Dec 38.52526942
-	Distance 19.7414 # 165.2147 +/- 0.0636 mas
+	Distance 19.741 # 165.2147 +/- 0.0636 mas
+	SpectralType "M5e"
+	AppMag 11.52
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+268+A"
 }
 
-"QY Aur:Gliese 268 A:Ross 986 A"
+"QY Aur B:Gliese 268 B"
 {
-	OrbitBarycenter "Gliese 268"
-	SpectralType "M4.5V"
-	AppMag 12.05
-	InfoURL "https://en.wikipedia.org/wiki/Gliese_268"
-
-	EllipticalOrbit {              # fully specified orbit
-		Period        0.028547
-		SemiMajorAxis  0.03090 # mass ratio 0.22599:0.19248
-		Eccentricity    0.3203
-		Inclination       8.92
-		AscendingNode    66.51
-		ArgOfPericenter 161.27
-		MeanAnomaly     272.77
-	}
+	RA 107.5051434
+	Dec 38.52526942
+	Distance 19.741 # 165.2147 +/- 0.0636 mas
+	SpectralType "M5e"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+268+B"
 }
 
-"Gliese 268 B:Ross 986 B"
-{
-	OrbitBarycenter "Gliese 268"
-	SpectralType "M6V"
-	AppMag 12.45
-
-	EllipticalOrbit {              # fully specified orbit
-		Period        0.028547
-		SemiMajorAxis  0.03628 # mass ratio 0.22599:0.19248
-		Eccentricity    0.3203
-		Inclination       8.92
-		AscendingNode    66.51
-		ArgOfPericenter 341.27
-		MeanAnomaly     272.77
-	}
-}
-
-99240 # Del Pav
+99240 # del Pav
 {
 	RA 302.19503989
 	Dec -66.18709128
-	Distance 19.8931 # 163.9544 +/- 0.1222 mas
-	SpectralType "G8IV"
+	Distance 19.893 # 163.9544 +/- 0.1222 mas
+	SpectralType "G8"
 	AppMag 3.56
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=del+Pav"
 }
 
-"2MASS 0136+0933:2MASS J01365662+0933473:SIMP J013656.5+093347:GJ 10218"
+"SIMP J013656.5+093347.3"
 {
 	RA 24.24124979
 	Dec 9.56307045
-	Distance 19.9548 # 163.4478 +/- 0.4629 mas
-	SpectralType "T2.5V"
-	AbsMag 27.5 # for approximate radius in Celestia
-	InfoURL "https://en.wikipedia.org/wiki/SIMP_J013656.5%2B093347"
+	Distance 19.955 # 163.4478 +/- 0.4629 mas
+	SpectralType "T2"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=SIMP+J013656.5%2B093347.3"
 }
 
-# coordinates, parallax from Schilbach, Röser & Scholz (2009), A&A 493 (2), L27-L30
-# "Trigonometric parallaxes of ten ultracool subdwarfs"
-# https://www.aanda.org/articles/aa/abs/2009/02/aa11281-08/aa11281-08.html
-"2MASS 0937+2931:2MASS J09373487+2931409:GJ 11388"
+"2MASSI J0937347+293142"
 {
-	RA 144.395250
-	Dec 29.528189
-	Distance 19.961 # 163.39 +/- 1.76 mas
-	SpectralType "T6.0V"
-	AbsMag 33.5 # for approximate radius in Celestia
-	InfoURL "https://en.wikipedia.org/wiki/2MASS_J09373487%2B2931409"
+	RA 144.395332
+	Dec 29.528053
+	Distance 20.028 # 162.85 +/- 3.88 mas
+	SpectralType "T7"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASSI+J0937347%2B293142"
 }
 
-99701 # Gliese 784
+99701 # HD 191849
 {
 	RA 303.47739056
 	Dec -45.16473054
-	Distance 20.1062 # 162.2171 +/- 0.0225 mas
-	SpectralType "M0V"
-	Radius 432000 # approx. for class
+	Distance 20.106 # 162.2171 +/- 0.0225 mas
+	SpectralType "M0"
 	AppMag 7.966
-	InfoURL "https://en.wikipedia.org/wiki/Gliese_784"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+191849"
 }
 
-# parameters from Kirkpatrick et al. (2021)
-# BT-Settl model parameters from Beichman et al. (2014), ApJ 783 (2), 68
-# "WISE Y Dwarfs as Probes of the Brown Dwarf-Exoplanet Connection"
-# https://iopscience.iop.org/article/10.1088/0004-637X/783/2/68/meta
-"WISE 2209+2711:WISE J220905.73+271143.9:GJ 13202"
+"WISE J220905.73+271143.9"
 {
 	RA 332.275805
 	Dec 27.193641
-	Distance 20.170 # 161.7 +/- 2.0 mas
-	SpectralType "Y0V"
-	Temperature 350
-	Radius 69900
-	AbsMag 40 # extremely low
-	InfoURL "https://en.wikipedia.org/wiki/WISE_J2209%2B2711"
+	Distance 20.17 # 161.7 +/- 2.0 mas
+	SpectralType "Y0"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISE+J220905.73%2B271143.9"
 }
 
-"GJ 1221:LP 44-113"
+"GJ 1221:EGGR 372"
 {
 	RA 267.01612291
 	Dec 70.88157381
-	Distance 20.2588 # 160.9952 +/- 0.0119 mas
+	Distance 20.259 # 160.9952 +/- 0.0119 mas
 	SpectralType "DQ9P"
-	AppMag 14.15
-	InfoURL "https://en.wikipedia.org/wiki/G_240-72"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=EGGR+372"
 }
 
-71253 # Gliese 555
+71253 # BD-11 3759
 {
 	RA 218.56843176
 	Dec -12.51692385
-	Distance 20.3946 # 159.9225 +/- 0.0546 mas
-	SpectralType "M3.5V"
-	Radius 225000 # approx. for class
+	Distance 20.395 # 159.9225 +/- 0.0546 mas
+	SpectralType "M3.5"
 	AppMag 11.317
-	InfoURL "https://en.wikipedia.org/wiki/Gliese_555"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BD-11+3759"
 }
 
-# "3D orbital architecture of a dwarf binary system and its planetary companion"
-# https://arxiv.org/abs/2208.14553
-Barycenter 116132 "EQ Peg:Gliese 896:BD+19 5116"
+116132 # BD+19 5116 A
 {
-	RA 352.97054871 # mass ratio 0.43814:0.16527
-	Dec 19.93708072
-	Distance 20.400 # 159.88 +/- 0.17 mas
+	RA 352.97012375
+	Dec 19.93699283
+	Distance 20.428 # 159.6634 +/- 0.0341 mas
+	SpectralType "M3.5e"
+	AppMag 10.173
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BD%2B19+5116+A"
 }
 
-1000231723 "EQ Peg A:Gliese 896 A:BD+19 5116 A"
+"EQ Peg B:Gliese 896 B:BD+19 5116 B"
 {
-	OrbitBarycenter "Gliese 896"
-	SpectralType "M3.5V"
-	Radius 225000 # approx. for class
-	AppMag 10.27
-
-	EllipticalOrbit {
-		Epoch       2401891.34
-		Period          229.0613
-		SemiMajorAxis     8.6646 # mass ratio 0.43814:0.16527
-		Eccentricity      0.108047
-		Inclination     118.196
-		AscendingNode    83.078
-		ArgOfPericenter 296.426
-	}
-}
-
-2000231723 "EQ Peg B:Gliese 896 B:BD+19 5116 B"
-{
-	OrbitBarycenter "Gliese 896"
-	SpectralType "M4.5V"
-	Radius 160000 # approx. for class
-	AppMag 12.21
-
-	EllipticalOrbit {
-		Epoch       2401891.34
-		Period          229.0613
-		SemiMajorAxis    22.9704 # mass ratio 0.43814:0.16527
-		Eccentricity      0.108047
-		Inclination     118.196
-		AscendingNode    83.078
-		ArgOfPericenter 116.426
-	}
+	RA 352.9716753
+	Dec 19.93731375
+	Distance 20.396 # 159.9085 +/- 0.0513 mas
+	SpectralType "M4e"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BD%2B19+5116+B"
 }
 
 74995 # Gliese 581
 {
 	RA 229.85630133
 	Dec -7.72270702
-	Distance 20.5494 # 158.7183 +/- 0.0301 mas
-	SpectralType "M3V"
-	Radius 270000 # approx. for class
-	AppMag 10.560
-	InfoURL "https://en.wikipedia.org/wiki/Gliese_581"
+	Distance 20.549 # 158.7183 +/- 0.0301 mas
+	SpectralType "M3"
+	AppMag 10.56
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BD-07+4003"
 }
 
-# parameters from Kirkpatrick et al. (2021)
-"WISE 1405+5534:WISE J140518.39+553421.3:GJ 12023"
+"WISE J140518.39+553421.3"
 {
-	RA 211.320620
+	RA 211.32062
 	Dec 55.572896
 	Distance 20.617 # 158.2 +/- 2.6 mas
-	SpectralType "Y0V"
-	Temperature 411
-	Radius 60000 # approx.
-	AbsMag 40 # extremely low
-	InfoURL "https://en.wikipedia.org/wiki/WISE_1405%2B5534"
+	SpectralType "Y0(pec?)"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISE+J140518.39%2B553421.3"
 }
 
-# Parameters from Gonzalez-Alvarez et al. (2020), A&A 637, A93
-# "The CARMENES search for exoplanets around M dwarfs. A super-Earth planet orbiting 
-# HD 79211 (GJ 338 B)"
-# https://arxiv.org/abs/2003.13052
-Barycenter "Gliese 338:Struve 1321:ADS 7251"
+"Gliese 338 A"
 {
-	RA 138.58729103 # mass ratio 0.69:0.64
-	Dec 52.68376704 # A: 157.8879 +/- 0.0197 mas
-	Distance 20.658 # B: 157.8825 +/- 0.0211 mas
+	RA 138.58356162
+	Dec 52.68408017
+	Distance 20.657 # 157.8879 +/- 0.0197 mas
+	SpectralType "M0"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+79210"
 }
 
-45343 "Gliese 338 A:Struve 1321 A:ADS 7251 A"
+120005 # Gliese 338 B
 {
-	OrbitBarycenter "Gliese 338"
-	SpectralType "M0.0V"
-	Radius 403500
-	AppMag 7.63
-
-	EllipticalOrbit {
-		Period          1295
-		SemiMajorAxis   63.0 # mass ratio 0.69:0.64
-		Eccentricity    0.01
-		Inclination     123.3
-		AscendingNode   348.8
-		ArgOfPericenter 184.3
-		MeanAnomaly     135.4
-	}
-
-	RotationPeriod 391.2 # 16.3 d
+	RA 138.5913118
+	Dec 52.68342944
+	Distance 20.658 # 157.8825 +/- 0.0211 mas
+	SpectralType "M0"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+79211"
 }
 
-120005 "Gliese 338 B:Struve 1321 B:ADS 7251 B"
-{
-	OrbitBarycenter "Gliese 338"
-	SpectralType "M0.0V"
-	Radius 403500
-	AppMag 7.70
-
-	EllipticalOrbit {
-		Period          1295
-		SemiMajorAxis   67.9 # mass ratio 0.69:0.64
-		Eccentricity    0.01
-		Inclination     123.3
-		AscendingNode   348.8
-		ArgOfPericenter 4.3
-		MeanAnomaly     135.4
-	}
-
-	RotationPeriod 398.64 # 16.61 d
-}
-
-"LHS 2090:LP 368-128:GJ 11309"
+"LP 368-128"
 {
 	RA 135.09564332
-	Dec 21.83206260
-	Distance 20.7388 # 157.2686 +/- 0.0535 mas
-	SpectralType "M6.5V"
-	Radius 105000 # approx. for class
-	AppMag 16.100
-	InfoURL "https://en.wikipedia.org/wiki/LHS_2090"
+	Dec 21.8320626
+	Distance 20.739 # 157.2686 +/- 0.0535 mas
+	SpectralType "M6.5"
+	AppMag 16.1
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=LP+368-128"
 }
 
-# Orbit from Agati et al. (2015), A&A 574 (A6), 32
-# "Are the orbital poles of binary stars in the solar neighbourhood anisotropically 
-# distributed?"
-# https://www.aanda.org/articles/aa/abs/2015/02/aa23056-13/aa23056-13.html
-# Masses from Söderhjelm, S. (1999), A&A 341, 121
-# "Visual binary orbits and masses post Hipparcos"
-# http://adsabs.harvard.edu/abs/1999A%26A...341..121S
-# Distance from RECONS' weighted parallax
-Barycenter 84140 "Gliese 661:BD+45 2505"
-{
-	RA 258.03421598
-	Dec 45.65905974
-	Distance 20.865 # 156.32 +/- 1.28 mas
-}
-
-"Gliese 661 A:BD+45 2505 A"
-{
-	OrbitBarycenter "Gliese 661"
-	SpectralType "M3V"
-	Radius 270000 # approx. for class
-	AppMag 10.02
-
-	EllipticalOrbit {              # fully specified orientation
-		Period          12.85
-		SemiMajorAxis    2.78 # mass ratio 0.36:0.35
-		Eccentricity     0.80
-		Inclination      58.0
-		AscendingNode   288.7
-		ArgOfPericenter 256.9
-		MeanAnomaly     256.6
-	}
-}
-
-"Gliese 661 B:BD+45 2505 B"
-{
-	OrbitBarycenter "Gliese 661"
-	SpectralType "M4V"
-	Radius 180000 # approx. for class
-	AppMag 10.25
-
-	EllipticalOrbit {              # fully specified orientation
-		Period          12.85
-		SemiMajorAxis    2.85 # mass ratio 0.36:0.35
-		Eccentricity     0.80
-		Inclination      58.0
-		AscendingNode   288.7
-		ArgOfPericenter  76.9
-		MeanAnomaly     256.6
-	}
-}
-
-"2MASS 1503+2525:2MASS J15031961+2525196:GJ 12162"
+"2MASS J15031961+2525196"
 {
 	RA 225.83214226
 	Dec 25.42464449
-	Distance 20.9375 # 155.7758 +/- 0.7557 mas
-	SpectralType "T5.5V"
-	AbsMag 32 # for approximate radius in Celestia
-	InfoURL "https://en.wikipedia.org/wiki/2MASS_J15031961%2B2525196"
+	Distance 20.938 # 155.7758 +/- 0.7557 mas
+	SpectralType "T5.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASS+J15031961%2B2525196"
 }
 
-"LP 944-20:GJ 10513"
+"LP 944-20"
 {
 	RA 54.89857021
 	Dec -35.42759364
-	Distance 20.9614 # 155.5982 +/- 0.0522 mas
-	SpectralType "M9.5Ve"
-	Radius 56000 # approx. for class
+	Distance 20.961 # 155.5982 +/- 0.0522 mas
+	SpectralType "M9"
 	AppMag 18.69
-	InfoURL "https://en.wikipedia.org/wiki/LP_944-20"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=LP+944-20"
 }
 
-"Gliese 223.2:GJ 9193:LP 658-2:HL 4"
+"HL 4:GJ 9193:EGGR 45"
 {
 	RA 88.79209556
 	Dec -4.17892709
-	Distance 21.0102 # 155.2373 +/- 0.0175 mas
-	SpectralType "DZ9" # DZ11
+	Distance 21.01 # 155.2373 +/- 0.0175 mas
+	SpectralType "DZ11"
 	AppMag 14.45
-	InfoURL "https://en.wikipedia.org/wiki/LP_658-2"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=EGGR+45"
 }
 
-"GL Vir:GJ 1156:Luyten 1190-34"
+"GJ 1156:GL Vir"
 {
 	RA 184.74174734
 	Dec 11.12695237
-	Distance 21.0832 # 154.6999 +/- 0.0445 mas
-	SpectralType "M4.5V"
-	Radius 160000 # approx. for class
-	AppMag 13.898
-	InfoURL "https://en.wikipedia.org/wiki/GL_Virginis"
+	Distance 21.083 # 154.6999 +/- 0.0445 mas
+	SpectralType "M4.5e"
+	AppMag 13.9
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GL+Vir"
 }
 
 80459 # Gliese 625
 {
 	RA 246.35588833
 	Dec 54.30333867
-	Distance 21.1309 # 154.3503 +/- 0.0161 mas
-	SpectralType "M1.5V"
-	Radius 324000 # approx. for class
-	AppMag 10.17
-	InfoURL "https://en.wikipedia.org/wiki/Gliese_625"
+	Distance 21.131 # 154.3503 +/- 0.0161 mas
+	SpectralType "M1.5"
+	AppMag 10.07
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+202-48"
 }
 
-# Used Gaia EDR3 parallax for C
-Barycenter "Gliese 644:Wolf 630" # orbit of (AB) & C unknown
-{
-	RA 253.86817134 # mass ratio (0.4155:(0.3466:0.3143)):0.0841
-	Dec -8.34454331
-	Distance 21.1837 # 153.9659 +/- 0.0570 mas
-}
-
-# masses from Segransan et al. (2000), A&A 364, 665
-# "Accurate masses of very low mass stars. III. 16 new or improved masses"
-# http://adsabs.harvard.edu/abs/2000A%26A...364..665S
-Barycenter 82817 "Gliese 644 AB:Wolf 630 AB"
+82817 # Gliese 644 A
 {
 	RA 253.86621222
 	Dec -8.34032583
-	Distance 21.1837
+	Distance 21.184 # 153.9659 +/- 0.057 mas
+	SpectralType "M3e"
+	AppMag 9.023
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+644+A"
 }
 
-"V1054 Oph:Gliese 644 A:Wolf 630 A"
+"Gliese 644 B:Gliese 644 Ba"
 {
-	OrbitBarycenter "Gliese 644 AB"
-	SpectralType "M2.5V"
-	AppMag 9.73
-	InfoURL "https://en.wikipedia.org/wiki/V1054_Ophiuchi"
-
-	EllipticalOrbit {              # fully specified orientation
-		Period            1.718
-		SemiMajorAxis     0.91 # mass ratio 0.4155:(0.3466:0.3143)
-		Eccentricity      0.04
-		Inclination      82.15
-		AscendingNode   324.51
-		ArgOfPericenter 236.42
-		MeanAnomaly      63.52
-	}
+	RA 253.86621222
+	Dec -8.34032583
+	Distance 21.184 # 153.9659 +/- 0.057 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+644+B"
 }
 
-Barycenter "Gliese 644 B:Wolf 630 B"
+"Gliese 644 B:Gliese 644 Bb"
 {
-	OrbitBarycenter "Gliese 644 AB"
-
-	EllipticalOrbit {             # fully specified orientation
-		Period           1.718
-		SemiMajorAxis    0.57 # mass ratio 0.4155:(0.3466:0.3143)
-		Eccentricity     0.04
-		Inclination     82.15
-		AscendingNode  324.51
-		ArgOfPericenter 56.42
-		MeanAnomaly     63.52
-	}
+	RA 253.86621222
+	Dec -8.34032583
+	Distance 21.184 # 153.9659 +/- 0.057 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+644+B"
 }
 
-"Gliese 644 Ba:Wolf 630 Ba"
-{
-	OrbitBarycenter "Gliese 644 B"
-	SpectralType "M3V"
-	AppMag 10.54
-
-	EllipticalOrbit {
-		Period           0.008125 # 2.965509 d
-		SemiMajorAxis    0.0167 # mass ratio 0.3466:0.3143
-		Eccentricity     0.02 # axis calculated from mass and period
-		Inclination     80.81
-		AscendingNode  328.19 # assumed to be identical to A-B
-		ArgOfPericenter 79.87
-		MeanAnomaly    164.82
-	}
-}
-
-"Gliese 644 Bb:Wolf 630 Bb"
-{
-	OrbitBarycenter "Gliese 644 B"
-	SpectralType "M4V"
-	AppMag 10.63
-
-	EllipticalOrbit {
-		Period            0.008125 # 2.965509 d
-		SemiMajorAxis     0.0185 # mass ratio 0.3466:0.3143
-		Eccentricity      0.02 # axis calculated from mass and period
-		Inclination      80.81
-		AscendingNode   328.19 # assumed to be identical to A-B
-		ArgOfPericenter 259.87
-		MeanAnomaly     164.82
-	}
-}
-
-# Physical parameters from Mann et al. (2015), ApJ 804 (1), 64
-# "How to Constrain Your M Dwarf: Measuring Effective Temperature, 
-# Bolometric Luminosity, Mass, and Radius"
-# http://iopscience.iop.org/article/10.1088/0004-637X/804/1/64/meta
-"Gliese 644 C:Wolf 630 C:VB 8"
+"VB 8:Gliese 644 C"
 {
 	RA 253.89324627
 	Dec -8.39852302
-	Distance 21.1837
-	SpectralType "M7V"
+	Distance 21.184 # 153.9659 +/- 0.057 mas
+	SpectralType "M7"
 	AppMag 16.916
-	Radius 78680
-	InfoURL "https://en.wikipedia.org/wiki/V1054_Ophiuchi#V1054_Ophiuchi_C_(vB_8)"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+644+C"
 }
 
-82809 "Gliese 643:Wolf 629"
+82809 # Gliese 643
 {
 	RA 253.85142033
 	Dec -8.32657626
-	Distance 21.1961 # 153.8754 +/- 0.0474 mas
-	SpectralType "M3.5V"
-	Radius 225000 # approx. for class
+	Distance 21.196 # 153.8754 +/- 0.0474 mas
+	SpectralType "M3.5"
 	AppMag 11.759
-	InfoURL "https://en.wikipedia.org/wiki/V1054_Ophiuchi#Gliese_643"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Wolf+629"
 }
 
-"GJ 1128:LHS 271:Luyten 100-115"
+"GJ 1128:L 100-115"
 {
 	RA 145.69216012
 	Dec -68.87998538
-	Distance 21.2121 # 153.7593 +/- 0.0249 mas
-	SpectralType "M4.0V"
-	Radius 180000 # approx. for class
+	Distance 21.212 # 153.7593 +/- 0.0249 mas
+	SpectralType "M4"
 	AppMag 12.78
-	InfoURL "https://en.wikipedia.org/wiki/GJ_1128"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=L+100-115"
 }
 
-114622 # Gliese 892
+114622 # HD 219134
 {
 	RA 348.33773395
 	Dec 57.16966644
-	Distance 21.3364 # 152.8640 +/- 0.0494 mas
-	SpectralType "K3V"
-	AppMag 5.570
-	InfoURL "https://en.wikipedia.org/wiki/HD_219134"
+	Distance 21.336 # 152.864 +/- 0.0494 mas
+	SpectralType "K3"
+	AppMag 5.57
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+219134"
 }
 
-# parameters from Kirkpatrick et al. (2021)
-"WISE 0825+2805:WISE J082507.35+280548.5:GJ 11222"
+"WISEA J082507.37+280548.2"
 {
 	RA 126.280525
 	Dec 28.096445
 	Distance 21.373 # 152.6 +/- 2.0 mas
-	SpectralType "Y0.5V"
-	Temperature 376
-	Radius 60000 # approx.
-	AbsMag 40 # extremely low
+	SpectralType "Y0.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISEA+J082507.37%2B280548.2"
 }
 
-# parameters from Kirkpatrick et al. (2021)
-"WISE 0410+1502:WISE J041022.71+150248.4:GJ 10571"
+"WISE J041022.71+150248.4"
 {
 	RA 62.596159
 	Dec 15.043733
 	Distance 21.557 # 151.3 +/- 2.0 mas
-	SpectralType "Y0V"
-	Temperature 451
-	Radius 60000 # approx.
-	AbsMag 40 # extremely low
-	InfoURL "https://en.wikipedia.org/wiki/WISEPA_J041022.71%2B150248.5"
+	SpectralType "Y0"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISE+J041022.71%2B150248.4"
 }
 
-# parameters from Kirkpatrick et al. (2021)
-"2MASS 0521+1025:2MASS J05212615+1025328:WISE J052126.29+102528.4:GJ 10757"
+"2MASS J05212615+1025328"
 {
 	RA 80.359997
 	Dec 10.423818
 	Distance 21.715 # 150.2 +/- 3.0 mas
 	SpectralType "T7.5"
-	Temperature 727
-	Radius 60000 # approx.
-	AbsMag 40 # extremely low
-	InfoURL "https://en.wikipedia.org/wiki/WISE_J0521%2B1025"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASS+J05212615%2B1025328"
 }
 
-"LHS 337:Luyten 471-42:GJ 3737"
+"GJ 3737:L 471-42"
 {
 	RA 189.70080544
 	Dec -38.38740912
-	Distance 21.7324 # 150.0781 +/- 0.0322 mas
-	SpectralType "M4.0V"
-	Radius 180000 # approx. for class
+	Distance 21.732 # 150.0781 +/- 0.0322 mas
+	SpectralType "M4"
 	AppMag 12.74
-	InfoURL "https://en.wikipedia.org/wiki/GJ_3737"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=L+471-42"
 }
 
 53767 # Ross 104
 {
-	RA 165.01567860
-	Dec 22.83170230
-	Distance 22.0081 # 148.1986 +/- 0.0253 mas
-	SpectralType "M4V"
-	Radius 180000 # approx. for class
-	AppMag 10.020
-	InfoURL "https://en.wikipedia.org/wiki/Gliese_408"
+	RA 165.0156786
+	Dec 22.8317023
+	Distance 22.008 # 148.1986 +/- 0.0253 mas
+	SpectralType "M2.5"
+	AppMag 10.02
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Ross+104"
 }
 
-# Söderhjelm, S. (1999), A&A 341, 121
-# "Visual binary orbits and masses post Hipparcos"
-# http://adsabs.harvard.edu/abs/1999A%26A...341..121S
-Barycenter 72659 "XI Boo:37 Boo:Gliese 566:ADS 9413"
+"Gliese 566 A:ksi Boo A"
 {
-	RA 222.84746520 # mass ratio 0.94:0.67
-	Dec 19.10061690 # A: 148.0695 +/- 0.1317 mas
-	Distance 22.013 # B: 148.1793 +/- 0.0546 mas
-}
-
-1007221481 "XI Boo A:37 Boo A:Gliese 566 A:ADS 9413 A"
-{
-	OrbitBarycenter "XI Boo"
-	SpectralType "G7Ve"
+	RA 222.84805147
+	Dec 19.10026964
+	Distance 22.027 # 148.0695 +/- 0.1317 mas
+	SpectralType "G7"
 	AppMag 4.675
-
-	EllipticalOrbit {
-		Period          151.6
-		SemiMajorAxis    13.87 # mass ratio 0.94:0.67
-		Eccentricity      0.51
-		Inclination      83.21
-		AscendingNode   270.13
-		ArgOfPericenter 158.75
-		MeanAnomaly     215.38
-	}
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=ksi+Boo+A"
 }
 
-2007221481 "XI Boo B:37 Boo B:Gliese 566 B:ADS 9413 B"
+"Gliese 566 B:ksi Boo B"
 {
-	OrbitBarycenter "XI Boo"
-	SpectralType "K5Ve"
+	RA 222.84664267
+	Dec 19.10110411
+	Distance 22.011 # 148.1793 +/- 0.0546 mas
+	SpectralType "K5"
 	AppMag 6.816
-
-	EllipticalOrbit {
-		Period          151.6
-		SemiMajorAxis    19.47 # mass ratio 0.94:0.67
-		Eccentricity      0.51
-		Inclination      83.21
-		AscendingNode   270.13
-		ArgOfPericenter 338.75
-		MeanAnomaly     215.38
-	}
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=ksi+Boo+B"
 }
 
 "Gliese 299:Ross 619"
 {
 	RA 122.99468256
 	Dec 8.75040152
-	Distance 22.0791 # 147.7218 +/- 0.0950 mas
-	SpectralType "M4.5V"
-	Radius 160000 # approx. for class
+	Distance 22.079 # 147.7218 +/- 0.095 mas
+	SpectralType "M4.5e"
 	AppMag 12.834
-	InfoURL "https://en.wikipedia.org/wiki/Gliese_299"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Ross+619"
 }
 
-# Tokovinin et al. (2015), AJ 150 (2), 50
-# "Speckle Interferometry at SOAR in 2014"
-# http://iopscience.iop.org/article/10.1088/0004-6256/150/2/50/meta
-# Delfosse et al. (1999), A&A 344, 897
-# "New neighbours. I. 13 new companions to nearby M dwarfs"
-# http://adsabs.harvard.edu/abs/1999A&A...344..897D
-Barycenter "GJ 3522:Giclas 41-14"
+"GJ 3522 A:G 41-14 A"
 {
-	RA 134.73639684 # mass ratio (0.19:0.17):0.17
-	Dec 8.47245694
+	RA 134.73635
+	Dec 8.47245119
+	Distance 22.088 # 147.66 +/- 1.98 mas
+	SpectralType "M4e"
+	AppMag 10.98
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+41-14+A"
+}
+
+"G 41-14 B"
+{
+	RA 134.73648124
+	Dec 8.4724691
+	Distance 22.088 # 147.66 +/- 1.98 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+41-14+B"
+}
+
+"G 41-14 C"
+{
+	RA 134.73635
+	Dec 8.47245119
 	Distance 22.088 # 147.66 +/- 1.98 mas
 }
 
-Barycenter "GJ 3522 A:Giclas 41-14 A"
-{
-	OrbitBarycenter "Giclas 41-14"
-
-	EllipticalOrbit {
-		Period          5.566
-		SemiMajorAxis    0.86 # mass ratio (0.19:0.17):0.17
-		Eccentricity     0.78
-		Inclination    155.71
-		AscendingNode  234.28
-		ArgOfPericenter 34.91
-		MeanAnomaly    303.15
-	}
-}
-
-"GJ 3522 Aa:Giclas 41-14 Aa"
-{
-	OrbitBarycenter "Giclas 41-14 A"
-	SpectralType "M3.5V"
-	Radius 225000 # approx. for class
-	AppMag 11.94
-
-	EllipticalOrbit {
-		Period          0.0206858	# 7.5555 d
-		SemiMajorAxis   0.0255	# estimated from mass ratio 0.19:0.17
-		Eccentricity    0.014
-		Inclination     156     # guess - to match
-		AscendingNode   234     # plane of AB
-		ArgOfPericenter 18.2
-		MeanAnomaly     43.8
-	}
-}
-
-"GJ 3522 Ab:Giclas 41-14 Ab"
-{
-	OrbitBarycenter "Giclas 41-14 A"
-	SpectralType "M6V" # from estimated mass
-	Radius 105000 # approx. for estimated class
-	AppMag 12.14
-
-	EllipticalOrbit {
-		Period          0.0206858	# 7.5555 d
-		SemiMajorAxis   0.0285	# estimated from mass ratio 0.19:0.17
-		Eccentricity    0.014
-		Inclination     156     # guess - to match
-		AscendingNode   234     # plane of AB
-		ArgOfPericenter 198.2
-		MeanAnomaly     43.8
-	}
-}
-
-"GJ 3522 B:Giclas 41-14 B"
-{
-	OrbitBarycenter "Giclas 41-14"
-	SpectralType "M6V"
-	Radius 105000 # approx. for estimated class
-	AppMag 12.28
-
-	EllipticalOrbit {
-		Period           5.566
-		SemiMajorAxis     1.83 # mass ratio (0.19:0.17):0.17
-		Eccentricity      0.78
-		Inclination     155.71
-		AscendingNode   234.28
-		ArgOfPericenter 214.91
-		MeanAnomaly     303.15
-	}
-}
-
-# Delfosse et al. (1999), A&A 344, 897
-# "New neighbours. I. 13 new companions to nearby M dwarfs"
-# http://adsabs.harvard.edu/abs/1999A&A...344..897D
-Barycenter 106106 "Gliese 829:Ross 775"
+106106 # Gliese 829 A
 {
 	RA 322.40807988
-	Dec 17.64497780
-	Distance 22.1129 # 147.4958 +/- 0.0257 mas
+	Dec 17.6449778
+	Distance 22.113 # 147.4958 +/- 0.0257 mas
+	SpectralType "M3e"
+	AppMag 10.303
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+829+A"
 }
 
-"Gliese 829 A:Ross 775 A"
+"Ross 775 B:Gliese 829 B"
 {
-	OrbitBarycenter "Ross 775"
-	SpectralType "M3.0V"
-	Radius 270000 # approx. for class
-	AppMag 11.05
-
-	EllipticalOrbit {
-		Period          0.145711	# 53.221 d
-		SemiMajorAxis   0.11	# estimated from mass ratio 0.26:0.26
-		Eccentricity    0.374
-		ArgOfPericenter 181.3
-		MeanAnomaly     68.9
-	}
+	RA 322.40807988
+	Dec 17.6449778
+	Distance 22.113 # 147.4958 +/- 0.0257 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+829+B"
 }
 
-"Gliese 829 B:Ross 775 B"
-{
-	OrbitBarycenter "Ross 775"
-	SpectralType "M3.5V"
-	Radius 225000 # approx. for class
-	AppMag 11.05
-
-	EllipticalOrbit {
-		Period          0.145711	# 53.221 d
-		SemiMajorAxis   0.11	# estimated from mass ratio 0.26:0.26
-		Eccentricity    0.374
-		ArgOfPericenter 1.3
-		MeanAnomaly     68.9
-	}
-}
-
-# Dupuy et al. (2019), AJ 158 (5), 174
-# "WISE J072003.20-084651.2B is a Massive T Dwarf"
-# https://arxiv.org/abs/1908.06994
-Barycenter "Scholz's Star:WISE 0720-0846:WISE J072003.20-084651.2:GJ 11068"
+"Scholz's Star A:Scholtz's Star A"
 {
 	RA 110.01336164
 	Dec -8.78107327
-	Distance 22.172 # 147.1 +1.1 -1.2 mas
+	Distance 22.172 # 147.1 +/- 1.2 mas
+	SpectralType "M9.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASS+J07200325-0846499"
 }
 
-# Apparent magnitude of A from Ivanov et al. (2015), A&A 574, A64
-# "Properties of the solar neighbor WISE J072003.20-084651.2"
-# https://www.aanda.org/articles/aa/abs/2015/02/aa24883-14/aa24883-14.html
-"Scholz's Star A:WISE 0720-0846 A:WISE J072003.20-084651.2 A:GJ 11068 A"
+"Scholz's Star B:Scholtz's Star B"
 {
-	OrbitBarycenter "WISE 0720-0846"
-	SpectralType "M9.5V"
-	AppMag 18.266
-	Radius 70900
-
-	EllipticalOrbit {              # fully specified orbit
-		Period            8.06
-		SemiMajorAxis     0.87 # mass ratio 99J:66J
-		Eccentricity      0.24
-		Inclination      59.8
-		AscendingNode   158.8
-		ArgOfPericenter  39.7
-		MeanAnomaly      18.4
-	}
+	RA 110.01336164
+	Dec -8.78107327
+	Distance 22.172 # 147.1 +/- 1.2 mas
+	SpectralType "T5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASS+J07200325-0846499"
 }
 
-"Scholz's Star B:WISE 0720-0846 B:WISE J072003.20-084651.2 B:GJ 11068 B"
-{
-	OrbitBarycenter "WISE 0720-0846"
-	SpectralType "T5.5V"
-	AbsMag 32 # for approximate radius in Celestia
-	Radius 58800
-
-	EllipticalOrbit {              # fully specified orbit
-		Period            8.06
-		SemiMajorAxis     1.31 # mass ratio 99J:66J
-		Eccentricity      0.24
-		Inclination      59.8
-		AscendingNode   158.8
-		ArgOfPericenter 219.7
-		MeanAnomaly      18.4
-	}
-}
-
-"2MASS 1928+2356:2MASS J19284155+2356016:GJ 12834"
+"2MASS J19284155+2356016"
 {
 	RA 292.17175326
-	Dec 23.93500480
-	Distance 22.2774 # 146.4067 +/- 1.2001 mas
+	Dec 23.9350048
+	Distance 22.277 # 146.4067 +/- 1.2001 mas
 	SpectralType "T6"
-	AbsMag 33.5 # for approximate radius in Celestia
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASS+J19284155%2B2356016"
 }
 
-# parallax from Kirkpatrick et al. (2019), ApJS 240 (2), 19
-# "Preliminary Trigonometric Parallaxes of 184 Late-T and Y Dwarfs and an
-# Analysis of the Field Substellar Mass Function into the 'Planetary' Mass Regime"
-# https://iopscience.iop.org/article/10.3847/1538-4365/aaf6af
-"WISE 0254+0223:WISE J025409.51+022358.6:GJ 10400"
+"WISEPA J025409.45+022359.1"
 {
-	RA 43.5328583
-	Dec 2.3989861
+	RA 43.53286
+	Dec 2.398985
 	Distance 22.324 # 146.1 +/- 1.5 mas
-	SpectralType "T8V"
-	Temperature 656
-	Radius 60000 # approx.
-	AbsMag 40 # extremely low
-	InfoURL "https://en.wikipedia.org/wiki/WISE_J0254%2B0223"
+	SpectralType "T8"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISEPA+J025409.45%2B022359.1"
 }
 
-# Used parallax of component A, from Gaia EDR3
-# Winters et al. (2019), AJ 158 (4), 152
-# "Three Red Suns in the Sky: A Transiting, Terrestrial Planet in a Triple 
-# M Dwarf System at 6.9 Parsecs"
-# https://arxiv.org/abs/1906.10147
-# CNS5 lists the entire system as GJ 3193 ABC, and does not contain an entry
-# for GJ 3192
-Barycenter 14101 "LTT 1445:GJ 3193"
-{
-	RA 45.46154733 # mass ratio 0.257:(0.215:0.161)
-	Dec -16.59369072
-	Distance 22.3867 # 145.6922 +/- 0.0244 mas
-}
-
-1006945865 "LTT 1445 A:GJ 3193 A:LP 771-96:Luyten 730-18:RECONS 4:TOI-455"
+14101 # BD-17 588 A
 {
 	RA 45.46242451
 	Dec -16.59453281
-	Distance 22.3867
-	AppMag 11.22
-	SpectralType "M3V"
-	Radius 186400
-	InfoURL "https://en.wikipedia.org/wiki/LTT_1445#Stellar_system"
+	Distance 22.387 # 145.6922 +/- 0.0244 mas
+	SpectralType "M3"
+	AppMag 10.529
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BD-17+588A"
 }
 
-# CNS5 does not list the GJ 3192 designation
-Barycenter "LTT 1445 BC:GJ 3193 BC:GJ 3192:LP 771-95"
+"GJ 3192 A:BD-17 588 B"
 {
-	RA 45.46094777
-	Dec -16.59311514
-	Distance 22.3867
+	RA 45.46242451
+	Dec -16.59453281
+	Distance 22.387 # 145.6922 +/- 0.0244 mas
+	SpectralType "M2.5"
+	AppMag 10.59
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BD-17+588BC"
 }
 
-# CNS5 does not list the GJ 3192 designation
-"LTT 1445 B:GJ 3193 B:GJ 3192 A:LP 771-95 A"
+"GJ 3192 B:BD-17 588 C"
 {
-	OrbitBarycenter "LTT 1445 BC"
-	SpectralType "M4V" # estimate from mass and radius
-	AppMag 11.78
-	Radius 164200
-
-	EllipticalOrbit {
-		Period          36.2
-		SemiMajorAxis   3.41 # mass ratio 0.215:0.161
-		Eccentricity    0.50
-		Inclination     70.41
-		AscendingNode   204.85
-		ArgOfPericenter 333.35
-		MeanAnomaly     169.06
-	}
+	RA 45.46242451
+	Dec -16.59453281
+	Distance 22.387 # 145.6922 +/- 0.0244 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BD-17+588BC"
 }
 
-# CNS5 does not list the GJ 3192 designation
-"LTT 1445 C:GJ 3193 C:GJ 3192 B:LP 771-95 B"
-{
-	OrbitBarycenter "LTT 1445 BC"
-	SpectralType "M4V" # estimate from mass and radius
-	AppMag 12.64
-	Radius 137100
-
-	EllipticalOrbit {
-		Period          36.2
-		SemiMajorAxis   4.55 # mass ratio 0.215:0.161
-		Eccentricity    0.50
-		Inclination     70.41
-		AscendingNode   204.85
-		ArgOfPericenter 153.35
-		MeanAnomaly     169.06
-	}
-}
-
-113296 # Ross 671
+113296 # HD 216899
 {
 	RA 344.14022173
 	Dec 16.55216937
-	Distance 22.3972 # 145.6234 +/- 0.0255 mas
-	SpectralType "M1.5Ve"
-	Radius 324000 # approx. for class
+	Distance 22.397 # 145.6234 +/- 0.0255 mas
+	SpectralType "M1.5e"
 	AppMag 8.638
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+216899"
 }
 
-# parameters from Kirkpatrick et al. (2021)
-# Not in CNS5
-"CWISE 1055+5443:CWISE J105512.11+544328.3"
+"CWISE J105512.11+544328.3"
 {
 	RA 163.799544
 	Dec 54.724527
 	Distance 22.494 # 145.0 +/- 14.7 mas
-	SpectralType "sdT8"
-	Temperature 686
-	Radius 60000 # approx.
-	AbsMag 40 # extremely low
+	SpectralType "sdT8?"
 }
 
 53020 # Wolf 358
 {
 	RA 162.71296407
 	Dec 6.80448954
-	Distance 22.7225 # 143.5391 +/- 0.0286 mas
-	SpectralType "M4V"
-	Radius 180000 # approx. for class
+	Distance 22.722 # 143.5391 +/- 0.0286 mas
+	SpectralType "M4"
 	AppMag 11.675
-	InfoURL "https://en.wikipedia.org/wiki/Gliese_402"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Wolf+358"
 }
 
-Modify 51317 # Gliese 393
+51317 # BD+01 2447
 {
-	Radius 305000 # approx. for class
+	RA 157.22878343
+	Dec 0.83774689
+	Distance 22.953 # 142.0951 +/- 0.0212 mas
+	SpectralType "M2"
+	AppMag 9.65
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BD%2B01+2447"
 }
 
-Modify 103096 # Gliese 809
+103096 # HD 199305
 {
-	Radius 341000 # approx. for class
+	RA 313.3324563
+	Dec 62.1509577
+	Distance 22.96 # 142.0543 +/- 0.016 mas
+	SpectralType "M1e"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+199305"
 }
 
-"2MASS 2146+3813:2MASS J21462206+3813047:GJ 13136"
+"UCAC4 642-113039"
 {
 	RA 326.59288194
 	Dec 38.21751708
-	Distance 22.9858 # 141.8946 +/- 0.0212 mas
-	SpectralType "M5V"
-	Radius 140000 # approx. for class
-	AppMag 12.210
+	Distance 22.986 # 141.8946 +/- 0.0212 mas
+	SpectralType "M4"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=UCAC4+642-113039"
 }
 
 "GJ 3877:LP 914-54"
 {
 	RA 224.15695945
 	Dec -28.16725415
-	Distance 23.0029 # 141.7891 +/- 0.0617 mas
-	SpectralType "M7.0V"
-	Radius 84000 # approx. for class
+	Distance 23.003 # 141.7891 +/- 0.0617 mas
+	SpectralType "M7e"
 	AppMag 17.141
-	InfoURL "https://en.wikipedia.org/wiki/LHS_3003"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=LP+914-54"
 }
 
-# parameters from Kirkpatrick et al. (2021)
-# BT-Settl model parameters from Beichman et al. (2014), ApJ 783 (2), 68
-# "WISE Y Dwarfs as Probes of the Brown Dwarf-Exoplanet Connection"
-# https://iopscience.iop.org/article/10.1088/0004-637X/783/2/68/meta
-"WISE 2056+1459:WISE J205628.91+145953.2:GJ 13033"
+"WISE J205628.91+145953.2"
 {
 	RA 314.121593
 	Dec 14.998858
 	Distance 23.165 # 140.8 +/- 2.0 mas
-	SpectralType "Y0V"
-	Temperature 407
-	Radius 65000
-	AbsMag 40 # extremely low
-	InfoURL "https://en.wikipedia.org/wiki/WISEPC_J205628.90%2B145953.3"
+	SpectralType "Y0"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISE+J205628.91%2B145953.2"
 }
 
-"GJ 1068:Luyten 230-188"
+"GJ 1068:L 230-188"
 {
 	RA 62.61100026
 	Dec -53.61299677
-	Distance 23.1816 # 140.6961 +/- 0.0214 mas
-	SpectralType "M4.5V"
-	Radius 160000 # approx. for class
+	Distance 23.182 # 140.6961 +/- 0.0214 mas
+	SpectralType "M4.5"
 	AppMag 13.58
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=L+230-188"
 }
 
-# parameters from Kirkpatrick et al. (2021)
-"WISE 0049+2151:WISE J004945.61+215120.0:GJ 10131"
+"WISE J004945.61+215120.0"
 {
 	RA 12.439534
 	Dec 21.855377
 	Distance 23.231 # 140.4 +/- 2.1 mas
 	SpectralType "T8.5"
-	Temperature 640
-	Radius 60000 # approx.
-	AbsMag 40 # extremely low
-	InfoURL "https://en.wikipedia.org/wiki/WISE_J004945.61%2B215120.0"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISE+J004945.61%2B215120.0"
 }
 
-"GJ 1286"
+"GJ 1286:G 157-77"
 {
 	RA 353.79706944
 	Dec -2.39279939
-	Distance 23.4074 # 139.3389 +/- 0.0441 mas
-	SpectralType "M5.0V"
-	Radius 140000 # approx. for class
+	Distance 23.407 # 139.3389 +/- 0.0441 mas
+	SpectralType "M5.5"
 	AppMag 14.69
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+157-77"
 }
 
-# Used Gaia EDR3 parallax for B
-Barycenter "Gliese 105" # orbit of (AC) and B unknown
-{
-	RA 39.03674095 # mass ratio (0.78:102.6J):0.21
-	Dec 6.89039568
-	Distance 23.5599 # 138.4371 +/- 0.0420 mas
-}
-
-# Feng et al. (2021), MNRAS 507 (2), 2856
-# "Optimized modelling of Gaia-Hipparcos astrometry for the detection of the
-# smallest cold Jupiter and confirmation of seven low-mass companions"
-# https://arxiv.org/abs/2107.14056
-Barycenter 12114 "Gliese 105 AC"
+12114 # Gliese 105 A
 {
 	RA 39.02838451
 	Dec 6.89333911
-	Distance 23.5599
-}
-
-"Gliese 105 A"
-{
-	OrbitBarycenter "Gliese 105 AC"
-	SpectralType "K3V"
-	AppMag 5.81
-
-	EllipticalOrbit {              # fully specified orientation
-		Period         76.107
-		SemiMajorAxis     1.9 # mass ratio 0.78:102.6J
-		Eccentricity    0.641
-		Inclination     110.5
-		AscendingNode   344.9
-		ArgOfPericenter   8.3
-		MeanAnomaly     273.7
-	}
-}
-
-"Gliese 105 C"
-{
-	OrbitBarycenter "Gliese 105 AC"
-	SpectralType "M7V"
-	AppMag 16.77
-
-	EllipticalOrbit {              # fully specified orientation
-		Period         76.107
-		SemiMajorAxis    15.1 # mass ratio 0.78:102.6J
-		Eccentricity    0.641
-		Inclination     110.5
-		AscendingNode   344.9
-		ArgOfPericenter 188.3
-		MeanAnomaly     273.7
-	}
+	Distance 23.576 # 138.34 +/- 0.3177 mas
+	SpectralType "K3"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+105+A"
 }
 
 "BX Cet:Gliese 105 B"
 {
 	RA 39.07167733
-	Dec 6.87808990
-	Distance 23.5599
-	AppMag 11.664
-	SpectralType "M3.5V"
-	Radius 225000 # approx. for class
+	Dec 6.8780899
+	Distance 23.56 # 138.4371 +/- 0.042 mas
+	SpectralType "M4"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+105+B"
 }
 
-"V488 Hya:2MASS J08354256-0819237:GJ 11250"
+"Gliese 105 C"
 {
-	RA 128.92481210
-	Dec -8.32181827
-	Distance 23.5807 # 138.3147 +/- 0.2145 mas
-	SpectralType "L6.5V"
-	AbsMag 21.5 # for approximate radius in Celestia
+	RA 39.02838451
+	Dec 6.89333911
+	Distance 23.576 # 138.34 +/- 0.3177 mas
+	SpectralType "M7"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+105+C"
 }
 
-"GJ 4274:Luyten 788-34"
+"2MASS J08354256-0819237"
+{
+	RA 128.9248121
+	Dec -8.32181827
+	Distance 23.581 # 138.3147 +/- 0.2145 mas
+	SpectralType "L6.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASS+J08354256-0819237"
+}
+
+"GJ 4274:L 788-34"
 {
 	RA 335.78059284
 	Dec -17.61050757
-	Distance 23.5955 # 138.2280 +/- 0.0482 mas
-	SpectralType "M4.5Ve"
-	Radius 160000 # approx. for class
-	AppMag 13.30
+	Distance 23.596 # 138.228 +/- 0.0482 mas
+	SpectralType "M4.5e"
+	AppMag 13.3
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=L+788-34"
 }
 
-# Used parallax of component C from Gaia EDR3
-# orbit listed for AB-C in Sixth Catalog yields unrealistically high mass sum
-Barycenter "Gliese 667:CD-34 11626"
-{
-	RA 259.74581449 # mass ratio (0.68:0.59):0.35
-	Dec -34.99176542
-	Distance 23.6232 # 138.0663 +/- 0.0283 mas
-}
-
-Barycenter 84709 "Gliese 667 AB:CD-34 11626 AB"
-{
-	RA  259.74431576
-	Dec -34.99010370
-	Distance 23.6232
-}
-
-1008507370 "Gliese 667 A:CD-34 11626 A"
-{
-	OrbitBarycenter "Gliese 667 AB"
-	SpectralType "K4V"
-	AppMag 5.90
-
-	EllipticalOrbit {
-		Period           42.15
-		SemiMajorAxis     6.09 # mass ratio 0.68:0.59
-		Eccentricity      0.58
-		Inclination     136.65
-		AscendingNode   305.37
-		ArgOfPericenter 183.60
-		MeanAnomaly     205.84
-	}
-}
-
-2008507370 "Gliese 667 B:CD-34 11626 B"
-{
-	OrbitBarycenter "Gliese 667 AB"
-	SpectralType "K5V"
-	AppMag 5.90
-
-	EllipticalOrbit {
-		Period           42.15
-		SemiMajorAxis     7.02 # mass ratio 0.68:0.59
-		Eccentricity      0.58
-		Inclination     136.65
-		AscendingNode   305.37
-		ArgOfPericenter   3.60
-		MeanAnomaly     205.84
-	}
-}
-
-"Gliese 667 C:CD-34 11626 C"
+84709 # Gliese 667 A
 {
 	RA 259.75125274
 	Dec -34.99779509
-	Distance 23.6232
-	SpectralType "M1.5V"
-	Radius 324000 # approx. for class
-	AppMag 10.22
-	InfoURL "https://en.wikipedia.org/wiki/Gliese_667#Gliese_667_C"
+	Distance 23.623 # 138.0663 +/- 0.0283 mas
+	SpectralType "K3"
+	AppMag 5.89
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+156384A"
 }
 
-"WISE 0607+2429:WISEP J060738.65+242953.4:GJ 10869"
+"Gliese 667 B"
+{
+	RA 259.75125274
+	Dec -34.99779509
+	Distance 23.623 # 138.0663 +/- 0.0283 mas
+	SpectralType "K5"
+	AppMag 7.38
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+156384B"
+}
+
+"Gliese 667 C"
+{
+	RA 259.75125274
+	Dec -34.99779509
+	Distance 23.623 # 138.0663 +/- 0.0283 mas
+	SpectralType "M1.5"
+	AppMag 10.22
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+156384C"
+}
+
+"2MASS J06073908+2429574"
 {
 	RA 91.91027347
 	Dec 24.49769409
-	Distance 23.6240 # 138.0616 +/- 0.5185 mas
-	SpectralType "L9V"
-	AbsMag 23 # approx. for radius in Celestia
-	InfoURL "https://en.wikipedia.org/wiki/WISE_0607%2B2429"
+	Distance 23.624 # 138.0616 +/- 0.5185 mas
+	SpectralType "L9"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASS+J06073908%2B2429574"
 }
 
-# parameters from Kirkpatrick et al. (2021)
-# BT-Settl model parameters from Beichman et al. (2014), ApJ 783 (2), 68
-# "WISE Y Dwarfs as Probes of the Brown Dwarf-Exoplanet Connection"
-# https://iopscience.iop.org/article/10.1088/0004-637X/783/2/68/meta
-"WISE 0313+7807:WISE J031325.94+780744.3:GJ 10442"
+"WISEP J031325.96+780744.2"
 {
 	RA 48.359149
 	Dec 78.129087
 	Distance 24.053 # 135.6 +/- 2.8 mas
-	SpectralType "T8.5V"
-	Temperature 651
-	Radius 61500
-	AbsMag 40 # extremely low
-	InfoURL "https://en.wikipedia.org/wiki/WISEPA_J031325.96%2B780744.2"
+	SpectralType "T8.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISEP+J031325.96%2B780744.2"
 }
 
-"2MASS 1507-1627:2MASS J15074769-1627386:GJ 12172"
+"2MASSW J1507476-162738"
 {
-	RA 226.94794580
+	RA 226.9479458
 	Dec -16.46512505
-	Distance 24.1691 # 134.9474 +/- 0.2611 mas
-	SpectralType "L5V"
-	Radius 60000 # approx.
+	Distance 24.169 # 134.9474 +/- 0.2611 mas
+	SpectralType "L5.5"
 	AppMag 22.136
-	InfoURL "https://en.wikipedia.org/wiki/2MASS_1507%E2%88%921627"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASSW+J1507476-162738"
 }
 
 3765 # HD 4628
 {
 	RA 12.09910708
 	Dec 5.27553945
-	Distance 24.2505 # 134.4948 +/- 0.0578 mas
-	SpectralType "K2.5V"
+	Distance 24.25 # 134.4948 +/- 0.0578 mas
+	SpectralType "K2.5"
 	AppMag 5.74
-	InfoURL "https://en.wikipedia.org/wiki/HD_4628"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+4628"
 }
 
-# Used Hipparcos parallax instead
-2021 # Bet Hyi
+2021 # bet Hyi
 {
 	RA 6.48250499
 	Dec -77.25279547
-	Distance 24.327 # 134.07 +/- 0.11 mas
-	SpectralType "G0V"
+	Distance 24.391 # 133.7194 +/- 0.272 mas
+	SpectralType "G2"
 	AppMag 2.79
-	InfoURL "https://en.wikipedia.org/wiki/Beta_Hydri"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=bet+Hyi"
 }
 
-# parameters from Kirkpatrick et al. (2021)
-"WISE 2000+3629:WISE J200050.19+362950.1:GJ 12908"
+"WISE J200050.19+362950.1"
 {
 	RA 300.209094
 	Dec 36.497796
-	Distance 24.450 # 133.4 +/- 2.2 mas
+	Distance 24.45 # 133.4 +/- 2.2 mas
 	SpectralType "T8"
-	Temperature 765
-	Radius 60000 # approx.
-	AbsMag 40 # extremely low
-	InfoURL "https://en.wikipedia.org/wiki/WISE_J2000%2B3629"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISE+J200050.19%2B362950.1"
 }
 
-# Parameters from Bond et al. (2020), ApJ 904 (2), 112
-# "Hubble Space Telescope Astrometry of the Metal-poor Visual Binary μ Cassiopeiae:
-# Dynamical Masses, Helium Content, and Age"
-# https://iopscience.iop.org/article/10.3847/1538-4357/abc172
-Barycenter 5336 "MU Cas:30 Cas:Gliese 53"
-{
-	RA 17.09474986
-	Dec 54.91320398
-	Distance 24.586 # 132.66 +/- 0.69 mas
-}
-
-"MU Cas A:30 Cas A:Gliese 53 A"
-{
-	OrbitBarycenter "MU Cas"
-	SpectralType "G5V"
-	AppMag 5.166
-	Radius 548900
-
-	EllipticalOrbit {	       # fully specified orientation
-		Period          21.568
-		SemiMajorAxis   1.4186 # mass ratio 0.7440:0.1728
-		Eccentricity    0.5885
-		Inclination      25.62
-		AscendingNode   344.53
-		ArgOfPericenter 124.96
-		MeanAnomaly      46.34
-	}
-}
-
-"MU Cas B:30 Cas B:Gliese 53 B"
-{
-	OrbitBarycenter "MU Cas"
-	SpectralType "MVI"
-	AppMag 11.00
-
-	EllipticalOrbit {
-		Period          21.568
-		SemiMajorAxis   6.1080 # mass ratio 0.7440:0.1728
-		Eccentricity    0.5885
-		Inclination      25.62
-		AscendingNode   344.53
-		ArgOfPericenter 304.96
-		MeanAnomaly      46.34
-	}
-}
-
-# Delfosse et al. (1999), A&A 344, 897
-# "New neighbours. I. 13 new companions to nearby M dwarfs"
-# http://adsabs.harvard.edu/abs/1999A&A...344..897D
-Barycenter 83945 "GJ 3991:Giclas 203-47"
+83945 # G 203-47 A
 {
 	RA 257.38347212
 	Dec 43.68010581
-	Distance 24.7840 # 131.5996 +/- 0.4285 mas
+	Distance 24.784 # 131.5996 +/- 0.4285 mas
+	SpectralType "M3.5"
+	AppMag 13.671
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+203-47"
 }
 
-"GJ 3991 A:Giclas 203-47 A"
+"G 203-47 B"
 {
-	OrbitBarycenter "Giclas 203-47"
-	SpectralType "M3.5V"
-	Radius 225000 # approx. for class
-	AppMag 11.80
-
-	EllipticalOrbit {
-		Period          0.0402836	# 14.7136 d
-		SemiMajorAxis   0.065	# estimated from mass ratio 0.35:0.5
-		Eccentricity    0.068
-		ArgOfPericenter 332.0
-		MeanAnomaly     348.6
-	}
+	RA 257.38347212
+	Dec 43.68010581
+	Distance 24.784 # 131.5996 +/- 0.4285 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+203-47"
 }
 
-"GJ 3991 B:Giclas 203-47 B"
+113368 # alf PsA A
 {
-	OrbitBarycenter "Giclas 203-47"
-	SpectralType "D"
-	AbsMag 13.7 # for a 0.5-solar-mass white dwarf
-
-	EllipticalOrbit {
-		Period          0.0402836	# 14.7136 d
-		SemiMajorAxis   0.046	# estimated from mass ratio 0.35:0.5
-		Eccentricity    0.068
-		ArgOfPericenter 152.0
-		MeanAnomaly     348.6
-	}
+	RA 344.41269272
+	Dec -29.62223703
+	Distance 25.126 # 129.81 +/- 0.47 mas
+	SpectralType "A4"
+	AppMag 1.16
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=alf+PsA"
 }
 
-113283 # TW PsA (Fomalhaut B)
+113283 # alf PsA B
 {
-	RA 344.10194140
+	RA 344.1019414
 	Dec -31.56626896
-	Distance 24.7929 # 131.5525 +/- 0.0275 mas
-	SpectralType "K4Ve"
+	Distance 24.793 # 131.5525 +/- 0.0275 mas
+	SpectralType "K4"
 	AppMag 6.48
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=alf+PsA+B"
 }
 
-# Used Gaia DR2 parallax instead
-7981 # 107 Psc
+"Fomalhaut C:alf PsA C"
 {
-	RA 25.62258569
-	Dec 20.26551918
-	Distance 24.8046 # 131.4903 +/- 0.1515 mas
-	SpectralType "K1V"
-	AppMag 5.24
-	InfoURL "https://en.wikipedia.org/wiki/107_Piscium"
+	RA 342.02033817
+	Dec -24.36962742
+	Distance 25.037 # 130.2707 +/- 0.0325 mas
+	SpectralType "M4e"
+	AppMag 12.624
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=alf+PsA+C"
 }
 
-"Giclas 141-36:GJ 12735"
+5336 # Gliese 53 A
+{
+	RA 17.09474986
+	Dec 54.91320398
+	Distance 25.033 # 130.2881 +/- 0.4348 mas
+	SpectralType "G5"
+	AppMag 5.17
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+53+A"
+}
+
+"Gliese 53 B"
+{
+	RA 17.09474986
+	Dec 54.91320398
+	Distance 25.033 # 130.2881 +/- 0.4348 mas
+	SpectralType "M4?"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+53+B"
+}
+
+12781 # VX Ari
+{
+	RA 41.06888178
+	Dec 25.52175109
+	Distance 25.051 # 130.1956 +/- 0.0281 mas
+	SpectralType "M3"
+	AppMag 10.563
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=VX+Ari"
+}
+
+"G 141-36"
 {
 	RA 282.07475874
 	Dec 7.69032389
-	Distance 24.8445 # 131.2790 +/- 0.0398 mas
-	SpectralType "M5.0V"
-	Radius 140000 # approx. for class
-	AppMag 14.248
+	Distance 24.845 # 131.279 +/- 0.0398 mas
+	SpectralType "M5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+141-36"
 }
 
-Modify 65859 # Ross 490
+65859 # BD+11 2576
 {
-	Radius 341000 # approx. for class
+	RA 202.50420163
+	Dec 10.37238957
+	Distance 24.878 # 131.1013 +/- 0.027 mas
+	SpectralType "M1e"
+	AppMag 9.029
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BD%2B11+2576"
 }
 
-# parameters from Kirkpatrick et al. (2021)
-# BT-Settl model parameters from Beichman et al. (2014), ApJ 783 (2), 68
-# "WISE Y Dwarfs as Probes of the Brown Dwarf-Exoplanet Connection"
-# https://iopscience.iop.org/article/10.1088/0004-637X/783/2/68/meta
-"WISE 1738+2732:WISE J173835.53+273259.0:GJ 12541"
+"WISE J173835.53+273259.0"
 {
 	RA 264.648568
 	Dec 27.549203
 	Distance 24.916 # 130.9 +/- 2.1 mas
-	SpectralType "Y0V"
-	Temperature 409
-	Radius 64300
-	AbsMag 40 # extremely low
-	InfoURL "https://en.wikipedia.org/wiki/WISEPA_J173835.53%2B273258.9"
+	SpectralType "Y0"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISE+J173835.53%2B273259.0"
 }
 
-"GJ 4053:LP 71-165"
+"GJ 4053:G 258-33"
 {
 	RA 274.74325648
 	Dec 66.19061665
-	Distance 24.9254 # 130.8531 +/- 0.0217 mas
-	SpectralType "M4.5V"
-	Radius 160000 # approx. for class
-	AppMag 13.406
+	Distance 24.925 # 130.8531 +/- 0.0217 mas
+	SpectralType "M4.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+258-33"
 }
 
-# parameters from Kirkpatrick et al. (2021)
-"WISE 2354+0240:WISEA J235402.79+024014.1:GJ 13441"
+7981 # 107 Psc
+{
+	RA 25.62258569
+	Dec 20.26551918
+	Distance 24.931 # 130.8234 +/- 0.1532 mas
+	SpectralType "K0"
+	AppMag 5.24
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=107+Psc"
+}
+
+"WISEA J235402.79+024014.1"
 {
 	RA 358.512498
 	Dec 2.669898
 	Distance 24.974 # 130.6 +/- 3.3 mas
 	SpectralType "Y1"
-	Temperature 388
-	Radius 60000 # approx.
-	AbsMag 40 # extremely low
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISEA+J235402.79%2B024014.1"
 }
 
-# apparent magnitude from Henry et al. (2006) AJ 132 (6), 2360
-# "The Solar Neighborhood. XVII. Parallax Results from the CTIOPI 0.9 m Program:
-# 20 New Members of the RECONS 10 Parsec Sample"
-# http://iopscience.iop.org/1538-3881/132/6/2360/pdf/1538-3881_132_6_2360.pdf
-"GJ 4248:LHS 3746:Luyten 499-56"
+"GJ 4248:L 499-56"
 {
 	RA 330.62692304
 	Dec -37.08193914
-	Distance 25.0084 # 130.4186 +/- 0.0534 mas
-	SpectralType "M3.0V"
-	Radius 270000 # approx. for class
-	AppMag 11.76
+	Distance 25.008 # 130.4186 +/- 0.0534 mas
+	SpectralType "M3"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=L+499-56"
 }
 
-"Fomalhaut C:ALF PsA C:LP 876-10:GJ 13282"
+91262 # alf Lyr
 {
-	RA 342.02033817
-	Dec -24.36962742
-	Distance 25.0368 # 130.2707 +/- 0.0325 mas
-	SpectralType "M4.0Ve"
-	Radius 160000 # approx. for class
-	AppMag 12.624
-	InfoURL "https://en.wikipedia.org/wiki/Fomalhaut_C"
+	RA 279.23473479
+	Dec 38.78368896
+	Distance 25.045 # 130.23 +/- 0.36 mas
+	SpectralType "A0"
+	AppMag 0.03
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=alf+Lyr"
 }
 
-# rotational parameters from Monnier et al. (2012), ApJL 761 (1), L3
-# "Resolving Vega and the Inclination Controversy with CHARA/MIRC"
-# https://arxiv.org/abs/1211.6055
-Modify 91262 # Vega
+49986 # AN Sex
 {
-	Radius 1896000 # equatorial radius
-
-	SemiAxes [ 1 0.887 1 ] # equatorial radius 12.7% greater than polar
-
-	UniformRotation
-	{
-		Period         17.04
-		Inclination   150.91 # inclination (i) = 6.2
-		AscendingNode 208.14 # pole position angle = -58
-	}
+	RA 153.07293731
+	Dec -3.74674755
+	Distance 25.136 # 129.7544 +/- 0.0252 mas
+	SpectralType "M1.5"
+	AppMag 9.264
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=AN+Sex"
 }
 
-Modify 12781 # Gliese 109
+85295 # HD 157881
 {
-	Radius 225000 # approx. for class
+	RA 261.43588749
+	Dec 2.10615776
+	Distance 25.157 # 129.6459 +/- 0.0175 mas
+	SpectralType "K7"
+	AppMag 7.56
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+157881"
 }
 
-# Rotational parameters based on disk parameters, from
-# MacGregor et al. (2017), ApJ 842 (1), 8
-# "A Complete ALMA Map of the Fomalhaut Debris Disk"
-# https://arxiv.org/abs/1705.05867
-Modify 113368 # Fomalhaut 
+"SIPS J1259-4336"
 {
-	UniformRotation
-	{
-		Inclination    83.2  # rotation pole matches debris disk
-		AscendingNode  177.5 # inclination 65.6 deg, position angle 337.9 deg
- 	}
+	RA 194.77664455
+	Dec -43.60796356
+	Distance 25.2 # 129.4288 +/- 0.062 mas
+	SpectralType "M8"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=SIPS+J1259-4336"
 }
 
-#========================================================================
-# Nearby multiple star with poor Hipparcos parallax
-
-# Used Gaia DR2 parallax for B
-Barycenter 55203 "Alula Australis:XI UMa:53 UMa:Gliese 423:ADS 8119"
+"GJ 2005:LP 881-64 A"
 {
-	RA 169.545550
-	Dec 31.529289
-	Distance 28.4885 # 114.4867 +/- 0.4316 mas
+	RA 6.18360971
+	Dec -27.13725776
+	Distance 25.222 # 129.3167 +/- 0.1256 mas
+	SpectralType "M5.5"
+	AppMag 15.338
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=LP+881-64"
 }
 
-# Masses from Fuhrmann et al. (2016), MNRAS 459 (2), 1682
-# "Evidence for very nearby hidden white dwarfs"
-# https://doi.org/10.1093/mnras/stw760
-Barycenter 1026342520 "Alula Australis A:XI UMa A:53 UMa A:Gliese 423 A:ADS 8119 A"
+"LP 881-64 B"
 {
-	OrbitBarycenter "Alula Australis"
-
-	EllipticalOrbit {            # fully specified orientation
-		Period         59.88
-		SemiMajorAxis   9.65 # mass ratio (0.98:0.38):(0.88:0.17)
-		Eccentricity    0.40
-		Inclination    14.09
-		AscendingNode 192.13
-		ArgOfPericenter 9.70
-		MeanAnomaly    29.62
-	}
+	RA 6.18360971
+	Dec -27.13725776
+	Distance 25.222 # 129.3167 +/- 0.1256 mas
+	SpectralType "M9.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=LP+881-64"
 }
 
-Barycenter 2026342520 "Alula Australis B:XI UMa B:53 UMa B:Gliese 423 B:ADS 8119 B"
+"LP 881-64 C"
 {
-	OrbitBarycenter "Alula Australis"
-
-	EllipticalOrbit {              # fully specified orientation
-		Period           59.88
-		SemiMajorAxis    12.50 # mass ratio (0.98:0.38):(0.88:0.17)
-		Eccentricity      0.40
-		Inclination      14.09
-		AscendingNode   192.13
-		ArgOfPericenter 189.70
-		MeanAnomaly      29.62
-	}
+	RA 6.18360971
+	Dec -27.13725776
+	Distance 25.222 # 129.3167 +/- 0.1256 mas
+	SpectralType "L0"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=LP+881-64"
 }
 
-"Alula Australis Aa:XI UMa Aa:53 UMa Aa:Gliese 423 Aa"
+"GJ 3378:G 192-13"
 {
-	OrbitBarycenter "Alula Australis A"
-	SpectralType "G0V"
-	AppMag 4.33
-
-	EllipticalOrbit {             # fully specified orientation
-		Period          1.834
-		SemiMajorAxis    0.47 # mass ratio 0.98:0.38
-		Eccentricity     0.61
-		Inclination      32.2
-		AscendingNode    21.4
-		ArgOfPericenter   4.7
-		MeanAnomaly      73.4
-	}
+	RA 90.29510136
+	Dec 59.59306279
+	Distance 25.225 # 129.3014 +/- 0.0283 mas
+	SpectralType "M4e"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+192-13"
 }
 
-"Alula Australis Ab:XI UMa Ab:53 UMa Ab"
+88574 # HD 165222
 {
-	OrbitBarycenter "Alula Australis A"
-	SpectralType "M2V" # from mass estimate of 0.38
-	AbsMag 10.3 # for estimated spectral class
-
-	EllipticalOrbit {             # fully specified orientation
-		Period          1.834
-		SemiMajorAxis    1.21 # mass ratio 0.98:0.38
-		Eccentricity     0.61
-		Inclination      32.2
-		AscendingNode    21.4
-		ArgOfPericenter 184.7
-		MeanAnomaly      73.4
-	}
+	RA 271.28411384
+	Dec -3.032798
+	Distance 25.241 # 129.2184 +/- 0.0256 mas
+	SpectralType "M0"
+	AppMag 9.36
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+165222"
 }
 
-"Alula Australis Ba:XI UMa Ba:53 UMa Ba:Gliese 423 Ba"
+"GJ 1093:G 109-35"
 {
-	OrbitBarycenter "Alula Australis B"
-	SpectralType "G0V"
-	AppMag 4.8
-
-	EllipticalOrbit {
-		Period          0.010898034 # 3.980507 d
-		SemiMajorAxis   0.008  # mass ratio 0.88:0.17
-		Eccentricity    0
-		Inclination     102 # plane-of-inclination:
-		AscendingNode   70  # 12.7 deg
-		ArgOfPericenter 347.3
-		MeanAnomaly     329.2
-	}
-
-	UniformRotation {
-		Period          95.532168 # guess, to match orbit
-		Inclination     102
-		AscendingNode   70
-	}
+	RA 104.87435116
+	Dec 19.34487369
+	Distance 25.286 # 128.9866 +/- 0.0607 mas
+	SpectralType "M5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+109-35"
 }
 
-"Alula Australis Bb:XI UMa Bb:53 UMa Bb:Gliese 423 Bb"
-# Fuhrmann et al. (2016) suggest it could be a white dwarf
+"G 227-22"
 {
-	OrbitBarycenter "Alula Australis B"
-	SpectralType "D"
-	AbsMag 11.3 # for approximate radius in Celestia
-
-	EllipticalOrbit {
-		Period          0.010898034 # 3.980507 d
-		SemiMajorAxis   0.056  # mass ratio 0.88:0.17
-		Eccentricity    0
-		Inclination     102 # plane-of-inclination:
-		AscendingNode   70  # 12.7 deg
-		ArgOfPericenter 167.3
-		MeanAnomaly     329.2
-	}
-
-	UniformRotation {
-		Period          95.532168 # guess, to match orbit
-		Inclination     102
-		AscendingNode   70
-	}
+	RA 270.57119282
+	Dec 64.26058362
+	Distance 25.42 # 128.3057 +/- 0.0319 mas
+	SpectralType "M5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+227-22"
 }
 
-# Gaia DR2 suggests WDS J11182+3132C is an optical pair
-# radius and temperature from Zhang et al. (2021), ApJ 911 (1), 7
-# "The Hawaii Infrared Parallax Program. V. New T-dwarf Members and Candidate
-# Members of Nearby Young Moving Groups"
-# https://iopscience.iop.org/article/10.3847/1538-4357/abe3fa
-"Alula Australis C:WISE 1118+3125:WISE J111838.70+312537.9"
+"WISEP J180026.60+013453.1"
 {
-	RA 169.66125400
-	Dec 31.42720000
-	Distance 28.4885
-	SpectralType "T8.5V"
-	Temperature 584
-	Radius 63000
-	AbsMag 40 # extremely low
-	InfoURL "https://en.wikipedia.org/wiki/Xi_Ursae_Majoris#WISE_J111838.70+312537.9"
+	RA 270.11114463
+	Dec 1.5807637
+	Distance 25.47 # 128.0546 +/- 0.5101 mas
+	SpectralType "L7.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISEP+J180026.60%2B013453.1"
+}
+
+80346 # Gliese 623 A
+{
+	RA 246.04650958
+	Dec 48.3508694
+	Distance 25.585 # 127.4785 +/- 0.4818 mas
+	SpectralType "M3e"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+623+A"
+}
+
+"Gliese 623 B"
+{
+	RA 246.04650958
+	Dec 48.3508694
+	Distance 25.585 # 127.4785 +/- 0.4818 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+623+B"
+}
+
+5496 # CD-68 47 A
+{
+	RA 17.59990108
+	Dec -67.44239091
+	Distance 25.702 # 126.9 +/- 0.4 mas
+	SpectralType "M2.5"
+	AppMag 9.824
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=CD-68+47"
+}
+
+"CD-68 47 B"
+{
+	RA 17.59990108
+	Dec -67.44239091
+	Distance 25.702 # 126.9 +/- 0.4 mas
+	AppMag 10.854
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=CD-68+47"
+}
+
+"WISE J000517.48+373720.5"
+{
+	RA 1.324667
+	Dec 37.621951
+	Distance 25.702 # 126.9 +/- 2.1 mas
+	SpectralType "T9"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISE+J000517.48%2B373720.5"
+}
+
+"2MASS J07290002-3954043"
+{
+	RA 112.250104
+	Dec -39.901222
+	Distance 25.824 # 126.3 +/- 8.3 mas
+	SpectralType "T8pec"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASS+J07290002-3954043"
+}
+
+"GJ 1224:G 154-44"
+{
+	RA 271.88396509
+	Dec -15.96461683
+	Distance 25.999 # 125.4509 +/- 0.0306 mas
+	SpectralType "M4e"
+	AppMag 13.48
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+154-44"
+}
+
+"SCR J0740-4257"
+{
+	RA 115.04626042
+	Dec -42.95894881
+	Distance 26.029 # 125.3028 +/- 0.0215 mas
+	SpectralType "M4.5"
+	AppMag 13.835
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=SCR+J0740-4257"
+}
+
+106255 # Gliese 831 A
+{
+	RA 322.83298126
+	Dec -9.79096535
+	Distance 26.03 # 125.3 +/- 0.3 mas
+	SpectralType "M4.5"
+	AppMag 12.006
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+831+A"
+}
+
+"BB Cap B:Gliese 831 B"
+{
+	RA 322.83298126
+	Dec -9.79096535
+	Distance 26.03 # 125.3 +/- 0.3 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+831+B"
+}
+
+22449 # pi.03 Ori
+{
+	RA 72.46212402
+	Dec 6.96133101
+	Distance 26.172 # 124.6198 +/- 0.2246 mas
+	SpectralType "F6.0"
+	AppMag 3.19
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=pi.03+Ori"
+}
+
+33499 # CD-44 3045 A
+{
+	RA 104.43732955
+	Dec -44.29139605
+	Distance 26.183 # 124.5695 +/- 0.0495 mas
+	SpectralType "M3"
+	AppMag 10.846
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=CD-44+3045+A"
+}
+
+"Gliese 257 B:CD-44 3045 B"
+{
+	RA 104.43647191
+	Dec -44.29165131
+	Distance 26.227 # 124.3569 +/- 0.0399 mas
+	SpectralType "M3"
+	AppMag 11.29
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=CD-44+3045+B"
+}
+
+"GJ 1151"
+{
+	RA 177.73016381
+	Dec 48.3730998
+	Distance 26.231 # 124.3378 +/- 0.0549 mas
+	SpectralType "M4.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+122-49"
+}
+
+61874 # L 399-68
+{
+	RA 190.18807527
+	Dec -43.56332198
+	Distance 26.264 # 124.1851 +/- 0.0295 mas
+	SpectralType "M3"
+	AppMag 12.239
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=L+399-68"
+}
+
+89937 # chi Dra A
+{
+	RA 275.27203305
+	Dec 72.7312778
+	Distance 26.28 # 124.11 +/- 0.87 mas
+	SpectralType "F7.0"
+	AppMag 3.58
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=chi+Dra+A"
+}
+
+"Gliese 713 B:chi Dra B"
+{
+	RA 275.27203305
+	Dec 72.7312778
+	Distance 26.28 # 124.11 +/- 0.87 mas
+	SpectralType "K0"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=chi+Dra+B"
+}
+
+62452 # Gliese 486
+{
+	RA 191.98138883
+	Dec 9.74935423
+	Distance 26.351 # 123.7756 +/- 0.0329 mas
+	SpectralType "M3.5e"
+	AppMag 11.395
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Wolf+437"
+}
+
+"2MASSW J2148162+400359"
+{
+	RA 327.07239546
+	Dec 40.06851779
+	Distance 26.372 # 123.6752 +/- 0.3595 mas
+	SpectralType "L7"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASSW+J2148162%2B400359"
+}
+
+101180 # G 262-15
+{
+	RA 307.63826398
+	Dec 65.45081813
+	Distance 26.376 # 123.6547 +/- 0.0148 mas
+	SpectralType "M2.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+262-15"
+}
+
+"GJ 1154:G 13-22"
+{
+	RA 183.5647256
+	Dec 0.62272713
+	Distance 26.379 # 123.643 +/- 0.0449 mas
+	SpectralType "M4.5e"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+13-22"
+}
+
+"Gliese 300:L 674-15"
+{
+	RA 123.17043503
+	Dec -21.55502399
+	Distance 26.473 # 123.2033 +/- 0.0236 mas
+	SpectralType "M3.5"
+	AppMag 12.13
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=L+674-15"
+}
+
+"GJ 1087:EGGR 290"
+{
+	RA 89.10409822
+	Dec 5.35934471
+	Distance 26.474 # 123.1989 +/- 0.017 mas
+	SpectralType "DA8P"
+	AppMag 14.13
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=EGGR+290"
+}
+
+"IRAS 21500+5903"
+{
+	RA 327.90897024
+	Dec 59.29444662
+	Distance 26.505 # 123.0568 +/- 0.5944 mas
+	SpectralType "M2?"
+	AppMag 10.64
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=IRAS+21500%2B5903"
+}
+
+"UCAC4 747-070768"
+{
+	RA 327.91636042
+	Dec 59.29292978
+	Distance 27.604 # 118.1551 +/- 0.0155 mas
+	SpectralType "DAH"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=UCAC4+747-070768"
+}
+
+86287 # Gliese 686
+{
+	RA 264.47662365
+	Dec 18.59608765
+	Distance 26.613 # 122.5546 +/- 0.0176 mas
+	SpectralType "M1.5e"
+	AppMag 9.577
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BD%2B18+3421"
+}
+
+"Gliese 293:LAWD 26"
+{
+	RA 118.30118446
+	Dec -67.79867245
+	Distance 26.644 # 122.413 +/- 0.0114 mas
+	SpectralType "DA"
+	AppMag 14.09
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=LAWD+26"
+}
+
+"UGPS J052127.27+364048.6"
+{
+	RA 80.363625
+	Dec 36.680167
+	Distance 26.69 # 122.2 +/- 1.6 mas
+	SpectralType "T8.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=UGPS+J052127.27%2B364048.6"
+}
+
+"Gliese 66 A"
+{
+	RA 24.95065662
+	Dec -56.19640007
+	Distance 26.733 # 122.0035 +/- 0.0319 mas
+	SpectralType "K2"
+	AppMag 5.797
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+66+A"
+}
+
+"Gliese 66 B"
+{
+	RA 24.95131742
+	Dec -56.19325138
+	Distance 26.71 # 122.1088 +/- 0.0365 mas
+	SpectralType "K2"
+	AppMag 5.685
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+66+B"
+}
+
+"L 173-19"
+{
+	RA 30.1604351
+	Dec -55.96826051
+	Distance 26.798 # 121.7084 +/- 0.0319 mas
+	SpectralType "M2"
+	AppMag 12.9
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=L+173-19"
+}
+
+113576 # HD 217357
+{
+	RA 345.06283532
+	Dec -22.52408921
+	Distance 26.85 # 121.4724 +/- 0.0249 mas
+	SpectralType "K7"
+	AppMag 7.869
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+217357"
+}
+
+4856 # Ross 318
+{
+	RA 15.65901188
+	Dec 71.67812049
+	Distance 26.853 # 121.4598 +/- 0.0158 mas
+	SpectralType "M3e"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Ross+318"
+}
+
+"WISE J115013.85+630241.5"
+{
+	RA 177.558965
+	Dec 63.044112
+	Distance 26.866 # 121.4 +/- 2.7 mas
+	SpectralType "T8"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISE+J115013.85%2B630241.5"
+}
+
+"Gliese 915:LAWD 96"
+{
+	RA 0.54842422
+	Dec -43.16843962
+	Distance 27.176 # 120.0143 +/- 0.0215 mas
+	SpectralType "DAP"
+	AppMag 13.05
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=LAWD+96"
+}
+
+86974 # mu. Her Aa
+{
+	RA 266.61321351
+	Dec 27.71727504
+	Distance 27.197 # 119.9248 +/- 0.1543 mas
+	SpectralType "G5"
+	AppMag 3.42
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=mu.+Her+A"
+}
+
+"Gliese 695 A:mu. Her Ab"
+{
+	RA 266.60269364
+	Dec 27.71382059
+	Distance 27.09 # 120.3979 +/- 0.2785 mas
+	SpectralType "M4"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=mu.+Her+A"
+}
+
+"Gliese 695 B:mu. Her B"
+{
+	RA 266.60286144
+	Dec 27.71373737
+	Distance 27.205 # 119.8871 +/- 0.2055 mas
+	SpectralType "M3.5"
+}
+
+"Gliese 695 C:mu. Her C"
+{
+	RA 266.60286144
+	Dec 27.71373737
+	Distance 27.205 # 119.8871 +/- 0.2055 mas
+}
+
+"Gliese 747 A"
+{
+	RA 286.9355656
+	Dec 32.54979921
+	Distance 27.134 # 120.2 +/- 0.2 mas
+	SpectralType "M3.5e"
+	AppMag 11.26
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+747+A"
+}
+
+"Gliese 747 B"
+{
+	RA 286.9355656
+	Dec 32.54979921
+	Distance 27.134 # 120.2 +/- 0.2 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+747+B"
+}
+
+"2MASS J03480772-6022270"
+{
+	RA 57.030457
+	Dec -60.376464
+	Distance 27.157 # 120.1 +/- 1.8 mas
+	SpectralType "T7"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASS+J03480772-6022270"
+}
+
+"Gliese 518:Wolf 489"
+{
+	RA 204.11607941
+	Dec 3.67447929
+	Distance 27.235 # 119.7566 +/- 0.0304 mas
+	SpectralType "DA"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Wolf+489"
+}
+
+"GJ 1227:G 227-29"
+{
+	RA 275.60383796
+	Dec 62.04499387
+	Distance 27.236 # 119.7519 +/- 0.0341 mas
+	SpectralType "M4"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+227-29"
+}
+
+"GJ 1289:G 130-4"
+{
+	RA 355.78150916
+	Dec 36.53631038
+	Distance 27.275 # 119.5794 +/- 0.0563 mas
+	SpectralType "M4"
+	AppMag 12.67
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+130-4"
+}
+
+"SCR J1546-5534 A"
+{
+	RA 236.67171878
+	Dec -55.58097967
+	Distance 27.386 # 119.0962 +/- 0.7032 mas
+	SpectralType "M8"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=SCR+J1546-5534"
+}
+
+"SCR J1546-5534 B"
+{
+	RA 236.67171878
+	Dec -55.58097967
+	Distance 27.386 # 119.0962 +/- 0.7032 mas
+	SpectralType "T6"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=SCR+J1546-5534"
+}
+
+23452 # HD 32450 A
+{
+	RA 75.61783104
+	Dec -21.25787833
+	Distance 27.277 # 119.5737 +/- 0.042 mas
+	SpectralType "M0"
+	AppMag 8.317
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+32450+A"
+}
+
+"Gliese 185 B:HD 32450 B"
+{
+	RA 75.61776596
+	Dec -21.2576392
+	Distance 27.448 # 118.825 +/- 0.0795 mas
+	AppMag 10.6
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+32450+B"
+}
+
+"2MASS J00345157+0523050"
+{
+	RA 8.717679
+	Dec 5.385476
+	Distance 27.454 # 118.8 +/- 2.7 mas
+	SpectralType "T6.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASS+J00345157%2B0523050"
+}
+
+"SCR J1138-7721"
+{
+	RA 174.52796501
+	Dec -77.36075894
+	Distance 27.33 # 119.3419 +/- 0.0305 mas
+	SpectralType "M5"
+	AppMag 14.78
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=SCR+J1138-7721"
+}
+
+61317 # bet CVn
+{
+	RA 188.43142838
+	Dec 41.35877669
+	Distance 27.634 # 118.0266 +/- 0.153 mas
+	SpectralType "G0"
+	AppMag 4.25
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=bet+CVn"
+}
+
+"Gliese 232:Ross 64"
+{
+	RA 96.17468891
+	Dec 23.43077857
+	Distance 27.705 # 117.7263 +/- 0.0278 mas
+	SpectralType "M4"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Ross+64"
+}
+
+"Gliese 618 A:CD-37 10765 A"
+{
+	RA 245.01042208
+	Dec -37.52461045
+	Distance 27.765 # 117.4716 +/- 0.0291 mas
+	SpectralType "M3"
+	AppMag 10.586
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=CD-37+10765+A"
+}
+
+"Gliese 618 B:CD-37 10765 B"
+{
+	RA 245.00935125
+	Dec -37.52540961
+	Distance 27.716 # 117.6791 +/- 0.1071 mas
+	SpectralType "M5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=CD-37+10765+B"
+}
+
+"Gliese 318:CD-32 5613"
+{
+	RA 130.37950136
+	Dec -32.93649497
+	Distance 27.783 # 117.3961 +/- 0.0205 mas
+	SpectralType "DA5.5"
+	AppMag 11.85
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=CD-32+5613"
+}
+
+64924 # 61 Vir
+{
+	RA 199.59629813
+	Dec -18.3159221
+	Distance 27.836 # 117.1726 +/- 0.1456 mas
+	SpectralType "G7"
+	AppMag 4.74
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=61+Vir"
+}
+
+"GJ 1276:EGGR 453"
+{
+	RA 343.48356406
+	Dec -6.78483021
+	Distance 27.844 # 117.1388 +/- 0.0341 mas
+	SpectralType "DZ13"
+	AppMag 15.66
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=EGGR+453"
+}
+
+"FN Vir:Gliese 493.1:Wolf 461"
+{
+	RA 195.1354745
+	Dec 5.68656685
+	Distance 27.869 # 117.0327 +/- 0.0613 mas
+	SpectralType "M4.5e"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Wolf+461"
+}
+
+"GJ 3454:G 89-32 A"
+{
+	RA 114.10571719
+	Dec 7.07727655
+	Distance 27.972 # 116.6 +/- 0.97 mas
+	SpectralType "M4.5"
+	AppMag 13.24
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+89-32+A"
+}
+
+"GJ 3454:G 89-32 B"
+{
+	RA 114.10571719
+	Dec 7.07727655
+	Distance 27.972 # 116.6 +/- 0.97 mas
+	SpectralType "M5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+89-32+B"
+}
+
+"CWISEP J040235.55-265145.4"
+{
+	RA 60.649091
+	Dec -26.863288
+	Distance 28.02 # 116.4 +/- 20.5 mas
+	SpectralType ">Y1?"
+}
+
+113229 # L 49-19
+{
+	RA 343.92147125
+	Dec -75.46337685
+	Distance 28.041 # 116.3134 +/- 0.0168 mas
+	SpectralType "M3"
+	AppMag 10.377
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=L+49-19"
+}
+
+"GJ 1057:CD Cet"
+{
+	RA 48.35325824
+	Dec 4.77520017
+	Distance 28.052 # 116.2678 +/- 0.0427 mas
+	SpectralType "M4.5e"
+	AppMag 14.001
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=CD+Cet"
+}
+
+1599 # zet Tuc
+{
+	RA 5.03560955
+	Dec -64.86961714
+	Distance 28.073 # 116.1826 +/- 0.1334 mas
+	SpectralType "F9.5"
+	AppMag 4.23
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=zet+Tuc"
+}
+
+"NLTT 40406"
+{
+	RA 232.62556001
+	Dec 9.43455139
+	Distance 28.107 # 116.0425 +/- 0.0435 mas
+	SpectralType "M5.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=NLTT+40406"
+}
+
+"GJ 3517:LP 666-9"
+{
+	RA 133.39836837
+	Dec -3.49316443
+	Distance 28.242 # 115.4876 +/- 0.0726 mas
+	SpectralType "M9"
+	AppMag 18.959
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=LP+666-9"
+}
+
+"AP Col"
+{
+	RA 91.21742525
+	Dec -34.55841282
+	Distance 28.264 # 115.3982 +/- 0.0298 mas
+	SpectralType "M5"
+	AppMag 12.96
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=AP+Col"
+}
+
+"PM J11413-3624"
+{
+	RA 175.34234991
+	Dec -36.40821491
+	Distance 28.341 # 115.0835 +/- 0.0359 mas
+	SpectralType "M5"
+	AppMag 13.105
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=PM+J11413-3624"
+}
+
+27913 # chi01 Ori A
+{
+	RA 88.59482419
+	Dec 20.27585215
+	Distance 28.374 # 114.9497 +/- 0.528 mas
+	SpectralType "G0"
+	AppMag 4.4
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=chi01+Ori"
+}
+
+"chi01 Ori B"
+{
+	RA 88.59482419
+	Dec 20.27585215
+	Distance 28.374 # 114.9497 +/- 0.528 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=chi01+Ori"
+}
+
+"GJ 1207:G 19-7"
+{
+	RA 254.27604769
+	Dec -4.35064932
+	Distance 28.382 # 114.9158 +/- 0.0252 mas
+	SpectralType "M4"
+	AppMag 12.25
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+19-7"
+}
+
+"LP 991-84"
+{
+	RA 24.84136681
+	Dec -39.60350836
+	Distance 28.459 # 114.604 +/- 0.0402 mas
+	SpectralType "M4.5"
+	AppMag 14.403
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=LP+991-84"
+}
+
+55203 # ksi UMa Aa
+{
+	RA 169.54338012
+	Dec 31.5264149
+	Distance 28.489 # 114.4867 +/- 0.4316 mas
+	SpectralType "F8.5"
+	AppMag 3.79
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=ksi+UMa+A"
+}
+
+"Gliese 423 A:ksi UMa Ab"
+{
+	RA 169.54338012
+	Dec 31.5264149
+	Distance 28.489 # 114.4867 +/- 0.4316 mas
+	SpectralType "M3"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=ksi+UMa+A"
+}
+
+"Gliese 423 B:ksi UMa Ba"
+{
+	RA 169.54338012
+	Dec 31.5264149
+	Distance 28.489 # 114.4867 +/- 0.4316 mas
+	SpectralType "G2"
+	AppMag 4.77
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=ksi+UMa+B"
+}
+
+"Gliese 423 D:ksi UMa Bb"
+{
+	RA 169.54338012
+	Dec 31.5264149
+	Distance 28.489 # 114.4867 +/- 0.4316 mas
+	SpectralType "K2-3"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=ksi+UMa+B"
+}
+
+"WISE J111838.70+312537.9"
+{
+	RA 169.54338012
+	Dec 31.5264149
+	Distance 28.489 # 114.4867 +/- 0.4316 mas
+	SpectralType "T8.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISE+J111838.70%2B312537.9"
+}
+
+"LSPM J0036+1821"
+{
+	RA 9.07135464
+	Dec 18.35341014
+	Distance 28.492 # 114.4735 +/- 0.1381 mas
+	SpectralType "L3.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=LSPM+J0036%2B1821"
+}
+
+32984 # HD 50281 A
+{
+	RA 103.07278432
+	Dec -5.17372829
+	Distance 28.521 # 114.3547 +/- 0.0418 mas
+	SpectralType "K3.5"
+	AppMag 6.57
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+50281"
+}
+
+"Gliese 250 B:HD 50281 Ba"
+{
+	RA 103.07260096
+	Dec -5.19006974
+	Distance 28.537 # 114.2911 +/- 0.0219 mas
+	SpectralType "M2"
+	AppMag 10.05
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+50281B"
+}
+
+"Gliese 250 B:HD 50281 Bb"
+{
+	RA 103.07260096
+	Dec -5.19006974
+	Distance 28.537 # 114.2911 +/- 0.0219 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+50281B"
+}
+
+57802 # MCC 135
+{
+	RA 177.77908195
+	Dec 35.27313964
+	Distance 28.589 # 114.0854 +/- 0.0191 mas
+	SpectralType "M1.5"
+	AppMag 9.802
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=MCC+135"
+}
+
+"WISENF J193656.08+040801.2"
+{
+	RA 294.232524
+	Dec 4.131561
+	Distance 28.635 # 113.9 +/- 3.8 mas
+	SpectralType "Y0?"
+}
+
+84720 # 41 Ara A
+{
+	RA 259.77265431
+	Dec -46.63575838
+	Distance 28.673 # 113.7513 +/- 0.0725 mas
+	SpectralType "G9"
+	AppMag 5.52
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=41+Ara+A"
+}
+
+"Gliese 666 B:41 Ara Ba"
+{
+	RA 259.76853246
+	Dec -46.63635961
+	Distance 28.647 # 113.8552 +/- 0.0307 mas
+	SpectralType "M0"
+	AppMag 8.69
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=41+Ara+B"
+}
+
+"Gliese 666 B:41 Ara Bb"
+{
+	RA 259.76853246
+	Dec -46.63635961
+	Distance 28.647 # 113.8552 +/- 0.0307 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=41+Ara+B"
+}
+
+"HU Del A:Gliese 791.2 A"
+{
+	RA 307.45433767
+	Dec 9.68950366
+	Distance 28.762 # 113.4 +/- 0.2 mas
+	SpectralType "M4.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+791.2+A"
+}
+
+"HU Del B:Gliese 791.2 B"
+{
+	RA 307.45433767
+	Dec 9.68950366
+	Distance 28.762 # 113.4 +/- 0.2 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+791.2+B"
+}
+
+99825 # HD 192310
+{
+	RA 303.82866493
+	Dec -27.03378081
+	Distance 28.739 # 113.4872 +/- 0.0516 mas
+	SpectralType "K2"
+	AppMag 5.723
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+192310"
+}
+
+109388 # Gliese 849
+{
+	RA 332.42315157
+	Dec -4.64083482
+	Distance 28.75 # 113.4447 +/- 0.03 mas
+	SpectralType "M3.5"
+	AppMag 10.366
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BD-05+5715"
+}
+
+93873 # Gliese 745 A
+{
+	RA 286.77091075
+	Dec 20.88648752
+	Distance 28.799 # 113.2521 +/- 0.0296 mas
+	SpectralType "M2"
+	AppMag 10.774
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+745+A"
+}
+
+93899 # Gliese 745 B
+{
+	RA 286.80272964
+	Dec 20.8755384
+	Distance 28.807 # 113.2228 +/- 0.0192 mas
+	SpectralType "M2"
+	AppMag 10.771
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+745+B"
+}
+
+31292 # L 32-8
+{
+	RA 98.43896955
+	Dec -75.62380392
+	Distance 28.83 # 113.1318 +/- 0.0176 mas
+	SpectralType "M3"
+	AppMag 11.419
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=L+32-8"
+}
+
+31293 # L 32-9
+{
+	RA 98.42498691
+	Dec -75.62874086
+	Distance 28.83 # 113.1304 +/- 0.0169 mas
+	SpectralType "M2"
+	AppMag 10.484
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=L+32-9"
+}
+
+23311 # HD 32147
+{
+	RA 75.20661767
+	Dec -5.75859896
+	Distance 28.845 # 113.0715 +/- 0.0222 mas
+	SpectralType "K3"
+	AppMag 6.21
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+32147"
+}
+
+38956 # G 111-47
+{
+	RA 119.55420832
+	Dec 41.3006425
+	Distance 28.865 # 112.9927 +/- 0.0259 mas
+	SpectralType "M3.5"
+	AppMag 13.912
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+111-47"
+}
+
+60559 # Ross 695
+{
+	RA 186.2238895
+	Dec -18.25255602
+	Distance 28.947 # 112.674 +/- 0.0241 mas
+	SpectralType "M2"
+	AppMag 11.272
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Ross+695"
+}
+
+"LEHPM 3396"
+{
+	RA 53.56719574
+	Dec -49.89008391
+	Distance 28.963 # 112.61 +/- 0.0557 mas
+	SpectralType "M9"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=LEHPM+3396"
+}
+
+"SCR J0630-7643 A"
+{
+	RA 97.69292693
+	Dec -76.71700458
+	Distance 28.951 # 112.6584 +/- 0.0934 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=SCR+J0630-7643+A"
+}
+
+"SCR J0630-7643 B"
+{
+	RA 97.69447072
+	Dec -76.71691328
+	Distance 28.966 # 112.5988 +/- 0.1309 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=SCR+J0630-7643+B"
+}
+
+"2MASSI J0727182+171001"
+{
+	RA 111.826025
+	Dec 17.167002
+	Distance 28.992 # 112.5 +/- 0.9 mas
+	SpectralType "T8"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASSI+J0727182%2B171001"
+}
+
+"CWISEP J181006.00-101001.1"
+{
+	RA 272.525745
+	Dec -10.166806
+	Distance 28.992 # 112.5 +/- 8.0 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=CWISEP+J181006.00-101001.1"
+}
+
+27072 # Gliese 216 A
+{
+	RA 86.11439123
+	Dec -22.45002336
+	Distance 29.044 # 112.296 +/- 0.1452 mas
+	SpectralType "F6.5"
+	AppMag 3.6
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+216+A"
+}
+
+"AK Lep:Gliese 216 B"
+{
+	RA 86.10910372
+	Dec -22.42340451
+	Distance 29 # 112.4661 +/- 0.0225 mas
+	SpectralType "K2.5"
+	AppMag 6.15
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+216+B"
+}
+
+111802 # Gliese 867 A
+{
+	RA 339.69202741
+	Dec -20.62148673
+	Distance 29.112 # 112.0344 +/- 0.0201 mas
+	SpectralType "M2e"
+	AppMag 9.083
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=FK+Aqr"
+}
+
+"Gliese 867 B"
+{
+	RA 339.69068815
+	Dec -20.61468945
+	Distance 28.867 # 112.9867 +/- 0.0387 mas
+	SpectralType "M3.5"
+	AppMag 11.49
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=FL+Aqr"
+}
+
+"Gliese 867 C"
+{
+	RA 339.69202741
+	Dec -20.62148673
+	Distance 29.112 # 112.0344 +/- 0.0201 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=FK+Aqr"
+}
+
+"Gliese 867 D"
+{
+	RA 339.69068815
+	Dec -20.61468945
+	Distance 28.867 # 112.9867 +/- 0.0387 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=FL+Aqr"
+}
+
+40501 # G 113-20
+{
+	RA 124.03158305
+	Dec 1.30284273
+	Distance 29.155 # 111.8698 +/- 0.0228 mas
+	SpectralType "M2"
+	AppMag 10.091
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+113-20"
+}
+
+"GJ 3421:G 193-27 A"
+{
+	RA 105.98716288
+	Dec 52.6977273
+	Distance 29.429 # 110.8263 +/- 0.6945 mas
+	SpectralType "M5e"
+	AppMag 13.29
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+193-27"
+}
+
+"G 193-27 B"
+{
+	RA 105.98716288
+	Dec 52.6977273
+	Distance 29.429 # 110.8263 +/- 0.6945 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+193-27"
+}
+
+55360 # SZ UMa
+{
+	RA 169.98810368
+	Dec 65.84729794
+	Distance 29.589 # 110.2305 +/- 0.0166 mas
+	SpectralType "M1"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=SZ+UMa"
+}
+
+56528 # Gliese 433
+{
+	RA 173.86190773
+	Dec -32.54374825
+	Distance 29.605 # 110.1711 +/- 0.0204 mas
+	SpectralType "M2"
+	AppMag 9.813
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=CD-31+9113"
+}
+
+17378 # del Eri
+{
+	RA 55.81166331
+	Dec -9.76008366
+	Distance 29.644 # 110.0254 +/- 0.1944 mas
+	SpectralType "K0"
+	AppMag 3.54
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=del+Eri"
+}
+
+65026 # HD 115953 Aa
+{
+	RA 199.94126675
+	Dec 47.77792464
+	Distance 29.655 # 109.9837 +/- 0.8292 mas
+	SpectralType "M2"
+	AppMag 8.54
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+115953+A"
+}
+
+"HD 115953 Ab"
+{
+	RA 199.94126675
+	Dec 47.77792464
+	Distance 29.655 # 109.9837 +/- 0.8292 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+115953+A"
+}
+
+"Gliese 508 B:HD 115953 B"
+{
+	RA 199.94126675
+	Dec 47.77792464
+	Distance 29.655 # 109.9837 +/- 0.8292 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+115953+B"
+}
+
+"GJ 3146:LP 469-206"
+{
+	RA 34.12668629
+	Dec 13.58495936
+	Distance 29.664 # 109.95 +/- 0.0704 mas
+	SpectralType "M5e"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=LP+469-206"
+}
+
+"GJ 2012:EGGR 246"
+{
+	RA 10.35621993
+	Dec -22.35233354
+	Distance 29.67 # 109.9276 +/- 0.0202 mas
+	SpectralType "DQ9"
+	AppMag 14.6
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=EGGR+246"
+}
+
+108706 # V374 Peg
+{
+	RA 330.30656608
+	Dec 28.30710892
+	Distance 29.69 # 109.8548 +/- 0.0259 mas
+	SpectralType "M3.5e"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=V374+Peg"
+}
+
+"2MASS J06523073+4710348"
+{
+	RA 103.12722334
+	Dec 47.17695671
+	Distance 29.714 # 109.7651 +/- 0.2782 mas
+	SpectralType "L4.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASS+J06523073%2B4710348"
+}
+
+"WT 460 A"
+{
+	RA 212.99539892
+	Dec -41.53972199
+	Distance 29.723 # 109.7323 +/- 0.2316 mas
+	SpectralType "M5.5e"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WT+460"
+}
+
+"WT 460 B"
+{
+	RA 212.99539892
+	Dec -41.53972199
+	Distance 29.723 # 109.7323 +/- 0.2316 mas
+	SpectralType "L1"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WT+460"
+}
+
+"ULAS J141623.94+134836.3"
+{
+	RA 214.099759
+	Dec 13.810089
+	Distance 29.732 # 109.7 +/- 1.3 mas
+	SpectralType "T7.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=ULAS+J141623.94%2B134836.3"
+}
+
+"2MASS J14162408+1348263"
+{
+	RA 214.10070487
+	Dec 13.80784459
+	Distance 30.273 # 107.7375 +/- 0.2163 mas
+	SpectralType "L6"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASS+J14162408%2B1348263"
+}
+
+"Gliese 283 A"
+{
+	RA 115.09192338
+	Dec -17.41606612
+	Distance 29.828 # 109.344 +/- 0.0181 mas
+	SpectralType "DZA"
+	AppMag 13.061
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=LAWD+25"
+}
+
+"Gliese 283 B"
+{
+	RA 115.08608297
+	Dec -17.41513772
+	Distance 29.853 # 109.2545 +/- 0.0392 mas
+	SpectralType "M6.5e"
+	AppMag 16.696
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+283+B"
+}
+
+"WISE J071322.55-291751.9"
+{
+	RA 108.344602
+	Dec -29.298377
+	Distance 29.84 # 109.3 +/- 2.1 mas
+	SpectralType "Y0"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISE+J071322.55-291751.9"
+}
+
+"2MASS J03552337+1133437"
+{
+	RA 58.84840243
+	Dec 11.55936005
+	Distance 29.885 # 109.1381 +/- 0.4833 mas
+	SpectralType "L5.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASS+J03552337%2B1133437"
+}
+
+"WISEP J213456.73-713743.6"
+{
+	RA 323.736405
+	Dec -71.62905
+	Distance 29.895 # 109.1 +/- 3.7 mas
+	SpectralType "T9pec"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISEP+J213456.73-713743.6"
+}
+
+57939 # HD 103095
+{
+	RA 178.26735321
+	Dec 37.69282695
+	Distance 29.914 # 109.0296 +/- 0.0197 mas
+	SpectralType "K1"
+	AppMag 6.45
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+103095"
+}
+
+66906 # Ross 1015
+{
+	RA 205.67969336
+	Dec 33.28692387
+	Distance 29.98 # 108.7903 +/- 0.044 mas
+	SpectralType "M3.5"
+	AppMag 13.896
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Ross+1015"
+}
+
+64394 # bet Com
+{
+	RA 197.96428161
+	Dec 27.88210537
+	Distance 29.998 # 108.725 +/- 0.1645 mas
+	SpectralType "G0"
+	AppMag 4.25
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=bet+Com"
+}
+
+"2MASS J17502484-0016151 A"
+{
+	RA 267.60161205
+	Dec -0.26995465
+	Distance 30.038 # 108.5809 +/- 0.1985 mas
+	SpectralType "L5.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASS+J17502484-0016151"
+}
+
+"2MASS J17502484-0016151 B"
+{
+	RA 267.60161205
+	Dec -0.26995465
+	Distance 30.038 # 108.5809 +/- 0.1985 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASS+J17502484-0016151"
+}
+
+"WISEP J232519.54-410534.9"
+{
+	RA 351.33141
+	Dec -41.093072
+	Distance 30.088 # 108.4 +/- 3.7 mas
+	SpectralType "T9pec"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISEP+J232519.54-410534.9"
+}
+
+23932 # L 737-9 A
+{
+	RA 77.14837445
+	Dec -18.17827308
+	Distance 30.109 # 108.3254 +/- 0.0976 mas
+	SpectralType "M3.5"
+	AppMag 10.302
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=L+737-9"
+}
+
+"L 737-9 B"
+{
+	RA 77.14837445
+	Dec -18.17827308
+	Distance 30.109 # 108.3254 +/- 0.0976 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=L+737-9"
+}
+
+23512 # LP 776-46
+{
+	RA 75.83262224
+	Dec -17.37551009
+	Distance 30.123 # 108.2732 +/- 0.0398 mas
+	SpectralType "M3"
+	AppMag 11.735
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=LP+776-46"
+}
+
+"GJ 3128:LP 469-67"
+{
+	RA 30.56463582
+	Dec 10.3359579
+	Distance 30.128 # 108.2582 +/- 0.0578 mas
+	SpectralType "M5.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=LP+469-67"
+}
+
+105858 # gam Pav
+{
+	RA 321.61171581
+	Dec -65.36263997
+	Distance 30.197 # 108.0102 +/- 0.1061 mas
+	SpectralType "F9.0"
+	AppMag 4.22
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=gam+Pav"
+}
+
+"GJ 1103:G 112-50"
+{
+	RA 117.97896837
+	Dec -0.00676912
+	Distance 30.242 # 107.8488 +/- 0.0421 mas
+	SpectralType "M4.5"
+	AppMag 13.26
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+112-50"
+}
+
+15457 # kap01 Cet
+{
+	RA 49.84160069
+	Dec 3.37061619
+	Distance 30.255 # 107.8023 +/- 0.1838 mas
+	SpectralType "G5"
+	AppMag 4.85
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=kap01+Cet"
+}
+
+57443 # HD 102365 A
+{
+	RA 176.62052058
+	Dec -40.49856515
+	Distance 30.396 # 107.3024 +/- 0.0873 mas
+	SpectralType "G2"
+	AppMag 4.88
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+102365"
+}
+
+"Gliese 442 B:HD 102365 B"
+{
+	RA 176.62723834
+	Dec -40.49486213
+	Distance 30.362 # 107.4237 +/- 0.0351 mas
+	SpectralType "M4"
+	AppMag 15.43
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+102365B"
+}
+
+"WISE J121756.90+162640.8 A"
+{
+	RA 184.48871
+	Dec 16.442057
+	Distance 30.368 # 107.4 +/- 3.5 mas
+	SpectralType "T9"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISE+J121756.90%2B162640.8"
+}
+
+"WISE J121756.90+162640.8 B"
+{
+	RA 184.48871
+	Dec 16.442057
+	Distance 30.368 # 107.4 +/- 3.5 mas
+	SpectralType "Y0"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISE+J121756.90%2B162640.8"
+}
+
+"2MASS J00113182+5908400"
+{
+	RA 2.87473492
+	Dec 59.13922658
+	Distance 30.372 # 107.3873 +/- 0.0273 mas
+	SpectralType "M5.5"
+	AppMag 15.68
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASS+J00113182%2B5908400"
+}
+
+9724 # BD-18 359 A
+{
+	RA 31.27627524
+	Dec -17.61540307
+	Distance 30.397 # 107.2972 +/- 0.2307 mas
+	SpectralType "M3"
+	AppMag 10.189
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BD-18+359"
+}
+
+"BD-18 359 B"
+{
+	RA 31.27627524
+	Dec -17.61540307
+	Distance 30.397 # 107.2972 +/- 0.2307 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BD-18+359"
+}
+
+"2MASS J18212815+1414010"
+{
+	RA 275.36836652
+	Dec 14.23247325
+	Distance 30.472 # 107.0339 +/- 0.1856 mas
+	SpectralType "L5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASS+J18212815%2B1414010"
+}
+
+"2MASSI J0340094-672405"
+{
+	RA 55.03513537
+	Dec -67.39901254
+	Distance 30.522 # 106.8602 +/- 0.4379 mas
+	SpectralType "L7"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASSI+J0340094-672405"
+}
+
+"GJ 3817:Ross 837"
+{
+	RA 209.55650642
+	Dec 12.58206348
+	Distance 30.527 # 106.8404 +/- 0.0413 mas
+	SpectralType "M3.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Ross+837"
+}
+
+"WISEPA J045853.89+643452.9 A"
+{
+	RA 74.725487
+	Dec 64.581763
+	Distance 30.568 # 106.7 +/- 2.8 mas
+	SpectralType "T8.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISEPA+J045853.89%2B643452.9"
+}
+
+"WISEPA J045853.89+643452.9 B"
+{
+	RA 74.725487
+	Dec 64.581763
+	Distance 30.568 # 106.7 +/- 2.8 mas
+	SpectralType "T9.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISEPA+J045853.89%2B643452.9"
+}
+
+9786 # CD-30 731
+{
+	RA 31.44961033
+	Dec -30.17617826
+	Distance 30.594 # 106.6096 +/- 0.0273 mas
+	SpectralType "M2.5"
+	AppMag 12.167
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=CD-30+731"
+}
+
+"GJ 3306:EGGR 41"
+{
+	RA 69.44860244
+	Dec -8.82651622
+	Distance 30.671 # 106.339 +/- 0.0152 mas
+	SpectralType "DQ8"
+	AppMag 14.1
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=EGGR+41"
+}
+
+"WISEA J193054.55-205949.4"
+{
+	RA 292.7248684
+	Dec -20.9994605
+	Distance 30.683 # 106.3 +/- 4.9 mas
+	SpectralType ">Y1"
+}
+
+47780 # CD-45 5378
+{
+	RA 146.12137189
+	Dec -45.77909735
+	Distance 30.719 # 106.1727 +/- 0.0141 mas
+	SpectralType "M1"
+	AppMag 9.979
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=CD-45+5378"
+}
+
+47103 # Gliese 357
+{
+	RA 144.00748512
+	Dec -21.66520086
+	Distance 30.776 # 105.9789 +/- 0.0227 mas
+	SpectralType "M2.5"
+	AppMag 10.906
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=L+678-39"
+}
+
+"1RXS J115928.5-524717"
+{
+	RA 179.8561531
+	Dec -52.78916142
+	Distance 30.855 # 105.7052 +/- 0.0922 mas
+	SpectralType "M9e"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=1RXS+J115928.5-524717"
+}
+
+29277 # G 222-11
+{
+	RA 92.58432175
+	Dec 82.10081629
+	Distance 30.86 # 105.6903 +/- 0.0142 mas
+	SpectralType "M2"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+222-11"
+}
+
+"UCAC4 379-100760"
+{
+	RA 271.43447434
+	Dec -14.37835763
+	Distance 30.909 # 105.5229 +/- 0.0361 mas
+	SpectralType "M5.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=UCAC4+379-100760"
+}
+
+21932 # Gliese 176
+{
+	RA 70.73548174
+	Dec 18.95320293
+	Distance 30.937 # 105.4275 +/- 0.021 mas
+	SpectralType "M2"
+	AppMag 9.951
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+285968"
+}
+
+61629 # CD-51 6859
+{
+	RA 189.46009727
+	Dec -52.00134628
+	Distance 30.96 # 105.3467 +/- 0.0213 mas
+	SpectralType "M3e"
+	AppMag 10.663
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=CD-51+6859"
+}
+
+"GJ 3512"
+{
+	RA 130.33159039
+	Dec 59.49165865
+	Distance 30.976 # 105.2935 +/- 0.0313 mas
+	SpectralType "M5.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+234-45"
+}
+
+"BPS CS 22879-0089 A"
+{
+	RA 312.29111643
+	Dec -40.20171378
+	Distance 31.017 # 105.1555 +/- 0.2656 mas
+	AppMag 13.53
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BPS+CS+22879-0089"
+}
+
+"BPS CS 22879-0089 B"
+{
+	RA 312.29111643
+	Dec -40.20171378
+	Distance 31.017 # 105.1555 +/- 0.2656 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BPS+CS+22879-0089"
+}
+
+"GJ 1123:L 35-12"
+{
+	RA 139.28558759
+	Dec -77.82674697
+	Distance 31.053 # 105.0336 +/- 0.0265 mas
+	SpectralType "M4.5"
+	AppMag 13.1
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=L+35-12"
+}
+
+"GJ 3380:G 192-15"
+{
+	RA 90.62210759
+	Dec 49.86182104
+	Distance 31.075 # 104.959 +/- 0.0347 mas
+	SpectralType "M5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+192-15"
+}
+
+"GJ 1256:G 144-25"
+{
+	RA 310.14718809
+	Dec 15.5025902
+	Distance 31.086 # 104.919 +/- 0.03 mas
+	SpectralType "M4.5"
+	AppMag 13.41
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+144-25"
+}
+
+86776 # BD+43 2796
+{
+	RA 265.98324231
+	Dec 43.37593024
+	Distance 31.088 # 104.9147 +/- 0.0177 mas
+	SpectralType "M2.5"
+	AppMag 10.49
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BD%2B43+2796"
+}
+
+"GJ 3571:G 42-24"
+{
+	RA 148.47823971
+	Dec 20.94807918
+	Distance 31.133 # 104.7638 +/- 0.0357 mas
+	SpectralType "M4e"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+42-24"
+}
+
+56452 # HD 100623 A
+{
+	RA 173.61931513
+	Dec -32.82768461
+	Distance 31.177 # 104.6133 +/- 0.0277 mas
+	SpectralType "K0"
+	AppMag 5.98
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+100623"
+}
+
+"Gliese 432 B:HD 100623 B"
+{
+	RA 173.62327851
+	Dec -32.83031725
+	Distance 31.164 # 104.657 +/- 0.0267 mas
+	SpectralType "DC"
+	AppMag 15.0
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+100623B"
+}
+
+"GJ 1253:Wolf 1069"
+{
+	RA 306.52431726
+	Dec 58.57537972
+	Distance 31.229 # 104.4415 +/- 0.0261 mas
+	SpectralType "M5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Wolf+1069"
+}
+
+56997 # 61 UMa
+{
+	RA 175.26250051
+	Dec 34.19993958
+	Distance 31.234 # 104.4252 +/- 0.1005 mas
+	SpectralType "G8"
+	AppMag 5.34
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=61+UMa"
+}
+
+"PM J20502-3424"
+{
+	RA 312.56914168
+	Dec -34.41315318
+	Distance 31.322 # 104.131 +/- 0.0346 mas
+	SpectralType "M5e"
+	AppMag 13.88
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=PM+J20502-3424"
+}
+
+"Gliese 358:CD-40 5404"
+{
+	RA 144.94009579
+	Dec -41.06596998
+	Distance 31.332 # 104.0957 +/- 0.0176 mas
+	SpectralType "M3"
+	AppMag 10.694
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=CD-40+5404"
+}
+
+"WISE J114156.71-332635.8"
+{
+	RA 175.484176
+	Dec -33.443308
+	Distance 31.361 # 104.0 +/- 2.9 mas
+	SpectralType "Y0"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISE+J114156.71-332635.8"
+}
+
+"GJ 3253:Wolf 227 A"
+{
+	RA 58.17597944
+	Dec 17.01495663
+	Distance 31.398 # 103.8794 +/- 0.023 mas
+	SpectralType "M5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Wolf+227"
+}
+
+"Wolf 227 B"
+{
+	RA 58.17597944
+	Dec 17.01495663
+	Distance 31.398 # 103.8794 +/- 0.023 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Wolf+227"
+}
+
+"2MASS J14053729+8350248"
+{
+	RA 211.37927528
+	Dec 83.8427056
+	Distance 31.529 # 103.4474 +/- 0.4873 mas
+	SpectralType "L8"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASS+J14053729%2B8350248"
+}
+
+"G 161-7 A"
+{
+	RA 138.89984391
+	Dec -10.59728829
+	Distance 31.565 # 103.33 +/- 1.0 mas
+	SpectralType "M5"
+	AppMag 13.8
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+161-7"
+}
+
+"G 161-7 B"
+{
+	RA 138.89984391
+	Dec -10.59728829
+	Distance 31.565 # 103.33 +/- 1.0 mas
+	SpectralType "M5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+161-7"
+}
+
+86057 # CD-48 11837 A
+{
+	RA 263.80723698
+	Dec -48.67877743
+	Distance 31.571 # 103.3081 +/- 0.0216 mas
+	SpectralType "M3"
+	AppMag 10.127
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=CD-48+11837"
+}
+
+"CD-48 11837 B"
+{
+	RA 263.80594666
+	Dec -48.67780402
+	Distance 31.603 # 103.2027 +/- 0.0462 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=CD-48+11837+B"
+}
+
+"CFBDS J005910-011401"
+{
+	RA 14.79359437
+	Dec -1.23348344
+	Distance 31.604 # 103.2 +/- 2.1 mas
+	SpectralType "T9"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=CFBDS+J005910-011401"
+}
+
+76901 # L 768-119 A
+{
+	RA 235.51777704
+	Dec -19.47636665
+	Distance 31.61 # 103.1798 +/- 0.3159 mas
+	SpectralType "M3"
+	AppMag 11.855
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=L+768-119"
+}
+
+"L 768-119 B"
+{
+	RA 235.51777704
+	Dec -19.47636665
+	Distance 31.61 # 103.1798 +/- 0.3159 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=L+768-119"
+}
+
+"Gliese 799 A:AT Mic A"
+{
+	RA 310.46433403
+	Dec -32.43703678
+	Distance 32.359 # 100.7921 +/- 0.0726 mas
+	SpectralType "M4.5"
+	AppMag 10.36
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=AT+Mic"
+}
+
+"Gliese 799 B:AT Mic B"
+{
+	RA 310.46473122
+	Dec -32.43751492
+	Distance 31.985 # 101.9724 +/- 0.077 mas
+	SpectralType "M4"
+	AppMag 11.34
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=AT+Mic"
+}
+
+102409 # AU Mic
+{
+	RA 311.29118265
+	Dec -31.34250008
+	Distance 31.683 # 102.9432 +/- 0.0231 mas
+	SpectralType "M0.5"
+	AppMag 8.627
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=AU+Mic"
+}
+
+"GJ 3112:L 88-59"
+{
+	RA 25.75030397
+	Dec -67.31295816
+	Distance 31.704 # 102.8742 +/- 0.0128 mas
+	SpectralType "DA8.1"
+	AppMag 13.9
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=L+88-59"
+}
+
+"WISE J223617.59+510551.9"
+{
+	RA 339.07252
+	Dec 51.097653
+	Distance 31.727 # 102.8 +/- 1.9 mas
+	SpectralType "T5.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISE+J223617.59%2B510551.9"
+}
+
+"2MASS J20304235+0749358"
+{
+	RA 307.67935542
+	Dec 7.82610907
+	Distance 31.728 # 102.7966 +/- 0.8009 mas
+	SpectralType "T1.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASS+J20304235%2B0749358"
+}
+
+"GJ 1138:G 119-36 A"
+{
+	RA 162.43628734
+	Dec 35.54286957
+	Distance 31.742 # 102.7521 +/- 0.4059 mas
+	SpectralType "M5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+119-36"
+}
+
+"G 119-36 B"
+{
+	RA 162.43628734
+	Dec 35.54286957
+	Distance 31.742 # 102.7521 +/- 0.4059 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+119-36"
+}
+
+"2MASS J02572581-3105523"
+{
+	RA 44.3608848
+	Dec -31.09629275
+	Distance 31.758 # 102.6993 +/- 0.4759 mas
+	SpectralType "L8.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASS+J02572581-3105523"
+}
+
+"WISE J111239.24-385700.7"
+{
+	RA 168.164941
+	Dec -38.94906
+	Distance 31.789 # 102.6 +/- 3.7 mas
+	SpectralType "T9"
+}
+
+"LP 655-48"
+{
+	RA 70.09847133
+	Dec -5.50168855
+	Distance 31.791 # 102.5942 +/- 0.0612 mas
+	SpectralType "M6e"
+	AppMag 17.79
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=LP+655-48"
+}
+
+57087 # Gliese 436
+{
+	RA 175.55067547
+	Dec 26.70295395
+	Distance 31.882 # 102.3014 +/- 0.0302 mas
+	SpectralType "M2.5"
+	AppMag 10.613
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Ross+905"
+}
+
+"GJ 1028:G 268-110"
+{
+	RA 16.23022247
+	Dec -18.12244895
+	Distance 31.888 # 102.2827 +/- 0.0358 mas
+	SpectralType "M5"
+	AppMag 14.47
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+268-110"
+}
+
+"2MASSW J1515008+484742"
+{
+	RA 228.74722565
+	Dec 48.80131233
+	Distance 31.987 # 101.9645 +/- 0.2567 mas
+	SpectralType "L6"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASSW+J1515008%2B484742"
+}
+
+"CWISEP J225628.97+400227.3"
+{
+	RA 344.121593
+	Dec 40.040903
+	Distance 32.039 # 101.8 +/- 11.2 mas
+	SpectralType ">=Y1"
+}
+
+82003 # HD 151288
+{
+	RA 251.2762477
+	Dec 33.51092483
+	Distance 32.114 # 101.5615 +/- 0.015 mas
+	SpectralType "K5"
+	AppMag 8.11
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+151288"
+}
+
+4872 # BD+61 195
+{
+	RA 15.66895082
+	Dec 62.34545122
+	Distance 32.158 # 101.4238 +/- 0.0169 mas
+	SpectralType "M1.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BD%2B61+195"
+}
+
+"V388 Cas:Gliese 51:BD+61 195 B"
+{
+	RA 15.83964459
+	Dec 62.36589259
+	Distance 32.174 # 101.3724 +/- 0.048 mas
+	SpectralType "M5"
+	AppMag 13.21
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BD%2B61+195+B"
+}
+
+2552 # Gliese 22 A
+{
+	RA 8.14303082
+	Dec 67.23432836
+	Distance 32.265 # 101.0864 +/- 0.4607 mas
+	SpectralType "M2"
+	AppMag 10.327
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+22+A"
+}
+
+2552 # Gliese 22 B
+{
+	RA 8.14284007
+	Dec 67.23327824
+	Distance 32.487 # 100.3966 +/- 0.0374 mas
+	SpectralType "M3"
+	AppMag 12.19
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+22+B"
+}
+
+2552 # Gliese 22 C
+{
+	RA 8.14303082
+	Dec 67.23432836
+	Distance 32.265 # 101.0864 +/- 0.4607 mas
+	SpectralType "M4"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+22+C"
+}
+
+81300 # 12 Oph
+{
+	RA 249.0914023
+	Dec -2.32596128
+	Distance 32.27 # 101.0719 +/- 0.0501 mas
+	SpectralType "K1"
+	AppMag 5.77
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=12+Oph"
+}
+
+"UPM J0815-2344"
+{
+	RA 123.79719661
+	Dec -23.73739379
+	Distance 32.28 # 101.0408 +/- 0.0269 mas
+	AppMag 12.3
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=UPM+J0815-2344"
+}
+
+"GJ 3988:G 203-42"
+{
+	RA 255.85040249
+	Dec 51.40906417
+	Distance 32.316 # 100.9274 +/- 0.0219 mas
+	SpectralType "M5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+203-42"
+}
+
+21553 # HD 232979
+{
+	RA 69.42278387
+	Dec 52.89150297
+	Distance 32.32 # 100.9161 +/- 0.0266 mas
+	SpectralType "M0"
+	AppMag 8.648
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+232979"
+}
+
+46655 # G 48-20
+{
+	RA 142.68324346
+	Dec 0.32022324
+	Distance 32.324 # 100.9033 +/- 0.0265 mas
+	SpectralType "M3.5e"
+	AppMag 11.71
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+48-20"
+}
+
+"GJ 1065:G 160-28"
+{
+	RA 57.68254738
+	Dec -6.10099104
+	Distance 32.379 # 100.7299 +/- 0.0409 mas
+	SpectralType "M3.5"
+	AppMag 12.843
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+160-28"
+}
+
+"GJ 1230 A"
+{
+	RA 280.29313369
+	Dec 24.78772836
+	Distance 32.394 # 100.685 +/- 0.0215 mas
+	SpectralType "M5e"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+1230+A"
+}
+
+"GJ 1230 B"
+{
+	RA 280.29327363
+	Dec 24.78903472
+	Distance 32.436 # 100.5553 +/- 0.031 mas
+	SpectralType "M4.5e"
+	AppMag 14.4
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+1230+B"
+}
+
+"GJ 1230 C"
+{
+	RA 280.29313369
+	Dec 24.78772836
+	Distance 32.394 # 100.685 +/- 0.0215 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+1230+C"
+}
+
+72944 # BD+16 2708 A
+{
+	RA 223.6231086
+	Dec 16.10053096
+	Distance 32.446 # 100.5243 +/- 0.021 mas
+	SpectralType "M1"
+	AppMag 10.15
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BD%2B16+2708+A"
+}
+
+72944 # BD+16 2708 Ba
+{
+	RA 223.62403584
+	Dec 16.10156308
+	Distance 32.446 # 100.5243 +/- 0.021 mas
+	SpectralType "M8.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BD%2B16+2708+B"
+}
+
+"BD+16 2708 Bb"
+{
+	RA 223.62403584
+	Dec 16.10156308
+	Distance 32.446 # 100.5243 +/- 0.021 mas
+	SpectralType "M9"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BD%2B16+2708+B"
+}
+
+"L 403-31"
+{
+	RA 210.96248101
+	Dec -42.69934703
+	Distance 32.42 # 100.6025 +/- 0.0336 mas
+	SpectralType "M5e"
+	AppMag 13.003
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=L+403-31"
+}
+
+"GJ 3855:LP 98-79"
+{
+	RA 217.65033579
+	Dec 59.72427393
+	Distance 32.515 # 100.311 +/- 0.0437 mas
+	SpectralType "M6.5"
+	AppMag 17.88
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=LP+98-79"
+}
+
+"WISE J182831.08+265037.7"
+{
+	RA 277.131096
+	Dec 26.844069
+	Distance 32.518 # 100.3 +/- 2.0 mas
+	SpectralType ">= Y2"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISE+J182831.08%2B265037.7"
+}
+
+"Gliese 102:G 36-24"
+{
+	RA 38.40513666
+	Dec 24.92413188
+	Distance 32.568 # 100.1465 +/- 0.0429 mas
+	SpectralType "M3.5e"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+36-24"
+}
+
+31635 # HD 260655
+{
+	RA 99.29143146
+	Dec 17.56631652
+	Distance 32.608 # 100.0232 +/- 0.0208 mas
+	SpectralType "M0e"
+	AppMag 9.593
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+260655"
+}
+
+"Gaia EDR3 6305165514134625024"
+{
+	RA 224.97665286
+	Dec -18.53775641
+	Distance 18.742 # 174.0253 +/- 1.9006 mas
+}
+
+"CWISE J061741.79+194512.8 A"
+{
+	RA 94.4241519
+	Dec 19.7535668
+	Distance 24.523 # 133.0 +/- nan mas
+	SpectralType "L6.5?"
+}
+
+"CWISE J061741.79+194512.8 B"
+{
+	RA 94.4241519
+	Dec 19.7535668
+	Distance 24.523 # 133.0 +/- nan mas
+	SpectralType "T8?"
+}
+
+"ULAS J133553.45+113005.2"
+{
+	RA 203.97255
+	Dec 11.501316
+	Distance 32.648 # 99.9 +/- 1.6 mas
+	SpectralType "T9"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=ULAS+J133553.45%2B113005.2"
+}
+
+46706 # Ross 440 A
+{
+	RA 142.83426359
+	Dec -13.48858167
+	Distance 32.655 # 99.88 +/- 3.6 mas
+	SpectralType "M3"
+	AppMag 10.067
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Ross+440"
+}
+
+"Ross 440 B"
+{
+	RA 142.83440673
+	Dec -13.48858167
+	Distance 32.655 # 99.88 +/- 3.6 mas
+	SpectralType "M4"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Ross+440"
+}
+
+"WISE J033605.05-014350.4"
+{
+	RA 54.020761
+	Dec -1.732628
+	Distance 32.681 # 99.8 +/- 2.1 mas
+	SpectralType "Y0"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISE+J033605.05-014350.4"
+}
+
+"2MASS J13243559+6358284"
+{
+	RA 201.144281
+	Dec 63.974174
+	Distance 32.714 # 99.7 +/- 5.6 mas
+	SpectralType "T2pec"
+}
+
+"WISE J064723.23-623235.5"
+{
+	RA 101.846799
+	Dec -62.542541
+	Distance 32.78 # 99.5 +/- 1.7 mas
+	SpectralType "Y1"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISE+J064723.23-623235.5"
+}
+
+"WISEPA J181210.85+272144.3"
+{
+	RA 273.0451
+	Dec 27.362316
+	Distance 33.112 # 98.5 +/- 4.4 mas
+	SpectralType "T8.5"
+}
+
+"WISE J081117.81-805141.3"
+{
+	RA 122.824245
+	Dec -80.861496
+	Distance 33.112 # 98.5 +/- 7.7 mas
+	SpectralType "T9.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISE+J081117.81-805141.3"
+}
+
+"WISEU J050305.68-564834.0"
+{
+	RA 75.776553
+	Dec -56.808684
+	Distance 33.18 # 98.3 +/- 3.9 mas
+	SpectralType ">Y1"
+}
+
+"WISE J161441.46+173935.5"
+{
+	RA 243.673745
+	Dec 17.659099
+	Distance 33.213 # 98.2 +/- 2.7 mas
+	SpectralType "T9"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISE+J161441.46%2B173935.5"
+}
+
+"WISEPA J075108.79-763449.6"
+{
+	RA 117.78645
+	Dec -76.580638
+	Distance 33.315 # 97.9 +/- 6.7 mas
+	SpectralType "T9"
+}
+
+"GJ 1083 A:G 100-28 A"
+{
+	RA 85.10759541
+	Dec 24.80054829
+	Distance 33.418 # 97.6 +/- 2.8 mas
+	SpectralType "M7"
+	AppMag 14.94
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+100-28"
+}
+
+"GJ 1083 B:G 100-28 B"
+{
+	RA 85.10759541
+	Dec 24.80054829
+	Distance 33.418 # 97.6 +/- 2.8 mas
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=G+100-28"
+}
+
+"WISE J094305.98+360723.5"
+{
+	RA 145.776141
+	Dec 36.122541
+	Distance 33.59 # 97.1 +/- 2.9 mas
+	SpectralType "T9.5"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISE+J094305.98%2B360723.5"
+}
+
+"2MASS J12373919+6526148"
+{
+	RA 189.413318
+	Dec 65.437447
+	Distance 33.95 # 96.07 +/- 4.78 mas
+	SpectralType "T7"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASS+J12373919%2B6526148"
+}
+
+"CWISEP J144606.62-231717.8"
+{
+	RA 221.526873
+	Dec -23.288846
+	Distance 34.117 # 95.6 +/- 13.9 mas
+	SpectralType ">Y1?"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=CWISEP+J144606.62-231717.8"
+}
+
+"WISEA J083011.95+283716.0"
+{
+	RA 127.549578
+	Dec 28.617508
+	Distance 36 # 90.6 +/- 13.7 mas
+	SpectralType ">Y1"
+	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISEA+J083011.95%2B283716.0"
+}
+
+"CWISEP J023842.60-133210.7"
+{
+	RA 39.677455
+	Dec -13.536971
+	Distance 38.014 # 85.8 +/- 21.4 mas
+	SpectralType ">Y1?"
 }
