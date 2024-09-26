@@ -1,3 +1,30 @@
+Barycenter "Solar System Barycenter:SSB"
+{
+	RA 0
+	Dec 0
+	Distance 0
+}
+
+0 "Sol:Sun"
+{
+	OrbitBarycenter "Solar System Barycenter"
+	CustomOrbit "vsop87-sun"
+
+	SpectralType "G2V"
+	AbsMag 4.83
+	Temperature 5772
+	BoloCorrection -0.08
+	InfoURL "https://en.wikipedia.org/wiki/Sun"
+
+	UniformRotation
+	{
+	    Period         609.12  # 25.38 days
+	    Inclination      7.25
+	    AscendingNode   75.77
+	    MeridianAngle   23.00  # standard meridian
+	}
+}
+
 70890 # Proxima Cen
 {
 	RA 217.39232147
