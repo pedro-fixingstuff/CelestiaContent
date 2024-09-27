@@ -284,7 +284,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+173740"
 }
 
-"GX And:Gliese 15 A"
+1475 "GX And:Gliese 15 A"
 {
 	RA 4.61322626
 	Dec 44.02478674
@@ -410,7 +410,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=AX+Mic"
 }
 
-"Kruger 60 A:Gliese 860 A:HD 239960 A"
+1000923991 "Kruger 60 A:Gliese 860 A:HD 239960 A"
 {
 	RA 336.99211291
 	Dec 57.69403205
@@ -420,7 +420,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+239960A"
 }
 
-"DO Cep:Gliese 860 B:HD 239960 B"
+2000923991 "DO Cep:Gliese 860 B:HD 239960 B"
 {
 	RA 336.99138609
 	Dec 57.69410078
@@ -701,7 +701,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BD%2B44+2051B"
 }
 
-"AD Leo:Gliese 388:BD+20 2465"
+1001741423 # AD Leo
 {
 	RA 154.8988137
 	Dec 19.86980991
@@ -801,7 +801,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=70+Oph+A"
 }
 
-"Gliese 702 B:70 Oph B"
+1052120434 "Gliese 702 B:70 Oph B"
 {
 	RA 271.36591161
 	Dec 2.49419876
@@ -830,7 +830,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=2MASS+J15065257%2B7027247"
 }
 
-"GJ 3379:G 99-49"
+1006050134 # G 99-49
 {
 	RA 90.01597644
 	Dec 2.70637408
@@ -896,7 +896,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+119850"
 }
 
-"Stein 2051 A:Gliese 169.1 A"
+1004123744 "Stein 2051 A:Gliese 169.1 A"
 {
 	RA 67.80919063
 	Dec 58.96797997
@@ -906,7 +906,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+169.1+A"
 }
 
-"Stein 2051 B:Gliese 169.1 B"
+1020623744 "Stein 2051 B:Gliese 169.1 B"
 {
 	RA 67.81389197
 	Dec 58.96948121
@@ -1126,7 +1126,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=eta+Cas+A"
 }
 
-"Gliese 34 B:eta Cas B"
+2026693663 "Gliese 34 B:eta Cas B"
 {
 	RA 12.28118476
 	Dec 57.81573919
@@ -1136,7 +1136,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=eta+Cas+B"
 }
 
-"Guniibuu:Gliese 663 A:36 Oph A"
+1003266820 "Guniibuu:Gliese 663 A:36 Oph A"
 {
 	RA 258.83511696
 	Dec -26.60789783
@@ -1146,7 +1146,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=36+Oph+A"
 }
 
-84405 # 36 Oph B
+2003266820 # 36 Oph B
 {
 	RA 258.83412018
 	Dec -26.60680662
@@ -1336,7 +1336,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BD-11+3759"
 }
 
-116132 # BD+19 5116 A
+1000231723 # BD+19 5116 A
 {
 	RA 352.97012375
 	Dec 19.93699283
@@ -1346,7 +1346,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BD%2B19+5116+A"
 }
 
-"EQ Peg B:Gliese 896 B:BD+19 5116 B"
+2000231723 "EQ Peg B:Gliese 896 B:BD+19 5116 B"
 {
 	RA 352.9716753
 	Dec 19.93731375
@@ -1374,7 +1374,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISE+J140518.39%2B553421.3"
 }
 
-"Gliese 338 A"
+45343 "Gliese 338 A"
 {
 	RA 138.58356162
 	Dec 52.68408017
@@ -1564,7 +1564,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Ross+104"
 }
 
-"Gliese 566 A:ksi Boo A"
+1007221481 "Gliese 566 A:ksi Boo A"
 {
 	RA 222.84805147
 	Dec 19.10026964
@@ -1574,7 +1574,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=ksi+Boo+A"
 }
 
-"Gliese 566 B:ksi Boo B"
+2007221481 "Gliese 566 B:ksi Boo B"
 {
 	RA 222.84664267
 	Dec 19.10110411
@@ -1673,7 +1673,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=WISEPA+J025409.45%2B022359.1"
 }
 
-14101 # BD-17 588 A
+1006945865 # BD-17 588 A
 {
 	RA 45.46242451
 	Dec -16.59453281
@@ -1851,7 +1851,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=L+788-34"
 }
 
-84709 # Gliese 667 A
+1008507370 # Gliese 667 A
 {
 	RA 259.75125274
 	Dec -34.99779509
@@ -1861,7 +1861,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+156384A"
 }
 
-"Gliese 667 B"
+2008507370 "Gliese 667 B"
 {
 	RA 259.75125274
 	Dec -34.99779509
@@ -2295,7 +2295,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=pi.03+Ori"
 }
 
-33499 # CD-44 3045 A
+1010997640 # CD-44 3045 A
 {
 	RA 104.43732955
 	Dec -44.29139605
@@ -2305,7 +2305,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=CD-44+3045+A"
 }
 
-"Gliese 257 B:CD-44 3045 B"
+2010997640 "Gliese 257 B:CD-44 3045 B"
 {
 	RA 104.43647191
 	Dec -44.29165131
@@ -2410,7 +2410,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=EGGR+290"
 }
 
-"IRAS 21500+5903"
+1010813980 # IRAS 21500+5903
 {
 	RA 327.90897024
 	Dec 59.29444662
@@ -2458,7 +2458,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=UGPS+J052127.27%2B364048.6"
 }
 
-"Gliese 66 A"
+1013948478 "Gliese 66 A"
 {
 	RA 24.95065662
 	Dec -56.19640007
@@ -2468,7 +2468,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+66+A"
 }
 
-"Gliese 66 B"
+2013948478 "Gliese 66 B"
 {
 	RA 24.95131742
 	Dec -56.19325138
@@ -2633,7 +2633,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=SCR+J1546-5534"
 }
 
-23452 # HD 32450 A
+1004815912 # HD 32450 A
 {
 	RA 75.61783104
 	Dec -21.25787833
@@ -2643,7 +2643,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+32450+A"
 }
 
-"Gliese 185 B:HD 32450 B"
+2004815912 "Gliese 185 B:HD 32450 B"
 {
 	RA 75.61776596
 	Dec -21.2576392
@@ -2690,7 +2690,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Ross+64"
 }
 
-"Gliese 618 A:CD-37 10765 A"
+80018 "Gliese 618 A:CD-37 10765 A"
 {
 	RA 245.01042208
 	Dec -37.52461045
@@ -2882,7 +2882,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=LP+991-84"
 }
 
-55203 # ksi UMa Aa
+1026342520 # ksi UMa Aa
 {
 	RA 169.54338012
 	Dec 31.5264149
@@ -2901,7 +2901,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=ksi+UMa+A"
 }
 
-"Gliese 423 B:ksi UMa Ba"
+2026342520 "Gliese 423 B:ksi UMa Ba"
 {
 	RA 169.54338012
 	Dec 31.5264149
@@ -2948,7 +2948,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+50281"
 }
 
-"Gliese 250 B:HD 50281 Ba"
+1007654808 "Gliese 250 B:HD 50281 Ba"
 {
 	RA 103.07260096
 	Dec -5.19006974
@@ -2994,7 +2994,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=41+Ara+A"
 }
 
-"Gliese 666 B:41 Ara Ba"
+1043658341 "Gliese 666 B:41 Ara Ba"
 {
 	RA 259.76853246
 	Dec -46.63635961
@@ -3171,7 +3171,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+216+A"
 }
 
-"AK Lep:Gliese 216 B"
+1021965930 "AK Lep:Gliese 216 B"
 {
 	RA 86.10910372
 	Dec -22.42340451
@@ -3274,7 +3274,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=del+Eri"
 }
 
-65026 # HD 115953 Aa
+1021623460 # HD 115953 Aa
 {
 	RA 199.94126675
 	Dec 47.77792464
@@ -3292,7 +3292,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=HD+115953+A"
 }
 
-"Gliese 508 B:HD 115953 B"
+2021623460 "Gliese 508 B:HD 115953 B"
 {
 	RA 199.94126675
 	Dec 47.77792464
@@ -3872,7 +3872,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=PM+J20502-3424"
 }
 
-"Gliese 358:CD-40 5404"
+47425 # CD-40 5404
 {
 	RA 144.94009579
 	Dec -41.06596998
@@ -3981,7 +3981,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=L+768-119"
 }
 
-"Gliese 799 A:AT Mic A"
+1001377460 "Gliese 799 A:AT Mic A"
 {
 	RA 310.46433403
 	Dec -32.43703678
@@ -3991,7 +3991,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=AT+Mic"
 }
 
-"Gliese 799 B:AT Mic B"
+2001377460 "Gliese 799 B:AT Mic B"
 {
 	RA 310.46473122
 	Dec -32.43751492
@@ -4149,7 +4149,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=BD%2B61+195+B"
 }
 
-2552 # Gliese 22 A
+1008034027 # Gliese 22 A
 {
 	RA 8.14303082
 	Dec 67.23432836
@@ -4159,7 +4159,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+22+A"
 }
 
-2552 # Gliese 22 B
+1008024027 # Gliese 22 B
 {
 	RA 8.14284007
 	Dec 67.23327824
@@ -4169,7 +4169,7 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=GJ+22+B"
 }
 
-2552 # Gliese 22 C
+"Gliese 22 C"
 {
 	RA 8.14303082
 	Dec 67.23432836
