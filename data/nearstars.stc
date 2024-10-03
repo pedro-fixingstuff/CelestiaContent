@@ -35,24 +35,75 @@ Barycenter "Solar System Barycenter:SSB"
 	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=alf+Cen+C"
 }
 
-71683 # alf Cen A
+# Akeson et al. (2021), AJ 162 (1), 14
+# "Precision Millimeter Astrometry of the α Centauri AB System"
+# https://ui.adsabs.harvard.edu/abs/2021AJ....162...14A/abstract
+# Temperatures from Kervella et al. (2017), A&A 597, A137
+# "The radii and limb darkenings of α Centauri A and B -
+# Interferometric measurements with VLTI/PIONIER"
+# https://ui.adsabs.harvard.edu/abs/2017A%26A...597A.137K/abstract
+Barycenter "ALF Cen:Gliese 559"
 {
-	RA 219.90205833
-	Dec -60.83399269
-	Distance 4.3897 # 743.0 +/- 1.3 mas
-	SpectralType "G2"
-	AppMag 0.01
-	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=alf+Cen+A"
+	RA 219.85892215
+	Dec -60.83163195
+	Distance 4.3441 # 750.81 +/- 0.38 mas
 }
 
+# Rotation period from Huber and Zwintz (2020)
+# "Solar-Like Oscillations: Lessons Learned & First Results from TESS"
+# https://ui.adsabs.harvard.edu/abs/2020svos.conf..457H/abstract
+71683 # alf Cen A
+{
+	OrbitBarycenter "ALF Cen"
+	SpectralType "G2V"
+	Temperature 5795
+	AppMag 0.01
+	Radius<rS> 1.2175
+	InfoURL "https://en.wikipedia.org/wiki/Alpha_Centauri"
+
+	EllipticalOrbit # fully specified orientation
+	{
+		Period 79.762
+		SemiMajorAxis 10.6555 # mass ratio 1.0788:0.9092
+		Eccentricity 0.51947
+		Inclination 82.330
+		AscendingNode 231.866
+		ArgOfPericenter 279.481
+		MeanAnomaly 200.559
+	}
+
+	RotationPeriod<d> 28.3
+}
+
+# Rotational parameters from Dumusque (2014), ApJ 796 (2), 133
+# "Deriving Stellar Inclination of Slow Rotators Using Stellar Activity"
+# https://ui.adsabs.harvard.edu/abs/2014ApJ...796..133D/abstract
 71681 # alf Cen B
 {
-	RA 219.89609629
-	Dec -60.83752757
-	Distance 4.3897 # 743.0 +/- 1.3 mas
-	SpectralType "K1"
+	OrbitBarycenter "ALF Cen"
+	SpectralType "K1V"
+	Temperature 5231
 	AppMag 1.33
-	InfoURL "https://simbad.cds.unistra.fr/simbad/sim-id?Ident=alf+Cen+B"
+	Radius<rS> 0.8591
+	InfoURL "https://en.wikipedia.org/wiki/Alpha_Centauri"
+
+	EllipticalOrbit # fully specified orientation
+	{
+		Period 79.762
+		SemiMajorAxis 12.6433 # mass ratio 1.0788:0.9092
+		Eccentricity 0.51947
+		Inclination 82.330
+		AscendingNode 231.866
+		ArgOfPericenter 99.481
+		MeanAnomaly 200.559
+	}
+
+	UniformRotation
+	{
+		Period<d> 36.66
+		Inclination 61
+		AscendingNode 203 # assumed same plane-of-sky value as orbit
+	}
 }
 
 87937 # Barnard's Star
